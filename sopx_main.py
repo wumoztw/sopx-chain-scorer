@@ -32,7 +32,6 @@ def sopx_action_label(s):
     Decide investor action automatically.
     """
     c = float(s.get("constitutional") or 0)
-    total = float(s.get("total") or 0)
     layer = sopx_get_tag_value(s.get("tags", []), "layer:")
     thesis = sopx_get_tag_value(s.get("tags", []), "thesis:")
     risk = float(s.get("risk") or 0)
@@ -62,87 +61,127 @@ def sopx_fmt_line(s):
 
 
 def sopx_build_investor_plurk_post(scores, ts, flags=None, max_chars=320):
+    """
+    Investor-friendly Plurk output with stable formatting.
+    Never slices mid-text (except ultra fallback end-trim), so newlines won't break.
+    """
     flags = flags or []
 
-    # Sort by total score
-    sorted_scores = sorted(scores, key=lambda x: x["total"], reverse=True)
+    def build_with_caps(hold_cap, rotate_cap, trade_cap, avoid_cap, flag_cap):
+        # Sort by total score
+        sorted_scores = sorted(scores, key=lambda x: x["total"], reverse=True)
 
-    # Buckets
-    hold = []
-    rotate = []
-    trade = []
-    avoid = []
+        hold, rotate, trade, avoid = [], [], [], []
+        for s in sorted_scores:
+            act = sopx_action_label(s)
+            if act == "HOLD":
+                hold.append(s)
+            elif act == "ROTATE":
+                rotate.append(s)
+            elif act == "TRADE":
+                trade.append(s)
+            else:
+                avoid.append(s)
 
-    for s in sorted_scores:
-        act = sopx_action_label(s)
-        if act == "HOLD":
-            hold.append(s)
-        elif act == "ROTATE":
-            rotate.append(s)
-        elif act == "TRADE":
-            trade.append(s)
+        hold = hold[:hold_cap]
+        rotate = rotate[:rotate_cap]
+        trade = trade[:trade_cap]
+        avoid = avoid[:avoid_cap]
+        show_flags = flags[:flag_cap] if flags else []
+
+        lines = []
+        lines.append(f"【Weekly SOPX｜投資人版】{ts} UTC")
+
+        lines.append("")
+        lines.append("🧱 長期核心（HOLD）")
+        if hold:
+            for s in hold:
+                lines.append(sopx_fmt_line(s))
         else:
-            avoid.append(s)
+            lines.append("• 無")
 
-    # Caps (to keep message readable)
-    hold = hold[:3]
-    rotate = rotate[:4]
-    trade = trade[:4]
-    avoid = avoid[:3]
-
-    lines = []
-    lines.append(f"【Weekly SOPX｜投資人版】{ts} UTC")
-
-    # HOLD
-    lines.append("")
-    lines.append("🧱 長期核心（HOLD）")
-    if hold:
-        for s in hold:
-            lines.append(sopx_fmt_line(s))
-    else:
-        lines.append("• 無")
-
-    # ROTATE
-    lines.append("")
-    lines.append("🏗 成長配置（ROTATE）")
-    if rotate:
-        for s in rotate:
-            lines.append(sopx_fmt_line(s))
-    else:
-        lines.append("• 無")
-
-    # TRADE
-    lines.append("")
-    lines.append("🎭 高波動交易（TRADE）")
-    if trade:
-        for s in trade:
-            lines.append(sopx_fmt_line(s))
-    else:
-        lines.append("• 無")
-
-    # AVOID
-    if avoid:
         lines.append("")
-        lines.append("⛔ 結構風險（AVOID）")
-        for s in avoid:
-            lines.append(sopx_fmt_line(s))
+        lines.append("🏗 成長配置（ROTATE）")
+        if rotate:
+            for s in rotate:
+                lines.append(sopx_fmt_line(s))
+        else:
+            lines.append("• 無")
 
-    # Drift flags
-    if flags:
         lines.append("")
-        lines.append("⚠️ 本週結構警訊")
-        for i, (_, name, kind, v) in enumerate(flags[:3], 1):
-            lines.append(f"{i}. {name}｜{kind} ({v:+.1f})")
+        lines.append("🎭 高波動交易（TRADE）")
+        if trade:
+            for s in trade:
+                lines.append(sopx_fmt_line(s))
+        else:
+            lines.append("• 無")
 
-    lines.append("")
-    lines.append("（SOPX＝制度×需求×捕獲－風險｜非投資建議）")
+        if avoid:
+            lines.append("")
+            lines.append("⛔ 結構風險（AVOID）")
+            for s in avoid:
+                lines.append(sopx_fmt_line(s))
 
-    msg = "\n".join(lines)
+        if show_flags:
+            lines.append("")
+            lines.append("⚠️ 本週結構警訊")
+            for i, (_, name, kind, v) in enumerate(show_flags, 1):
+                lines.append(f"{i}. {name}｜{kind} ({v:+.1f})")
 
-    # Hard safety: shrink if too long
+        lines.append("")
+        lines.append("（SOPX＝制度×需求×捕獲－風險｜非投資建議）")
+
+        return "\n".join(lines)
+
+    # Start caps (the “nice” version)
+    msg = build_with_caps(3, 4, 4, 3, 3)
+
+    # If too long, progressively shrink by reducing items (never by slicing the string)
+    shrink_steps = [
+        (3, 4, 3, 2, 2),
+        (2, 3, 3, 2, 2),
+        (2, 3, 2, 1, 2),
+        (2, 2, 2, 1, 1),
+        (1, 2, 2, 0, 1),
+        (1, 1, 2, 0, 0),
+        (1, 1, 1, 0, 0),
+    ]
+
     if len(msg) > max_chars:
-        msg = "\n".join(lines[:18])
-        msg = msg[:max_chars]
+        for caps in shrink_steps:
+            msg2 = build_with_caps(*caps)
+            if len(msg2) <= max_chars:
+                return msg2
+
+        # Ultra-compact fallback with guaranteed newlines
+        sorted_scores = sorted(scores, key=lambda x: x["total"], reverse=True)
+        ultra = []
+        ultra.append(f"【Weekly SOPX｜投資人版】{ts} UTC")
+        ultra.append("")
+
+        def pick_syms(act, n):
+            out = []
+            for s in sorted_scores:
+                if sopx_action_label(s) == act:
+                    out.append((s.get("symbol") or "").upper())
+                if len(out) >= n:
+                    break
+            return out
+
+        ultra.append("🧱 HOLD：" + (", ".join(pick_syms("HOLD", 2)) or "無"))
+        ultra.append("🏗 ROTATE：" + (", ".join(pick_syms("ROTATE", 2)) or "無"))
+        ultra.append("🎭 TRADE：" + (", ".join(pick_syms("TRADE", 3)) or "無"))
+        if flags:
+            _, name, kind, _ = flags[0]
+            ultra.append(f"⚠️ 警訊：{name}({kind})")
+        ultra.append("（非投資建議）")
+
+        msg3 = "\n".join(ultra)
+
+        # final safeguard (rare): trim only at the very end
+        if len(msg3) > max_chars:
+            msg3 = msg3[:max_chars]
+        return msg3
 
     return msg
 
@@ -207,11 +246,15 @@ def main():
     ats = os.getenv("PLURK_ACCESS_TOKEN_SECRET")
 
     if all([ck, cs, at, ats]):
+        max_chars = cfg.get("plurk", {}).get("max_chars", 320)
+        if max_chars > 600:
+            max_chars = 320  # keep safe for Plurk
+
         msg = sopx_build_investor_plurk_post(
             final_scores,
             date_utc,
             flags=flags,
-            max_chars=cfg["plurk"]["max_chars"],
+            max_chars=max_chars,
         )
         res = sopx_post_plurk(msg, ck, cs, at, ats)
         if res:
