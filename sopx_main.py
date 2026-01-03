@@ -26,8 +26,13 @@ def main():
     scores = []
     for row in markets:
         coin_id = row["id"]
-        detail = cg.coin_detail(coin_id)
-        s = sopx_score_coin(row, detail, cfg, overrides)
+try:
+    detail = cg.coin_detail(coin_id)
+except Exception as e:
+    # Don't fail the whole job on a single coin
+    print(f"[WARN] coin_detail failed for {coin_id}: {e}. Using empty detail.")
+    detail = {}
+s = sopx_score_coin(row, detail, cfg, overrides)
         scores.append(s)
 
     date_utc = sopx_utc_today_str()
