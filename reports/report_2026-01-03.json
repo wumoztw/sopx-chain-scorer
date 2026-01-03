@@ -4,8 +4,8 @@
     "symbol": "btc",
     "name": "Bitcoin",
     "rank": 1,
-    "market_cap": 1795501367451,
-    "vol_to_mcap": 0.027473624396081784,
+    "market_cap": 1794812779662,
+    "vol_to_mcap": 0.027548376093751322,
     "constitutional": 100,
     "constitutional_breakdown": {
       "sopx_curated_facts": {
@@ -71,7 +71,7 @@
         }
       }
     },
-    "demand": 25.57,
+    "demand": 25.55,
     "capture": 100,
     "risk": 0,
     "total": 67.67,
@@ -88,8 +88,8 @@
     "symbol": "eth",
     "name": "Ethereum",
     "rank": 2,
-    "market_cap": 374826709968,
-    "vol_to_mcap": 0.06332856478671574,
+    "market_cap": 374055160974,
+    "vol_to_mcap": 0.06738910197994065,
     "constitutional": 100,
     "constitutional_breakdown": {
       "sopx_curated_facts": {
@@ -162,10 +162,10 @@
         }
       }
     },
-    "demand": 42.51,
+    "demand": 44.24,
     "capture": 56.67,
     "risk": 0,
-    "total": 64.09,
+    "total": 64.6,
     "tags": [
       "Civilization-Layer",
       "Settlement",
@@ -179,8 +179,8 @@
     "symbol": "usdt",
     "name": "Tether",
     "rank": 3,
-    "market_cap": 187036936696,
-    "vol_to_mcap": 0.4430418609810998,
+    "market_cap": 187034628758,
+    "vol_to_mcap": 0.44451475956664993,
     "constitutional": 37.85,
     "constitutional_breakdown": {
       "sopx_curated_facts": {
@@ -239,10 +239,10 @@
         }
       }
     },
-    "demand": 57.51,
+    "demand": 57.5,
     "capture": 56.67,
     "risk": 0,
-    "total": 43.73,
+    "total": 43.72,
     "tags": []
   },
   {
@@ -250,8 +250,8 @@
     "symbol": "xrp",
     "name": "XRP",
     "rank": 4,
-    "market_cap": 122813100361,
-    "vol_to_mcap": 0.03560623891218565,
+    "market_cap": 122156743950,
+    "vol_to_mcap": 0.03695419532340932,
     "constitutional": 41.61,
     "constitutional_breakdown": {
       "sopx_curated_facts": {
@@ -303,10 +303,10 @@
         }
       }
     },
-    "demand": 30.88,
+    "demand": 31.32,
     "capture": 100,
     "risk": 0,
-    "total": 45.91,
+    "total": 46.04,
     "tags": []
   },
   {
@@ -314,8 +314,8 @@
     "symbol": "bnb",
     "name": "BNB",
     "rank": 5,
-    "market_cap": 120328946925,
-    "vol_to_mcap": 0.014459664673077167,
+    "market_cap": 120468910538,
+    "vol_to_mcap": 0.014680664879443188,
     "constitutional": 49.12,
     "constitutional_breakdown": {
       "sopx_curated_facts": {
@@ -373,10 +373,10 @@
         }
       }
     },
-    "demand": 20.17,
+    "demand": 20.21,
     "capture": 100,
     "risk": 0,
-    "total": 45.7,
+    "total": 45.71,
     "tags": []
   },
   {
@@ -384,8 +384,8 @@
     "symbol": "usdc",
     "name": "USDC",
     "rank": 6,
-    "market_cap": 75334361614,
-    "vol_to_mcap": 0.18220841853459183,
+    "market_cap": 75335799629,
+    "vol_to_mcap": 0.18238464349837266,
     "constitutional": 39.49,
     "constitutional_breakdown": {
       "sopx_curated_facts": {
@@ -461,7 +461,7 @@
         }
       }
     },
-    "demand": 57.5,
+    "demand": 57.49,
     "capture": 56.67,
     "risk": 0,
     "total": 44.38,
@@ -472,8 +472,8 @@
     "symbol": "sol",
     "name": "Solana",
     "rank": 7,
-    "market_cap": 74143569265,
-    "vol_to_mcap": 0.06721211324732412,
+    "market_cap": 73907002360,
+    "vol_to_mcap": 0.06761730682375358,
     "constitutional": 68.8,
     "constitutional_breakdown": {
       "sopx_curated_facts": {
@@ -547,10 +547,10 @@
         }
       }
     },
-    "demand": 44.46,
+    "demand": 44.58,
     "capture": 56.67,
     "risk": 0,
-    "total": 52.19,
+    "total": 52.23,
     "tags": [
       "Regional-Layer",
       "Consumer-HighFreq",
@@ -565,8 +565,8 @@
     "symbol": "steth",
     "name": "Lido Staked Ether",
     "rank": 8,
-    "market_cap": 27474280629,
-    "vol_to_mcap": 0.0008889063313352677,
+    "market_cap": 27402415254,
+    "vol_to_mcap": 0.0008774356485416101,
     "constitutional": 38.35,
     "constitutional_breakdown": {
       "sopx_curated_facts": {
@@ -614,10 +614,10 @@
         }
       }
     },
-    "demand": 14.44,
+    "demand": 14.31,
     "capture": 56.67,
     "risk": 20,
-    "total": 29.0,
+    "total": 28.97,
     "tags": []
   },
   {
@@ -625,8 +625,8 @@
     "symbol": "trx",
     "name": "TRON",
     "rank": 9,
-    "market_cap": 27323241303,
-    "vol_to_mcap": 0.02056998650955405,
+    "market_cap": 27350537284,
+    "vol_to_mcap": 0.020636762749453856,
     "constitutional": 57.35,
     "constitutional_breakdown": {
       "sopx_curated_facts": {
@@ -683,10 +683,10 @@
         }
       }
     },
-    "demand": 22.6,
+    "demand": 22.63,
     "capture": 56.67,
     "risk": 0,
-    "total": 41.05,
+    "total": 41.06,
     "tags": []
   },
   {
@@ -694,8 +694,8 @@
     "symbol": "doge",
     "name": "Dogecoin",
     "rank": 10,
-    "market_cap": 23989581036,
-    "vol_to_mcap": 0.1375622009007894,
+    "market_cap": 23848275419,
+    "vol_to_mcap": 0.13958702222752117,
     "constitutional": 57.02,
     "constitutional_breakdown": {
       "sopx_curated_facts": {
@@ -750,10 +750,10 @@
         }
       }
     },
-    "demand": 61.51,
+    "demand": 61.28,
     "capture": 56.67,
     "risk": 0,
-    "total": 52.59,
+    "total": 52.53,
     "tags": []
   },
   {
@@ -815,8 +815,8 @@
     "symbol": "ada",
     "name": "Cardano",
     "rank": 12,
-    "market_cap": 14394702466,
-    "vol_to_mcap": 0.07278336335708462,
+    "market_cap": 14338007048,
+    "vol_to_mcap": 0.0741756985778823,
     "constitutional": 37.85,
     "constitutional_breakdown": {
       "sopx_curated_facts": {
@@ -858,10 +858,10 @@
         }
       }
     },
-    "demand": 48.03,
+    "demand": 48.45,
     "capture": 0,
     "risk": 10,
-    "total": 28.55,
+    "total": 28.68,
     "tags": []
   },
   {
@@ -869,8 +869,8 @@
     "symbol": "bch",
     "name": "Bitcoin Cash",
     "rank": 13,
-    "market_cap": 12499919361,
-    "vol_to_mcap": 0.04032756111793608,
+    "market_cap": 12645937775,
+    "vol_to_mcap": 0.04401425856296371,
     "constitutional": 37.85,
     "constitutional_breakdown": {
       "sopx_curated_facts": {
@@ -912,10 +912,10 @@
         }
       }
     },
-    "demand": 31.66,
+    "demand": 33.52,
     "capture": 0,
     "risk": 10,
-    "total": 23.64,
+    "total": 24.19,
     "tags": []
   },
   {
@@ -923,8 +923,8 @@
     "symbol": "wbt",
     "name": "WhiteBIT Coin",
     "rank": 14,
-    "market_cap": 12244542449,
-    "vol_to_mcap": 0.00731207077544266,
+    "market_cap": 12226352001,
+    "vol_to_mcap": 0.007299165523183108,
     "constitutional": 37.85,
     "constitutional_breakdown": {
       "sopx_curated_facts": {
@@ -966,7 +966,7 @@
         }
       }
     },
-    "demand": 16.24,
+    "demand": 16.22,
     "capture": 0,
     "risk": 10,
     "total": 19.01,
@@ -977,8 +977,8 @@
     "symbol": "wsteth",
     "name": "Wrapped stETH",
     "rank": 15,
-    "market_cap": 12207806055,
-    "vol_to_mcap": 0.0021829967546941015,
+    "market_cap": 12183593949,
+    "vol_to_mcap": 0.002210282131259823,
     "constitutional": 37.85,
     "constitutional_breakdown": {
       "sopx_curated_facts": {
@@ -1020,10 +1020,10 @@
         }
       }
     },
-    "demand": 15.01,
+    "demand": 14.95,
     "capture": 0,
     "risk": 10,
-    "total": 18.64,
+    "total": 18.62,
     "tags": []
   },
   {
@@ -1031,8 +1031,8 @@
     "symbol": "wbtc",
     "name": "Wrapped Bitcoin",
     "rank": 16,
-    "market_cap": 11229706136,
-    "vol_to_mcap": 0.0209825963517092,
+    "market_cap": 11208626323,
+    "vol_to_mcap": 0.01797606621844021,
     "constitutional": 37.85,
     "constitutional_breakdown": {
       "sopx_curated_facts": {
@@ -1074,10 +1074,10 @@
         }
       }
     },
-    "demand": 22.71,
+    "demand": 21.32,
     "capture": 0,
     "risk": 10,
-    "total": 20.95,
+    "total": 20.54,
     "tags": []
   },
   {
@@ -1085,8 +1085,8 @@
     "symbol": "wbeth",
     "name": "Wrapped Beacon ETH",
     "rank": 17,
-    "market_cap": 11025511969,
-    "vol_to_mcap": 0.0002863973127849588,
+    "market_cap": 10993935212,
+    "vol_to_mcap": 0.0002876671491158138,
     "constitutional": 37.85,
     "constitutional_breakdown": {
       "sopx_curated_facts": {
@@ -1128,10 +1128,10 @@
         }
       }
     },
-    "demand": 14.13,
+    "demand": 14.03,
     "capture": 0,
     "risk": 30,
-    "total": 16.38,
+    "total": 16.35,
     "tags": []
   },
   {
@@ -1139,8 +1139,8 @@
     "symbol": "usds",
     "name": "USDS",
     "rank": 18,
-    "market_cap": 9613588662,
-    "vol_to_mcap": 0.00024009379651571366,
+    "market_cap": 9611755340,
+    "vol_to_mcap": 0.00023208185405185314,
     "constitutional": 37.85,
     "constitutional_breakdown": {
       "sopx_curated_facts": {
@@ -1182,7 +1182,7 @@
         }
       }
     },
-    "demand": 12.61,
+    "demand": 12.6,
     "capture": 0,
     "risk": 30,
     "total": 15.92,
@@ -1193,8 +1193,8 @@
     "symbol": "weeth",
     "name": "Wrapped eETH",
     "rank": 19,
-    "market_cap": 9598711015,
-    "vol_to_mcap": 0.0004602554439961958,
+    "market_cap": 9574667177,
+    "vol_to_mcap": 0.00030922390776278363,
     "constitutional": 37.85,
     "constitutional_breakdown": {
       "sopx_curated_facts": {
@@ -1236,10 +1236,10 @@
         }
       }
     },
-    "demand": 14.23,
+    "demand": 14.14,
     "capture": 0,
     "risk": 30,
-    "total": 16.41,
+    "total": 16.38,
     "tags": []
   },
   {
@@ -1247,8 +1247,8 @@
     "symbol": "link",
     "name": "Chainlink",
     "rank": 20,
-    "market_cap": 9320594633,
-    "vol_to_mcap": 0.06028822989581463,
+    "market_cap": 9276745300,
+    "vol_to_mcap": 0.06105673387410992,
     "constitutional": 37.85,
     "constitutional_breakdown": {
       "sopx_curated_facts": {
@@ -1290,10 +1290,10 @@
         }
       }
     },
-    "demand": 41.54,
+    "demand": 41.77,
     "capture": 0,
     "risk": 10,
-    "total": 26.6,
+    "total": 26.67,
     "tags": []
   },
   {
@@ -1301,8 +1301,8 @@
     "symbol": "bsc-usd",
     "name": "Binance Bridged USDT (BNB Smart Chain)",
     "rank": 21,
-    "market_cap": 8980049439,
-    "vol_to_mcap": 0.11566141512419796,
+    "market_cap": 8981887329,
+    "vol_to_mcap": 0.10065082013232633,
     "constitutional": 37.85,
     "constitutional_breakdown": {
       "sopx_curated_facts": {
@@ -1360,8 +1360,8 @@
     "symbol": "leo",
     "name": "LEO Token",
     "rank": 22,
-    "market_cap": 8512253666,
-    "vol_to_mcap": 0.00019957346980688532,
+    "market_cap": 8511513903,
+    "vol_to_mcap": 0.00019980252859606943,
     "constitutional": 37.85,
     "constitutional_breakdown": {
       "sopx_curated_facts": {
@@ -1403,10 +1403,10 @@
         }
       }
     },
-    "demand": 14.8,
+    "demand": 14.87,
     "capture": 0,
     "risk": 30,
-    "total": 16.58,
+    "total": 16.6,
     "tags": []
   },
   {
@@ -1414,8 +1414,8 @@
     "symbol": "zec",
     "name": "Zcash",
     "rank": 23,
-    "market_cap": 8487747022,
-    "vol_to_mcap": 0.08378101564017137,
+    "market_cap": 8346077035,
+    "vol_to_mcap": 0.07593094388446416,
     "constitutional": 37.85,
     "constitutional_breakdown": {
       "sopx_curated_facts": {
@@ -1457,10 +1457,10 @@
         }
       }
     },
-    "demand": 52.65,
+    "demand": 48.69,
     "capture": 0,
     "risk": 10,
-    "total": 29.93,
+    "total": 28.75,
     "tags": []
   },
   {
@@ -1468,8 +1468,8 @@
     "symbol": "weth",
     "name": "WETH",
     "rank": 24,
-    "market_cap": 8126151963,
-    "vol_to_mcap": 0.018537573095591887,
+    "market_cap": 8109962230,
+    "vol_to_mcap": 0.021027295709119473,
     "constitutional": 37.85,
     "constitutional_breakdown": {
       "sopx_curated_facts": {
@@ -1511,10 +1511,10 @@
         }
       }
     },
-    "demand": 22.35,
+    "demand": 23.4,
     "capture": 0,
     "risk": 10,
-    "total": 20.84,
+    "total": 21.16,
     "tags": []
   },
   {
@@ -1522,8 +1522,8 @@
     "symbol": "xmr",
     "name": "Monero",
     "rank": 25,
-    "market_cap": 7862470618,
-    "vol_to_mcap": 0.009565984491924496,
+    "market_cap": 7886837393,
+    "vol_to_mcap": 0.00961706058087611,
     "constitutional": 37.85,
     "constitutional_breakdown": {
       "sopx_curated_facts": {
@@ -1565,10 +1565,10 @@
         }
       }
     },
-    "demand": 15.57,
+    "demand": 15.7,
     "capture": 0,
     "risk": 10,
-    "total": 18.81,
+    "total": 18.85,
     "tags": []
   },
   {
@@ -1576,8 +1576,8 @@
     "symbol": "xlm",
     "name": "Stellar",
     "rank": 26,
-    "market_cap": 7195340905,
-    "vol_to_mcap": 0.0369277100985391,
+    "market_cap": 7143242253,
+    "vol_to_mcap": 0.037488756857928726,
     "constitutional": 37.85,
     "constitutional_breakdown": {
       "sopx_curated_facts": {
@@ -1619,10 +1619,10 @@
         }
       }
     },
-    "demand": 30.13,
+    "demand": 30.19,
     "capture": 0,
     "risk": 10,
-    "total": 23.18,
+    "total": 23.2,
     "tags": []
   },
   {
@@ -1630,8 +1630,8 @@
     "symbol": "cbbtc",
     "name": "Coinbase Wrapped BTC",
     "rank": 27,
-    "market_cap": 6851800296,
-    "vol_to_mcap": 0.05806676622380064,
+    "market_cap": 6849981999,
+    "vol_to_mcap": 0.06207466005926361,
     "constitutional": 37.85,
     "constitutional_breakdown": {
       "sopx_curated_facts": {
@@ -1673,19 +1673,127 @@
         }
       }
     },
-    "demand": 39.32,
+    "demand": 41.1,
     "capture": 0,
     "risk": 10,
-    "total": 25.94,
+    "total": 26.47,
+    "tags": []
+  },
+  {
+    "id": "litecoin",
+    "symbol": "ltc",
+    "name": "Litecoin",
+    "rank": 28,
+    "market_cap": 6305576440,
+    "vol_to_mcap": 0.06986413457863021,
+    "constitutional": 37.85,
+    "constitutional_breakdown": {
+      "sopx_curated_facts": {
+        "score": 45.0,
+        "weight": 0.4,
+        "reason": "No curated entry; fallback",
+        "meta": {}
+      },
+      "sopx_age_maturity": {
+        "score": 35.0,
+        "weight": 0.15,
+        "reason": "No genesis_date; assume young/unknown",
+        "meta": {}
+      },
+      "sopx_decentralization_proxy": {
+        "score": 14.0,
+        "weight": 0.15,
+        "reason": "Dev proxy (commits=0, contrib=0) + interest",
+        "meta": {
+          "commits": 0,
+          "contributors": 0,
+          "alexa_rank": null
+        }
+      },
+      "sopx_governance_admin_risk": {
+        "score": 55.0,
+        "weight": 0.1,
+        "reason": "Admin/neutrality risk proxy (heuristic)",
+        "meta": {
+          "categories": []
+        }
+      },
+      "sopx_l2_settlement_anchor": {
+        "score": 35.0,
+        "weight": 0.2,
+        "reason": "Not identified as settlement anchor",
+        "meta": {
+          "tags": []
+        }
+      }
+    },
+    "demand": 45.53,
+    "capture": 0,
+    "risk": 10,
+    "total": 27.8,
+    "tags": []
+  },
+  {
+    "id": "ethena-usde",
+    "symbol": "usde",
+    "name": "Ethena USDe",
+    "rank": 29,
+    "market_cap": 6300508128,
+    "vol_to_mcap": 0.01696284154051646,
+    "constitutional": 37.85,
+    "constitutional_breakdown": {
+      "sopx_curated_facts": {
+        "score": 45.0,
+        "weight": 0.4,
+        "reason": "No curated entry; fallback",
+        "meta": {}
+      },
+      "sopx_age_maturity": {
+        "score": 35.0,
+        "weight": 0.15,
+        "reason": "No genesis_date; assume young/unknown",
+        "meta": {}
+      },
+      "sopx_decentralization_proxy": {
+        "score": 14.0,
+        "weight": 0.15,
+        "reason": "Dev proxy (commits=0, contrib=0) + interest",
+        "meta": {
+          "commits": 0,
+          "contributors": 0,
+          "alexa_rank": null
+        }
+      },
+      "sopx_governance_admin_risk": {
+        "score": 55.0,
+        "weight": 0.1,
+        "reason": "Admin/neutrality risk proxy (heuristic)",
+        "meta": {
+          "categories": []
+        }
+      },
+      "sopx_l2_settlement_anchor": {
+        "score": 35.0,
+        "weight": 0.2,
+        "reason": "Not identified as settlement anchor",
+        "meta": {
+          "tags": []
+        }
+      }
+    },
+    "demand": 20.16,
+    "capture": 0,
+    "risk": 10,
+    "total": 20.19,
     "tags": []
   },
   {
     "id": "sui",
     "symbol": "sui",
     "name": "Sui",
-    "rank": 28,
-    "market_cap": 6334430959,
-    "vol_to_mcap": 0.16282735808092655,
+    "rank": 30,
+    "market_cap": 6249941476,
+    "vol_to_mcap": 0.171908571804361,
     "constitutional": 47.6,
     "constitutional_breakdown": {
       "sopx_curated_facts": {
@@ -1740,118 +1848,10 @@
         }
       }
     },
-    "demand": 62.13,
+    "demand": 61.82,
     "capture": 100,
     "risk": 0,
-    "total": 57.68,
-    "tags": []
-  },
-  {
-    "id": "litecoin",
-    "symbol": "ltc",
-    "name": "Litecoin",
-    "rank": 29,
-    "market_cap": 6309500355,
-    "vol_to_mcap": 0.06956517462625612,
-    "constitutional": 37.85,
-    "constitutional_breakdown": {
-      "sopx_curated_facts": {
-        "score": 45.0,
-        "weight": 0.4,
-        "reason": "No curated entry; fallback",
-        "meta": {}
-      },
-      "sopx_age_maturity": {
-        "score": 35.0,
-        "weight": 0.15,
-        "reason": "No genesis_date; assume young/unknown",
-        "meta": {}
-      },
-      "sopx_decentralization_proxy": {
-        "score": 14.0,
-        "weight": 0.15,
-        "reason": "Dev proxy (commits=0, contrib=0) + interest",
-        "meta": {
-          "commits": 0,
-          "contributors": 0,
-          "alexa_rank": null
-        }
-      },
-      "sopx_governance_admin_risk": {
-        "score": 55.0,
-        "weight": 0.1,
-        "reason": "Admin/neutrality risk proxy (heuristic)",
-        "meta": {
-          "categories": []
-        }
-      },
-      "sopx_l2_settlement_anchor": {
-        "score": 35.0,
-        "weight": 0.2,
-        "reason": "Not identified as settlement anchor",
-        "meta": {
-          "tags": []
-        }
-      }
-    },
-    "demand": 45.4,
-    "capture": 0,
-    "risk": 10,
-    "total": 27.76,
-    "tags": []
-  },
-  {
-    "id": "ethena-usde",
-    "symbol": "usde",
-    "name": "Ethena USDe",
-    "rank": 30,
-    "market_cap": 6298256041,
-    "vol_to_mcap": 0.016874580091400256,
-    "constitutional": 37.85,
-    "constitutional_breakdown": {
-      "sopx_curated_facts": {
-        "score": 45.0,
-        "weight": 0.4,
-        "reason": "No curated entry; fallback",
-        "meta": {}
-      },
-      "sopx_age_maturity": {
-        "score": 35.0,
-        "weight": 0.15,
-        "reason": "No genesis_date; assume young/unknown",
-        "meta": {}
-      },
-      "sopx_decentralization_proxy": {
-        "score": 14.0,
-        "weight": 0.15,
-        "reason": "Dev proxy (commits=0, contrib=0) + interest",
-        "meta": {
-          "commits": 0,
-          "contributors": 0,
-          "alexa_rank": null
-        }
-      },
-      "sopx_governance_admin_risk": {
-        "score": 55.0,
-        "weight": 0.1,
-        "reason": "Admin/neutrality risk proxy (heuristic)",
-        "meta": {
-          "categories": []
-        }
-      },
-      "sopx_l2_settlement_anchor": {
-        "score": 35.0,
-        "weight": 0.2,
-        "reason": "Not identified as settlement anchor",
-        "meta": {
-          "tags": []
-        }
-      }
-    },
-    "demand": 20.12,
-    "capture": 0,
-    "risk": 10,
-    "total": 20.18,
+    "total": 57.58,
     "tags": []
   },
   {
@@ -1859,8 +1859,8 @@
     "symbol": "avax",
     "name": "Avalanche",
     "rank": 31,
-    "market_cap": 6022088829,
-    "vol_to_mcap": 0.08201387708225052,
+    "market_cap": 5970277320,
+    "vol_to_mcap": 0.08315522133903154,
     "constitutional": 37.85,
     "constitutional_breakdown": {
       "sopx_curated_facts": {
@@ -1902,10 +1902,10 @@
         }
       }
     },
-    "demand": 52.51,
+    "demand": 52.83,
     "capture": 0,
     "risk": 10,
-    "total": 29.89,
+    "total": 29.99,
     "tags": []
   },
   {
@@ -1913,8 +1913,8 @@
     "symbol": "hype",
     "name": "Hyperliquid",
     "rank": 32,
-    "market_cap": 5981666376,
-    "vol_to_mcap": 0.0370954354609763,
+    "market_cap": 5923812483,
+    "vol_to_mcap": 0.037624277378734174,
     "constitutional": 37.85,
     "constitutional_breakdown": {
       "sopx_curated_facts": {
@@ -1956,10 +1956,10 @@
         }
       }
     },
-    "demand": 28.45,
+    "demand": 28.34,
     "capture": 0,
     "risk": 10,
-    "total": 22.67,
+    "total": 22.64,
     "tags": []
   },
   {
@@ -1967,8 +1967,8 @@
     "symbol": "cc",
     "name": "Canton",
     "rank": 33,
-    "market_cap": 5681335402,
-    "vol_to_mcap": 0.006041612855301022,
+    "market_cap": 5695741385,
+    "vol_to_mcap": 0.005836350837056132,
     "constitutional": 37.85,
     "constitutional_breakdown": {
       "sopx_curated_facts": {
@@ -2010,10 +2010,10 @@
         }
       }
     },
-    "demand": 27.72,
+    "demand": 27.63,
     "capture": 0,
     "risk": 10,
-    "total": 22.46,
+    "total": 22.43,
     "tags": []
   },
   {
@@ -2021,8 +2021,8 @@
     "symbol": "hbar",
     "name": "Hedera",
     "rank": 34,
-    "market_cap": 5150548497,
-    "vol_to_mcap": 0.04353863692975921,
+    "market_cap": 5103467684,
+    "vol_to_mcap": 0.044554654419165715,
     "constitutional": 37.85,
     "constitutional_breakdown": {
       "sopx_curated_facts": {
@@ -2064,10 +2064,10 @@
         }
       }
     },
-    "demand": 33.91,
+    "demand": 34.08,
     "capture": 0,
     "risk": 10,
-    "total": 24.31,
+    "total": 24.36,
     "tags": []
   },
   {
@@ -2075,8 +2075,8 @@
     "symbol": "shib",
     "name": "Shiba Inu",
     "rank": 35,
-    "market_cap": 4772606295,
-    "vol_to_mcap": 0.05091350909346273,
+    "market_cap": 4716328469,
+    "vol_to_mcap": 0.0522322246254049,
     "constitutional": 37.85,
     "constitutional_breakdown": {
       "sopx_curated_facts": {
@@ -2118,10 +2118,10 @@
         }
       }
     },
-    "demand": 38.57,
+    "demand": 38.86,
     "capture": 0,
     "risk": 10,
-    "total": 25.71,
+    "total": 25.8,
     "tags": []
   },
   {
@@ -2129,8 +2129,8 @@
     "symbol": "susds",
     "name": "sUSDS",
     "rank": 36,
-    "market_cap": 4491409805,
-    "vol_to_mcap": 0.004184736378113687,
+    "market_cap": 4482195984,
+    "vol_to_mcap": 0.004178689434120916,
     "constitutional": 37.85,
     "constitutional_breakdown": {
       "sopx_curated_facts": {
@@ -2172,10 +2172,10 @@
         }
       }
     },
-    "demand": 14.46,
+    "demand": 14.42,
     "capture": 0,
     "risk": 10,
-    "total": 18.48,
+    "total": 18.47,
     "tags": []
   },
   {
@@ -2183,8 +2183,8 @@
     "symbol": "usdt0",
     "name": "USDT0",
     "rank": 37,
-    "market_cap": 4453873654,
-    "vol_to_mcap": 0.06378976348932595,
+    "market_cap": 4454201101,
+    "vol_to_mcap": 0.065340784666112,
     "constitutional": 37.85,
     "constitutional_breakdown": {
       "sopx_curated_facts": {
@@ -2226,10 +2226,10 @@
         }
       }
     },
-    "demand": 41.21,
+    "demand": 41.9,
     "capture": 0,
     "risk": 10,
-    "total": 26.5,
+    "total": 26.71,
     "tags": []
   },
   {
@@ -2237,8 +2237,8 @@
     "symbol": "ton",
     "name": "Toncoin",
     "rank": 38,
-    "market_cap": 4381558233,
-    "vol_to_mcap": 0.05146743920954297,
+    "market_cap": 4358569970,
+    "vol_to_mcap": 0.04889742334456547,
     "constitutional": 37.85,
     "constitutional_breakdown": {
       "sopx_curated_facts": {
@@ -2280,73 +2280,19 @@
         }
       }
     },
-    "demand": 39.94,
+    "demand": 38.6,
     "capture": 0,
     "risk": 10,
-    "total": 26.12,
-    "tags": []
-  },
-  {
-    "id": "world-liberty-financial",
-    "symbol": "wlfi",
-    "name": "World Liberty Financial",
-    "rank": 39,
-    "market_cap": 4297363803,
-    "vol_to_mcap": 0.017366660916141197,
-    "constitutional": 37.85,
-    "constitutional_breakdown": {
-      "sopx_curated_facts": {
-        "score": 45.0,
-        "weight": 0.4,
-        "reason": "No curated entry; fallback",
-        "meta": {}
-      },
-      "sopx_age_maturity": {
-        "score": 35.0,
-        "weight": 0.15,
-        "reason": "No genesis_date; assume young/unknown",
-        "meta": {}
-      },
-      "sopx_decentralization_proxy": {
-        "score": 14.0,
-        "weight": 0.15,
-        "reason": "Dev proxy (commits=0, contrib=0) + interest",
-        "meta": {
-          "commits": 0,
-          "contributors": 0,
-          "alexa_rank": null
-        }
-      },
-      "sopx_governance_admin_risk": {
-        "score": 55.0,
-        "weight": 0.1,
-        "reason": "Admin/neutrality risk proxy (heuristic)",
-        "meta": {
-          "categories": []
-        }
-      },
-      "sopx_l2_settlement_anchor": {
-        "score": 35.0,
-        "weight": 0.2,
-        "reason": "Not identified as settlement anchor",
-        "meta": {
-          "tags": []
-        }
-      }
-    },
-    "demand": 23.15,
-    "capture": 0,
-    "risk": 10,
-    "total": 21.08,
+    "total": 25.72,
     "tags": []
   },
   {
     "id": "dai",
     "symbol": "dai",
     "name": "Dai",
-    "rank": 40,
-    "market_cap": 4232213609,
-    "vol_to_mcap": 0.013752262143912028,
+    "rank": 39,
+    "market_cap": 4231898327,
+    "vol_to_mcap": 0.012231108594873386,
     "constitutional": 37.85,
     "constitutional_breakdown": {
       "sopx_curated_facts": {
@@ -2388,10 +2334,64 @@
         }
       }
     },
-    "demand": 18.69,
+    "demand": 18.0,
     "capture": 0,
     "risk": 10,
-    "total": 19.75,
+    "total": 19.54,
+    "tags": []
+  },
+  {
+    "id": "world-liberty-financial",
+    "symbol": "wlfi",
+    "name": "World Liberty Financial",
+    "rank": 40,
+    "market_cap": 4183032701,
+    "vol_to_mcap": 0.027559994922449448,
+    "constitutional": 37.85,
+    "constitutional_breakdown": {
+      "sopx_curated_facts": {
+        "score": 45.0,
+        "weight": 0.4,
+        "reason": "No curated entry; fallback",
+        "meta": {}
+      },
+      "sopx_age_maturity": {
+        "score": 35.0,
+        "weight": 0.15,
+        "reason": "No genesis_date; assume young/unknown",
+        "meta": {}
+      },
+      "sopx_decentralization_proxy": {
+        "score": 14.0,
+        "weight": 0.15,
+        "reason": "Dev proxy (commits=0, contrib=0) + interest",
+        "meta": {
+          "commits": 0,
+          "contributors": 0,
+          "alexa_rank": null
+        }
+      },
+      "sopx_governance_admin_risk": {
+        "score": 55.0,
+        "weight": 0.1,
+        "reason": "Admin/neutrality risk proxy (heuristic)",
+        "meta": {
+          "categories": []
+        }
+      },
+      "sopx_l2_settlement_anchor": {
+        "score": 35.0,
+        "weight": 0.2,
+        "reason": "Not identified as settlement anchor",
+        "meta": {
+          "tags": []
+        }
+      }
+    },
+    "demand": 26.86,
+    "capture": 0,
+    "risk": 10,
+    "total": 22.2,
     "tags": []
   },
   {
@@ -2399,8 +2399,8 @@
     "symbol": "cro",
     "name": "Cronos",
     "rank": 41,
-    "market_cap": 3873207885,
-    "vol_to_mcap": 0.006958186547221697,
+    "market_cap": 3850315242,
+    "vol_to_mcap": 0.007045556349279309,
     "constitutional": 37.85,
     "constitutional_breakdown": {
       "sopx_curated_facts": {
@@ -2453,8 +2453,8 @@
     "symbol": "uni",
     "name": "Uniswap",
     "rank": 42,
-    "market_cap": 3772200683,
-    "vol_to_mcap": 0.08145119409597434,
+    "market_cap": 3670810099,
+    "vol_to_mcap": 0.0909901980739865,
     "constitutional": 37.85,
     "constitutional_breakdown": {
       "sopx_curated_facts": {
@@ -2496,10 +2496,10 @@
         }
       }
     },
-    "demand": 49.23,
+    "demand": 52.75,
     "capture": 0,
     "risk": 10,
-    "total": 28.91,
+    "total": 29.97,
     "tags": []
   },
   {
@@ -2507,8 +2507,8 @@
     "symbol": "pyusd",
     "name": "PayPal USD",
     "rank": 43,
-    "market_cap": 3625801515,
-    "vol_to_mcap": 0.04498945056014739,
+    "market_cap": 3624940372,
+    "vol_to_mcap": 0.04391209169384925,
     "constitutional": 37.85,
     "constitutional_breakdown": {
       "sopx_curated_facts": {
@@ -2550,10 +2550,10 @@
         }
       }
     },
-    "demand": 32.79,
+    "demand": 32.29,
     "capture": 0,
     "risk": 10,
-    "total": 23.98,
+    "total": 23.83,
     "tags": []
   },
   {
@@ -2561,8 +2561,8 @@
     "symbol": "dot",
     "name": "Polkadot",
     "rank": 44,
-    "market_cap": 3541689092,
-    "vol_to_mcap": 0.0847016466458372,
+    "market_cap": 3535300453,
+    "vol_to_mcap": 0.08552711007728316,
     "constitutional": 37.85,
     "constitutional_breakdown": {
       "sopx_curated_facts": {
@@ -2604,10 +2604,10 @@
         }
       }
     },
-    "demand": 56.26,
+    "demand": 56.48,
     "capture": 0,
     "risk": 10,
-    "total": 31.02,
+    "total": 31.08,
     "tags": []
   },
   {
@@ -2615,8 +2615,8 @@
     "symbol": "susde",
     "name": "Ethena Staked USDe",
     "rank": 45,
-    "market_cap": 3481486042,
-    "vol_to_mcap": 0.012915657123866763,
+    "market_cap": 3481768492,
+    "vol_to_mcap": 0.012726802802028458,
     "constitutional": 37.85,
     "constitutional_breakdown": {
       "sopx_curated_facts": {
@@ -2658,10 +2658,10 @@
         }
       }
     },
-    "demand": 18.36,
+    "demand": 18.27,
     "capture": 0,
     "risk": 10,
-    "total": 19.65,
+    "total": 19.62,
     "tags": []
   },
   {
@@ -2669,8 +2669,8 @@
     "symbol": "usd1",
     "name": "USD1",
     "rank": 46,
-    "market_cap": 3330550561,
-    "vol_to_mcap": 0.35362999162708103,
+    "market_cap": 3329584697,
+    "vol_to_mcap": 0.35381437782959635,
     "constitutional": 37.85,
     "constitutional_breakdown": {
       "sopx_curated_facts": {
@@ -2736,8 +2736,8 @@
     "symbol": "mnt",
     "name": "Mantle",
     "rank": 47,
-    "market_cap": 3284380623,
-    "vol_to_mcap": 0.019627811267841595,
+    "market_cap": 3274961304,
+    "vol_to_mcap": 0.020261838794538623,
     "constitutional": 37.85,
     "constitutional_breakdown": {
       "sopx_curated_facts": {
@@ -2779,10 +2779,10 @@
         }
       }
     },
-    "demand": 20.36,
+    "demand": 20.6,
     "capture": 0,
     "risk": 10,
-    "total": 20.25,
+    "total": 20.32,
     "tags": []
   },
   {
@@ -2790,8 +2790,8 @@
     "symbol": "rain",
     "name": "Rain",
     "rank": 48,
-    "market_cap": 2723146692,
-    "vol_to_mcap": 0.021941637288778126,
+    "market_cap": 2717398892,
+    "vol_to_mcap": 0.024341292768879218,
     "constitutional": 37.85,
     "constitutional_breakdown": {
       "sopx_curated_facts": {
@@ -2833,10 +2833,10 @@
         }
       }
     },
-    "demand": 23.46,
+    "demand": 24.48,
     "capture": 0,
     "risk": 10,
-    "total": 21.18,
+    "total": 21.48,
     "tags": []
   },
   {
@@ -2844,8 +2844,8 @@
     "symbol": "m",
     "name": "MemeCore",
     "rank": 49,
-    "market_cap": 2643481281,
-    "vol_to_mcap": 0.0057680843475585025,
+    "market_cap": 2654408894,
+    "vol_to_mcap": 0.005746650425441198,
     "constitutional": 37.85,
     "constitutional_breakdown": {
       "sopx_curated_facts": {
@@ -2887,10 +2887,10 @@
         }
       }
     },
-    "demand": 17.27,
+    "demand": 17.14,
     "capture": 0,
     "risk": 10,
-    "total": 19.32,
+    "total": 19.28,
     "tags": []
   },
   {
@@ -2898,8 +2898,8 @@
     "symbol": "pepe",
     "name": "Pepe",
     "rank": 50,
-    "market_cap": 2555440140,
-    "vol_to_mcap": 0.6753609380182938,
+    "market_cap": 2490421158,
+    "vol_to_mcap": 0.6952413937851711,
     "constitutional": 37.85,
     "constitutional_breakdown": {
       "sopx_curated_facts": {
@@ -2952,19 +2952,73 @@
         }
       }
     },
-    "demand": 69.45,
+    "demand": 68.97,
     "capture": 100,
     "risk": 0,
-    "total": 55.98,
+    "total": 55.83,
+    "tags": []
+  },
+  {
+    "id": "bitget-token",
+    "symbol": "bgb",
+    "name": "Bitget Token",
+    "rank": 51,
+    "market_cap": 2488612194,
+    "vol_to_mcap": 0.016838333469967718,
+    "constitutional": 37.85,
+    "constitutional_breakdown": {
+      "sopx_curated_facts": {
+        "score": 45.0,
+        "weight": 0.4,
+        "reason": "No curated entry; fallback",
+        "meta": {}
+      },
+      "sopx_age_maturity": {
+        "score": 35.0,
+        "weight": 0.15,
+        "reason": "No genesis_date; assume young/unknown",
+        "meta": {}
+      },
+      "sopx_decentralization_proxy": {
+        "score": 14.0,
+        "weight": 0.15,
+        "reason": "Dev proxy (commits=0, contrib=0) + interest",
+        "meta": {
+          "commits": 0,
+          "contributors": 0,
+          "alexa_rank": null
+        }
+      },
+      "sopx_governance_admin_risk": {
+        "score": 55.0,
+        "weight": 0.1,
+        "reason": "Admin/neutrality risk proxy (heuristic)",
+        "meta": {
+          "categories": []
+        }
+      },
+      "sopx_l2_settlement_anchor": {
+        "score": 35.0,
+        "weight": 0.2,
+        "reason": "Not identified as settlement anchor",
+        "meta": {
+          "tags": []
+        }
+      }
+    },
+    "demand": 20.87,
+    "capture": 0,
+    "risk": 10,
+    "total": 20.4,
     "tags": []
   },
   {
     "id": "aave",
     "symbol": "aave",
     "name": "Aave",
-    "rank": 51,
-    "market_cap": 2525757735,
-    "vol_to_mcap": 0.12953597507244693,
+    "rank": 52,
+    "market_cap": 2487550114,
+    "vol_to_mcap": 0.13339766267719902,
     "constitutional": 37.97,
     "constitutional_breakdown": {
       "sopx_curated_facts": {
@@ -3032,64 +3086,10 @@
         }
       }
     },
-    "demand": 59.33,
+    "demand": 58.75,
     "capture": 100,
     "risk": 0,
-    "total": 52.99,
-    "tags": []
-  },
-  {
-    "id": "bitget-token",
-    "symbol": "bgb",
-    "name": "Bitget Token",
-    "rank": 52,
-    "market_cap": 2486616536,
-    "vol_to_mcap": 0.016754308674797616,
-    "constitutional": 37.85,
-    "constitutional_breakdown": {
-      "sopx_curated_facts": {
-        "score": 45.0,
-        "weight": 0.4,
-        "reason": "No curated entry; fallback",
-        "meta": {}
-      },
-      "sopx_age_maturity": {
-        "score": 35.0,
-        "weight": 0.15,
-        "reason": "No genesis_date; assume young/unknown",
-        "meta": {}
-      },
-      "sopx_decentralization_proxy": {
-        "score": 14.0,
-        "weight": 0.15,
-        "reason": "Dev proxy (commits=0, contrib=0) + interest",
-        "meta": {
-          "commits": 0,
-          "contributors": 0,
-          "alexa_rank": null
-        }
-      },
-      "sopx_governance_admin_risk": {
-        "score": 55.0,
-        "weight": 0.1,
-        "reason": "Admin/neutrality risk proxy (heuristic)",
-        "meta": {
-          "categories": []
-        }
-      },
-      "sopx_l2_settlement_anchor": {
-        "score": 35.0,
-        "weight": 0.2,
-        "reason": "Not identified as settlement anchor",
-        "meta": {
-          "tags": []
-        }
-      }
-    },
-    "demand": 20.8,
-    "capture": 0,
-    "risk": 10,
-    "total": 20.38,
+    "total": 52.81,
     "tags": []
   },
   {
@@ -3097,8 +3097,8 @@
     "symbol": "tao",
     "name": "Bittensor",
     "rank": 53,
-    "market_cap": 2430711182,
-    "vol_to_mcap": 0.05955861768854116,
+    "market_cap": 2407100878,
+    "vol_to_mcap": 0.06027175733513234,
     "constitutional": 37.85,
     "constitutional_breakdown": {
       "sopx_curated_facts": {
@@ -3140,10 +3140,10 @@
         }
       }
     },
-    "demand": 43.37,
+    "demand": 43.56,
     "capture": 0,
     "risk": 10,
-    "total": 27.15,
+    "total": 27.21,
     "tags": []
   },
   {
@@ -3151,8 +3151,8 @@
     "symbol": "okb",
     "name": "OKB",
     "rank": 54,
-    "market_cap": 2367967440,
-    "vol_to_mcap": 0.01158786161350259,
+    "market_cap": 2352687850,
+    "vol_to_mcap": 0.011632881939692934,
     "constitutional": 37.85,
     "constitutional_breakdown": {
       "sopx_curated_facts": {
@@ -3194,10 +3194,10 @@
         }
       }
     },
-    "demand": 19.01,
+    "demand": 18.82,
     "capture": 0,
     "risk": 10,
-    "total": 19.84,
+    "total": 19.79,
     "tags": []
   },
   {
@@ -3205,8 +3205,8 @@
     "symbol": "xaut",
     "name": "Tether Gold",
     "rank": 55,
-    "market_cap": 2259591211,
-    "vol_to_mcap": 0.1467560563103996,
+    "market_cap": 2254029605,
+    "vol_to_mcap": 0.1549051211330474,
     "constitutional": 37.85,
     "constitutional_breakdown": {
       "sopx_curated_facts": {
@@ -3248,10 +3248,10 @@
         }
       }
     },
-    "demand": 56.4,
+    "demand": 56.33,
     "capture": 0,
     "risk": 10,
-    "total": 31.06,
+    "total": 31.04,
     "tags": []
   },
   {
@@ -3259,8 +3259,8 @@
     "symbol": "near",
     "name": "NEAR Protocol",
     "rank": 56,
-    "market_cap": 2184832156,
-    "vol_to_mcap": 0.08499867849802921,
+    "market_cap": 2170202399,
+    "vol_to_mcap": 0.08636995705394573,
     "constitutional": 37.85,
     "constitutional_breakdown": {
       "sopx_curated_facts": {
@@ -3302,10 +3302,10 @@
         }
       }
     },
-    "demand": 53.61,
+    "demand": 53.94,
     "capture": 0,
     "risk": 10,
-    "total": 30.22,
+    "total": 30.32,
     "tags": []
   },
   {
@@ -3313,8 +3313,8 @@
     "symbol": "usdf",
     "name": "Falcon USD",
     "rank": 57,
-    "market_cap": 2163767955,
-    "vol_to_mcap": 0.0008325560029841555,
+    "market_cap": 2164713507,
+    "vol_to_mcap": 0.0009093064711033838,
     "constitutional": 37.85,
     "constitutional_breakdown": {
       "sopx_curated_facts": {
@@ -3356,7 +3356,7 @@
         }
       }
     },
-    "demand": 12.89,
+    "demand": 12.91,
     "capture": 0,
     "risk": 30,
     "total": 16.01,
@@ -3367,8 +3367,8 @@
     "symbol": "etc",
     "name": "Ethereum Classic",
     "rank": 58,
-    "market_cap": 1944923533,
-    "vol_to_mcap": 0.03638812930132817,
+    "market_cap": 1932346359,
+    "vol_to_mcap": 0.0369757521301594,
     "constitutional": 37.85,
     "constitutional_breakdown": {
       "sopx_curated_facts": {
@@ -3410,10 +3410,10 @@
         }
       }
     },
-    "demand": 30.69,
+    "demand": 30.77,
     "capture": 0,
     "risk": 10,
-    "total": 23.35,
+    "total": 23.37,
     "tags": []
   },
   {
@@ -3421,8 +3421,8 @@
     "symbol": "jitosol",
     "name": "Jito Staked SOL",
     "rank": 59,
-    "market_cap": 1883887759,
-    "vol_to_mcap": 0.007179005190404234,
+    "market_cap": 1875955239,
+    "vol_to_mcap": 0.00730477237149047,
     "constitutional": 37.85,
     "constitutional_breakdown": {
       "sopx_curated_facts": {
@@ -3464,10 +3464,10 @@
         }
       }
     },
-    "demand": 17.5,
+    "demand": 17.45,
     "capture": 0,
     "risk": 10,
-    "total": 19.39,
+    "total": 19.38,
     "tags": []
   },
   {
@@ -3475,8 +3475,8 @@
     "symbol": "weth",
     "name": "Binance-Peg WETH",
     "rank": 60,
-    "market_cap": 1878106472,
-    "vol_to_mcap": 0.02787032459573996,
+    "market_cap": 1875929622,
+    "vol_to_mcap": 0.028067114236335674,
     "constitutional": 37.85,
     "constitutional_breakdown": {
       "sopx_curated_facts": {
@@ -3518,10 +3518,10 @@
         }
       }
     },
-    "demand": 26.55,
+    "demand": 26.54,
     "capture": 0,
     "risk": 10,
-    "total": 22.11,
+    "total": 22.1,
     "tags": []
   },
   {
@@ -3529,8 +3529,8 @@
     "symbol": "ena",
     "name": "Ethena",
     "rank": 61,
-    "market_cap": 1836975411,
-    "vol_to_mcap": 0.14171680439548354,
+    "market_cap": 1819333387,
+    "vol_to_mcap": 0.1426050908832137,
     "constitutional": 37.85,
     "constitutional_breakdown": {
       "sopx_curated_facts": {
@@ -3600,10 +3600,10 @@
         }
       }
     },
-    "demand": 60.67,
+    "demand": 60.39,
     "capture": 100,
     "risk": 0,
-    "total": 53.34,
+    "total": 53.26,
     "tags": []
   },
   {
@@ -3611,8 +3611,8 @@
     "symbol": "aster",
     "name": "Aster",
     "rank": 62,
-    "market_cap": 1773546137,
-    "vol_to_mcap": 0.11910935700682028,
+    "market_cap": 1757833288,
+    "vol_to_mcap": 0.12185251267126988,
     "constitutional": 38.13,
     "constitutional_breakdown": {
       "sopx_curated_facts": {
@@ -3661,10 +3661,10 @@
         }
       }
     },
-    "demand": 58.53,
+    "demand": 58.06,
     "capture": 100,
     "risk": 0,
-    "total": 52.81,
+    "total": 52.67,
     "tags": []
   },
   {
@@ -3672,8 +3672,8 @@
     "symbol": "pi",
     "name": "Pi Network",
     "rank": 63,
-    "market_cap": 1755606141,
-    "vol_to_mcap": 0.009466770257783006,
+    "market_cap": 1751767836,
+    "vol_to_mcap": 0.00963340669533791,
     "constitutional": 37.85,
     "constitutional_breakdown": {
       "sopx_curated_facts": {
@@ -3715,10 +3715,10 @@
         }
       }
     },
-    "demand": 17.35,
+    "demand": 17.34,
     "capture": 0,
     "risk": 10,
-    "total": 19.35,
+    "total": 19.34,
     "tags": []
   },
   {
@@ -3780,8 +3780,8 @@
     "symbol": "icp",
     "name": "Internet Computer",
     "rank": 65,
-    "market_cap": 1714249104,
-    "vol_to_mcap": 0.05485538290822405,
+    "market_cap": 1699589372,
+    "vol_to_mcap": 0.05564902767584499,
     "constitutional": 37.85,
     "constitutional_breakdown": {
       "sopx_curated_facts": {
@@ -3823,10 +3823,10 @@
         }
       }
     },
-    "demand": 38.07,
+    "demand": 38.2,
     "capture": 0,
     "risk": 10,
-    "total": 25.56,
+    "total": 25.6,
     "tags": []
   },
   {
@@ -3834,8 +3834,8 @@
     "symbol": "hash",
     "name": "Provenance Blockchain",
     "rank": 66,
-    "market_cap": 1651421329,
-    "vol_to_mcap": 1.672922561605113e-05,
+    "market_cap": 1674749082,
+    "vol_to_mcap": 1.6490231460237336e-05,
     "constitutional": 37.85,
     "constitutional_breakdown": {
       "sopx_curated_facts": {
@@ -3877,19 +3877,19 @@
         }
       }
     },
-    "demand": 13.08,
+    "demand": 13.44,
     "capture": 0,
     "risk": 30,
-    "total": 16.06,
+    "total": 16.17,
     "tags": []
   },
   {
     "id": "pax-gold",
     "symbol": "paxg",
     "name": "PAX Gold",
-    "rank": 68,
-    "market_cap": 1617573683,
-    "vol_to_mcap": 0.12095927502796792,
+    "rank": 67,
+    "market_cap": 1618855416,
+    "vol_to_mcap": 0.12839166484278544,
     "constitutional": 37.85,
     "constitutional_breakdown": {
       "sopx_curated_facts": {
@@ -3931,19 +3931,19 @@
         }
       }
     },
-    "demand": 56.32,
+    "demand": 56.31,
     "capture": 0,
     "risk": 10,
-    "total": 31.04,
+    "total": 31.03,
     "tags": []
   },
   {
     "id": "wrapped-solana",
     "symbol": "sol",
     "name": "Wrapped SOL",
-    "rank": 67,
-    "market_cap": 1613527554,
-    "vol_to_mcap": 0.3708516656666899,
+    "rank": 68,
+    "market_cap": 1609010842,
+    "vol_to_mcap": 0.3676722676800956,
     "constitutional": 37.85,
     "constitutional_breakdown": {
       "sopx_curated_facts": {
@@ -3989,19 +3989,127 @@
         }
       }
     },
-    "demand": 59.2,
+    "demand": 59.17,
     "capture": 56.67,
     "risk": 0,
-    "total": 44.23,
+    "total": 44.22,
+    "tags": []
+  },
+  {
+    "id": "htx-dao",
+    "symbol": "htx",
+    "name": "HTX DAO",
+    "rank": 69,
+    "market_cap": 1544508424,
+    "vol_to_mcap": 0.006093257151441733,
+    "constitutional": 37.85,
+    "constitutional_breakdown": {
+      "sopx_curated_facts": {
+        "score": 45.0,
+        "weight": 0.4,
+        "reason": "No curated entry; fallback",
+        "meta": {}
+      },
+      "sopx_age_maturity": {
+        "score": 35.0,
+        "weight": 0.15,
+        "reason": "No genesis_date; assume young/unknown",
+        "meta": {}
+      },
+      "sopx_decentralization_proxy": {
+        "score": 14.0,
+        "weight": 0.15,
+        "reason": "Dev proxy (commits=0, contrib=0) + interest",
+        "meta": {
+          "commits": 0,
+          "contributors": 0,
+          "alexa_rank": null
+        }
+      },
+      "sopx_governance_admin_risk": {
+        "score": 55.0,
+        "weight": 0.1,
+        "reason": "Admin/neutrality risk proxy (heuristic)",
+        "meta": {
+          "categories": []
+        }
+      },
+      "sopx_l2_settlement_anchor": {
+        "score": 35.0,
+        "weight": 0.2,
+        "reason": "Not identified as settlement anchor",
+        "meta": {
+          "tags": []
+        }
+      }
+    },
+    "demand": 15.47,
+    "capture": 0,
+    "risk": 10,
+    "total": 18.78,
+    "tags": []
+  },
+  {
+    "id": "hashnote-usyc",
+    "symbol": "usyc",
+    "name": "Circle USYC",
+    "rank": 70,
+    "market_cap": 1536306794,
+    "vol_to_mcap": 3.6153586130661867e-05,
+    "constitutional": 37.85,
+    "constitutional_breakdown": {
+      "sopx_curated_facts": {
+        "score": 45.0,
+        "weight": 0.4,
+        "reason": "No curated entry; fallback",
+        "meta": {}
+      },
+      "sopx_age_maturity": {
+        "score": 35.0,
+        "weight": 0.15,
+        "reason": "No genesis_date; assume young/unknown",
+        "meta": {}
+      },
+      "sopx_decentralization_proxy": {
+        "score": 14.0,
+        "weight": 0.15,
+        "reason": "Dev proxy (commits=0, contrib=0) + interest",
+        "meta": {
+          "commits": 0,
+          "contributors": 0,
+          "alexa_rank": null
+        }
+      },
+      "sopx_governance_admin_risk": {
+        "score": 55.0,
+        "weight": 0.1,
+        "reason": "Admin/neutrality risk proxy (heuristic)",
+        "meta": {
+          "categories": []
+        }
+      },
+      "sopx_l2_settlement_anchor": {
+        "score": 35.0,
+        "weight": 0.2,
+        "reason": "Not identified as settlement anchor",
+        "meta": {
+          "tags": []
+        }
+      }
+    },
+    "demand": 12.53,
+    "capture": 0,
+    "risk": 30,
+    "total": 15.9,
     "tags": []
   },
   {
     "id": "worldcoin-wld",
     "symbol": "wld",
     "name": "Worldcoin",
-    "rank": 69,
-    "market_cap": 1572340439,
-    "vol_to_mcap": 0.103975618730493,
+    "rank": 71,
+    "market_cap": 1532704977,
+    "vol_to_mcap": 0.10958369909436264,
     "constitutional": 37.85,
     "constitutional_breakdown": {
       "sopx_curated_facts": {
@@ -4056,118 +4164,10 @@
         }
       }
     },
-    "demand": 61.97,
+    "demand": 61.59,
     "capture": 100,
     "risk": 0,
-    "total": 53.73,
-    "tags": []
-  },
-  {
-    "id": "htx-dao",
-    "symbol": "htx",
-    "name": "HTX DAO",
-    "rank": 70,
-    "market_cap": 1544553306,
-    "vol_to_mcap": 0.0060141556551755555,
-    "constitutional": 37.85,
-    "constitutional_breakdown": {
-      "sopx_curated_facts": {
-        "score": 45.0,
-        "weight": 0.4,
-        "reason": "No curated entry; fallback",
-        "meta": {}
-      },
-      "sopx_age_maturity": {
-        "score": 35.0,
-        "weight": 0.15,
-        "reason": "No genesis_date; assume young/unknown",
-        "meta": {}
-      },
-      "sopx_decentralization_proxy": {
-        "score": 14.0,
-        "weight": 0.15,
-        "reason": "Dev proxy (commits=0, contrib=0) + interest",
-        "meta": {
-          "commits": 0,
-          "contributors": 0,
-          "alexa_rank": null
-        }
-      },
-      "sopx_governance_admin_risk": {
-        "score": 55.0,
-        "weight": 0.1,
-        "reason": "Admin/neutrality risk proxy (heuristic)",
-        "meta": {
-          "categories": []
-        }
-      },
-      "sopx_l2_settlement_anchor": {
-        "score": 35.0,
-        "weight": 0.2,
-        "reason": "Not identified as settlement anchor",
-        "meta": {
-          "tags": []
-        }
-      }
-    },
-    "demand": 15.44,
-    "capture": 0,
-    "risk": 10,
-    "total": 18.77,
-    "tags": []
-  },
-  {
-    "id": "hashnote-usyc",
-    "symbol": "usyc",
-    "name": "Circle USYC",
-    "rank": 71,
-    "market_cap": 1536306794,
-    "vol_to_mcap": 3.6153586130661867e-05,
-    "constitutional": 37.85,
-    "constitutional_breakdown": {
-      "sopx_curated_facts": {
-        "score": 45.0,
-        "weight": 0.4,
-        "reason": "No curated entry; fallback",
-        "meta": {}
-      },
-      "sopx_age_maturity": {
-        "score": 35.0,
-        "weight": 0.15,
-        "reason": "No genesis_date; assume young/unknown",
-        "meta": {}
-      },
-      "sopx_decentralization_proxy": {
-        "score": 14.0,
-        "weight": 0.15,
-        "reason": "Dev proxy (commits=0, contrib=0) + interest",
-        "meta": {
-          "commits": 0,
-          "contributors": 0,
-          "alexa_rank": null
-        }
-      },
-      "sopx_governance_admin_risk": {
-        "score": 55.0,
-        "weight": 0.1,
-        "reason": "Admin/neutrality risk proxy (heuristic)",
-        "meta": {
-          "categories": []
-        }
-      },
-      "sopx_l2_settlement_anchor": {
-        "score": 35.0,
-        "weight": 0.2,
-        "reason": "Not identified as settlement anchor",
-        "meta": {
-          "tags": []
-        }
-      }
-    },
-    "demand": 12.53,
-    "capture": 0,
-    "risk": 30,
-    "total": 15.9,
+    "total": 53.62,
     "tags": []
   },
   {
@@ -4175,8 +4175,8 @@
     "symbol": "usdg",
     "name": "Global Dollar",
     "rank": 72,
-    "market_cap": 1529736743,
-    "vol_to_mcap": 0.01786105231833344,
+    "market_cap": 1529645884,
+    "vol_to_mcap": 0.016809853358190713,
     "constitutional": 37.85,
     "constitutional_breakdown": {
       "sopx_curated_facts": {
@@ -4218,10 +4218,10 @@
         }
       }
     },
-    "demand": 20.54,
+    "demand": 20.07,
     "capture": 0,
     "risk": 10,
-    "total": 20.3,
+    "total": 20.16,
     "tags": []
   },
   {
@@ -4229,8 +4229,8 @@
     "symbol": "jlp",
     "name": "Jupiter Perpetuals Liquidity Provider Token",
     "rank": 73,
-    "market_cap": 1527378410,
-    "vol_to_mcap": 0.016337882502869737,
+    "market_cap": 1524161284,
+    "vol_to_mcap": 0.016323017295589565,
     "constitutional": 37.85,
     "constitutional_breakdown": {
       "sopx_curated_facts": {
@@ -4272,10 +4272,10 @@
         }
       }
     },
-    "demand": 20.79,
+    "demand": 20.74,
     "capture": 0,
     "risk": 10,
-    "total": 20.38,
+    "total": 20.36,
     "tags": []
   },
   {
@@ -4283,8 +4283,8 @@
     "symbol": "night",
     "name": "Midnight",
     "rank": 74,
-    "market_cap": 1520549077,
-    "vol_to_mcap": 0.029228959243911338,
+    "market_cap": 1508064496,
+    "vol_to_mcap": 0.029133460880840206,
     "constitutional": 37.85,
     "constitutional_breakdown": {
       "sopx_curated_facts": {
@@ -4326,10 +4326,10 @@
         }
       }
     },
-    "demand": 28.8,
+    "demand": 28.41,
     "capture": 0,
     "risk": 10,
-    "total": 22.78,
+    "total": 22.66,
     "tags": []
   },
   {
@@ -4337,8 +4337,8 @@
     "symbol": "kcs",
     "name": "KuCoin",
     "rank": 75,
-    "market_cap": 1453352647,
-    "vol_to_mcap": 0.0021594717610198843,
+    "market_cap": 1449314065,
+    "vol_to_mcap": 0.0026296515655493896,
     "constitutional": 37.85,
     "constitutional_breakdown": {
       "sopx_curated_facts": {
@@ -4380,10 +4380,10 @@
         }
       }
     },
-    "demand": 13.92,
+    "demand": 14.06,
     "capture": 0,
     "risk": 10,
-    "total": 18.32,
+    "total": 18.36,
     "tags": []
   },
   {
@@ -4391,8 +4391,8 @@
     "symbol": "apt",
     "name": "Aptos",
     "rank": 76,
-    "market_cap": 1427505792,
-    "vol_to_mcap": 0.173615945650748,
+    "market_cap": 1414195699,
+    "vol_to_mcap": 0.1739023900114407,
     "constitutional": 37.85,
     "constitutional_breakdown": {
       "sopx_curated_facts": {
@@ -4450,10 +4450,10 @@
         }
       }
     },
-    "demand": 60.2,
+    "demand": 60.15,
     "capture": 56.67,
     "risk": 0,
-    "total": 44.53,
+    "total": 44.52,
     "tags": []
   },
   {
@@ -4461,8 +4461,8 @@
     "symbol": "sky",
     "name": "Sky",
     "rank": 77,
-    "market_cap": 1413582642,
-    "vol_to_mcap": 0.009122833442376127,
+    "market_cap": 1406159264,
+    "vol_to_mcap": 0.009323241211459245,
     "constitutional": 37.85,
     "constitutional_breakdown": {
       "sopx_curated_facts": {
@@ -4504,10 +4504,10 @@
         }
       }
     },
-    "demand": 16.27,
+    "demand": 16.42,
     "capture": 0,
     "risk": 10,
-    "total": 19.02,
+    "total": 19.07,
     "tags": []
   },
   {
@@ -4515,8 +4515,8 @@
     "symbol": "bnsol",
     "name": "Binance Staked SOL",
     "rank": 78,
-    "market_cap": 1393608087,
-    "vol_to_mcap": 0.006026471917280141,
+    "market_cap": 1394131467,
+    "vol_to_mcap": 0.0060350427482317205,
     "constitutional": 37.85,
     "constitutional_breakdown": {
       "sopx_curated_facts": {
@@ -4558,19 +4558,73 @@
         }
       }
     },
-    "demand": 16.87,
+    "demand": 16.86,
     "capture": 0,
     "risk": 10,
     "total": 19.2,
     "tags": []
   },
   {
+    "id": "syrupusdc",
+    "symbol": "syrupusdc",
+    "name": "syrupUSDC",
+    "rank": 79,
+    "market_cap": 1372010961,
+    "vol_to_mcap": 0.003570323517262338,
+    "constitutional": 37.85,
+    "constitutional_breakdown": {
+      "sopx_curated_facts": {
+        "score": 45.0,
+        "weight": 0.4,
+        "reason": "No curated entry; fallback",
+        "meta": {}
+      },
+      "sopx_age_maturity": {
+        "score": 35.0,
+        "weight": 0.15,
+        "reason": "No genesis_date; assume young/unknown",
+        "meta": {}
+      },
+      "sopx_decentralization_proxy": {
+        "score": 14.0,
+        "weight": 0.15,
+        "reason": "Dev proxy (commits=0, contrib=0) + interest",
+        "meta": {
+          "commits": 0,
+          "contributors": 0,
+          "alexa_rank": null
+        }
+      },
+      "sopx_governance_admin_risk": {
+        "score": 55.0,
+        "weight": 0.1,
+        "reason": "Admin/neutrality risk proxy (heuristic)",
+        "meta": {
+          "categories": []
+        }
+      },
+      "sopx_l2_settlement_anchor": {
+        "score": 35.0,
+        "weight": 0.2,
+        "reason": "Not identified as settlement anchor",
+        "meta": {
+          "tags": []
+        }
+      }
+    },
+    "demand": 14.13,
+    "capture": 0,
+    "risk": 10,
+    "total": 18.38,
+    "tags": []
+  },
+  {
     "id": "pump-fun",
     "symbol": "pump",
     "name": "Pump.fun",
-    "rank": 79,
-    "market_cap": 1372201118,
-    "vol_to_mcap": 0.10496956102902694,
+    "rank": 80,
+    "market_cap": 1356009963,
+    "vol_to_mcap": 0.10833904912835807,
     "constitutional": 37.85,
     "constitutional_breakdown": {
       "sopx_curated_facts": {
@@ -4621,64 +4675,10 @@
         }
       }
     },
-    "demand": 63.77,
+    "demand": 63.39,
     "capture": 100,
     "risk": 0,
-    "total": 54.27,
-    "tags": []
-  },
-  {
-    "id": "syrupusdc",
-    "symbol": "syrupusdc",
-    "name": "syrupUSDC",
-    "rank": 80,
-    "market_cap": 1371938744,
-    "vol_to_mcap": 0.003623815583416456,
-    "constitutional": 37.85,
-    "constitutional_breakdown": {
-      "sopx_curated_facts": {
-        "score": 45.0,
-        "weight": 0.4,
-        "reason": "No curated entry; fallback",
-        "meta": {}
-      },
-      "sopx_age_maturity": {
-        "score": 35.0,
-        "weight": 0.15,
-        "reason": "No genesis_date; assume young/unknown",
-        "meta": {}
-      },
-      "sopx_decentralization_proxy": {
-        "score": 14.0,
-        "weight": 0.15,
-        "reason": "Dev proxy (commits=0, contrib=0) + interest",
-        "meta": {
-          "commits": 0,
-          "contributors": 0,
-          "alexa_rank": null
-        }
-      },
-      "sopx_governance_admin_risk": {
-        "score": 55.0,
-        "weight": 0.1,
-        "reason": "Admin/neutrality risk proxy (heuristic)",
-        "meta": {
-          "categories": []
-        }
-      },
-      "sopx_l2_settlement_anchor": {
-        "score": 35.0,
-        "weight": 0.2,
-        "reason": "Not identified as settlement anchor",
-        "meta": {
-          "tags": []
-        }
-      }
-    },
-    "demand": 14.16,
-    "capture": 0,
-    "risk": 10,
-    "total": 18.39,
+    "total": 54.16,
     "tags": []
   },
   {
@@ -4686,8 +4686,8 @@
     "symbol": "rlusd",
     "name": "Ripple USD",
     "rank": 81,
-    "market_cap": 1345828471,
-    "vol_to_mcap": 0.07658938581037047,
+    "market_cap": 1345339819,
+    "vol_to_mcap": 0.0661622296039392,
     "constitutional": 37.85,
     "constitutional_breakdown": {
       "sopx_curated_facts": {
@@ -4729,10 +4729,10 @@
         }
       }
     },
-    "demand": 46.97,
+    "demand": 42.27,
     "capture": 0,
     "risk": 10,
-    "total": 28.23,
+    "total": 26.82,
     "tags": []
   },
   {
@@ -4740,8 +4740,8 @@
     "symbol": "ondo",
     "name": "Ondo",
     "rank": 82,
-    "market_cap": 1343738404,
-    "vol_to_mcap": 0.06580647299859416,
+    "market_cap": 1325116074,
+    "vol_to_mcap": 0.06772711671143761,
     "constitutional": 37.85,
     "constitutional_breakdown": {
       "sopx_curated_facts": {
@@ -4783,10 +4783,10 @@
         }
       }
     },
-    "demand": 45.33,
+    "demand": 45.83,
     "capture": 0,
     "risk": 10,
-    "total": 27.74,
+    "total": 27.89,
     "tags": []
   },
   {
@@ -4794,8 +4794,8 @@
     "symbol": "bfusd",
     "name": "BFUSD",
     "rank": 83,
-    "market_cap": 1319153634,
-    "vol_to_mcap": 0.01736791258386512,
+    "market_cap": 1319142143,
+    "vol_to_mcap": 0.01661951300421762,
     "constitutional": 37.85,
     "constitutional_breakdown": {
       "sopx_curated_facts": {
@@ -4837,73 +4837,19 @@
         }
       }
     },
-    "demand": 20.32,
+    "demand": 19.98,
     "capture": 0,
     "risk": 10,
-    "total": 20.24,
-    "tags": []
-  },
-  {
-    "id": "rocket-pool-eth",
-    "symbol": "reth",
-    "name": "Rocket Pool ETH",
-    "rank": 84,
-    "market_cap": 1290256146,
-    "vol_to_mcap": 0.0015840862346103485,
-    "constitutional": 37.85,
-    "constitutional_breakdown": {
-      "sopx_curated_facts": {
-        "score": 45.0,
-        "weight": 0.4,
-        "reason": "No curated entry; fallback",
-        "meta": {}
-      },
-      "sopx_age_maturity": {
-        "score": 35.0,
-        "weight": 0.15,
-        "reason": "No genesis_date; assume young/unknown",
-        "meta": {}
-      },
-      "sopx_decentralization_proxy": {
-        "score": 14.0,
-        "weight": 0.15,
-        "reason": "Dev proxy (commits=0, contrib=0) + interest",
-        "meta": {
-          "commits": 0,
-          "contributors": 0,
-          "alexa_rank": null
-        }
-      },
-      "sopx_governance_admin_risk": {
-        "score": 55.0,
-        "weight": 0.1,
-        "reason": "Admin/neutrality risk proxy (heuristic)",
-        "meta": {
-          "categories": []
-        }
-      },
-      "sopx_l2_settlement_anchor": {
-        "score": 35.0,
-        "weight": 0.2,
-        "reason": "Not identified as settlement anchor",
-        "meta": {
-          "tags": []
-        }
-      }
-    },
-    "demand": 14.74,
-    "capture": 0,
-    "risk": 30,
-    "total": 16.56,
+    "total": 20.14,
     "tags": []
   },
   {
     "id": "binance-bridged-usdc-bnb-smart-chain",
     "symbol": "usdc",
     "name": "Binance Bridged USDC (BNB Smart Chain)",
-    "rank": 85,
-    "market_cap": 1288591584,
-    "vol_to_mcap": 0.12881622157172182,
+    "rank": 84,
+    "market_cap": 1288713342,
+    "vol_to_mcap": 0.10597584858402126,
     "constitutional": 37.85,
     "constitutional_breakdown": {
       "sopx_curated_facts": {
@@ -4945,10 +4891,64 @@
         }
       }
     },
-    "demand": 57.5,
+    "demand": 57.49,
     "capture": 0,
     "risk": 10,
     "total": 31.39,
+    "tags": []
+  },
+  {
+    "id": "rocket-pool-eth",
+    "symbol": "reth",
+    "name": "Rocket Pool ETH",
+    "rank": 85,
+    "market_cap": 1287612559,
+    "vol_to_mcap": 0.001569997889403935,
+    "constitutional": 37.85,
+    "constitutional_breakdown": {
+      "sopx_curated_facts": {
+        "score": 45.0,
+        "weight": 0.4,
+        "reason": "No curated entry; fallback",
+        "meta": {}
+      },
+      "sopx_age_maturity": {
+        "score": 35.0,
+        "weight": 0.15,
+        "reason": "No genesis_date; assume young/unknown",
+        "meta": {}
+      },
+      "sopx_decentralization_proxy": {
+        "score": 14.0,
+        "weight": 0.15,
+        "reason": "Dev proxy (commits=0, contrib=0) + interest",
+        "meta": {
+          "commits": 0,
+          "contributors": 0,
+          "alexa_rank": null
+        }
+      },
+      "sopx_governance_admin_risk": {
+        "score": 55.0,
+        "weight": 0.1,
+        "reason": "Admin/neutrality risk proxy (heuristic)",
+        "meta": {
+          "categories": []
+        }
+      },
+      "sopx_l2_settlement_anchor": {
+        "score": 35.0,
+        "weight": 0.2,
+        "reason": "Not identified as settlement anchor",
+        "meta": {
+          "tags": []
+        }
+      }
+    },
+    "demand": 14.7,
+    "capture": 0,
+    "risk": 30,
+    "total": 16.55,
     "tags": []
   },
   {
@@ -4956,8 +4956,8 @@
     "symbol": "wbnb",
     "name": "Wrapped BNB",
     "rank": 86,
-    "market_cap": 1261820328,
-    "vol_to_mcap": 0.22904995631042013,
+    "market_cap": 1263436022,
+    "vol_to_mcap": 0.29889259877379054,
     "constitutional": 37.85,
     "constitutional_breakdown": {
       "sopx_curated_facts": {
@@ -5003,10 +5003,10 @@
         }
       }
     },
-    "demand": 58.65,
+    "demand": 58.6,
     "capture": 56.67,
     "risk": 0,
-    "total": 44.07,
+    "total": 44.05,
     "tags": []
   },
   {
@@ -5014,8 +5014,8 @@
     "symbol": "gt",
     "name": "Gate",
     "rank": 87,
-    "market_cap": 1235428463,
-    "vol_to_mcap": 0.0035696773484487866,
+    "market_cap": 1229400165,
+    "vol_to_mcap": 0.0019858822778017113,
     "constitutional": 37.85,
     "constitutional_breakdown": {
       "sopx_curated_facts": {
@@ -5057,10 +5057,10 @@
         }
       }
     },
-    "demand": 14.81,
+    "demand": 13.89,
     "capture": 0,
-    "risk": 10,
-    "total": 18.58,
+    "risk": 30,
+    "total": 16.31,
     "tags": []
   },
   {
@@ -5068,8 +5068,8 @@
     "symbol": "kas",
     "name": "Kaspa",
     "rank": 88,
-    "market_cap": 1221114208,
-    "vol_to_mcap": 0.016596952903523993,
+    "market_cap": 1211041586,
+    "vol_to_mcap": 0.016727911934809478,
     "constitutional": 37.85,
     "constitutional_breakdown": {
       "sopx_curated_facts": {
@@ -5111,10 +5111,10 @@
         }
       }
     },
-    "demand": 20.37,
+    "demand": 20.25,
     "capture": 0,
     "risk": 10,
-    "total": 20.25,
+    "total": 20.21,
     "tags": []
   },
   {
@@ -5122,8 +5122,8 @@
     "symbol": "pol",
     "name": "POL (ex-MATIC)",
     "rank": 89,
-    "market_cap": 1217507178,
-    "vol_to_mcap": 0.06566429376730952,
+    "market_cap": 1199841853,
+    "vol_to_mcap": 0.06700301443810362,
     "constitutional": 37.85,
     "constitutional_breakdown": {
       "sopx_curated_facts": {
@@ -5165,10 +5165,10 @@
         }
       }
     },
-    "demand": 44.52,
+    "demand": 44.72,
     "capture": 0,
     "risk": 10,
-    "total": 27.5,
+    "total": 27.56,
     "tags": []
   },
   {
@@ -5176,8 +5176,8 @@
     "symbol": "arb",
     "name": "Arbitrum",
     "rank": 90,
-    "market_cap": 1197092090,
-    "vol_to_mcap": 0.0814202539756152,
+    "market_cap": 1188066534,
+    "vol_to_mcap": 0.08231068816555016,
     "constitutional": 37.85,
     "constitutional_breakdown": {
       "sopx_curated_facts": {
@@ -5219,10 +5219,10 @@
         }
       }
     },
-    "demand": 51.21,
+    "demand": 51.37,
     "capture": 0,
     "risk": 10,
-    "total": 29.5,
+    "total": 29.55,
     "tags": []
   },
   {
@@ -5230,8 +5230,8 @@
     "symbol": "qnt",
     "name": "Quant",
     "rank": 91,
-    "market_cap": 1179016997,
-    "vol_to_mcap": 0.016321202365159795,
+    "market_cap": 1173454576,
+    "vol_to_mcap": 0.016309862683598245,
     "constitutional": 37.85,
     "constitutional_breakdown": {
       "sopx_curated_facts": {
@@ -5273,10 +5273,10 @@
         }
       }
     },
-    "demand": 23.01,
+    "demand": 22.98,
     "capture": 0,
     "risk": 10,
-    "total": 21.04,
+    "total": 21.03,
     "tags": []
   },
   {
@@ -5284,8 +5284,8 @@
     "symbol": "rseth",
     "name": "Kelp DAO Restaked ETH",
     "rank": 92,
-    "market_cap": 1151780759,
-    "vol_to_mcap": 6.47458289412178e-05,
+    "market_cap": 1149127336,
+    "vol_to_mcap": 6.615889955645438e-05,
     "constitutional": 37.85,
     "constitutional_breakdown": {
       "sopx_curated_facts": {
@@ -5327,10 +5327,10 @@
         }
       }
     },
-    "demand": 14.05,
+    "demand": 13.97,
     "capture": 0,
     "risk": 30,
-    "total": 16.35,
+    "total": 16.33,
     "tags": []
   },
   {
@@ -5338,8 +5338,8 @@
     "symbol": "algo",
     "name": "Algorand",
     "rank": 93,
-    "market_cap": 1133214853,
-    "vol_to_mcap": 0.054094309510431385,
+    "market_cap": 1117594416,
+    "vol_to_mcap": 0.05481727192165928,
     "constitutional": 37.85,
     "constitutional_breakdown": {
       "sopx_curated_facts": {
@@ -5381,10 +5381,10 @@
         }
       }
     },
-    "demand": 38.99,
+    "demand": 38.96,
     "capture": 0,
     "risk": 10,
-    "total": 25.84,
+    "total": 25.83,
     "tags": []
   },
   {
@@ -5392,8 +5392,8 @@
     "symbol": "fil",
     "name": "Filecoin",
     "rank": 94,
-    "market_cap": 1110556771,
-    "vol_to_mcap": 0.19462068994940196,
+    "market_cap": 1092965983,
+    "vol_to_mcap": 0.19860514908632798,
     "constitutional": 37.85,
     "constitutional_breakdown": {
       "sopx_curated_facts": {
@@ -5449,10 +5449,10 @@
         }
       }
     },
-    "demand": 63.04,
+    "demand": 62.48,
     "capture": 56.67,
     "risk": 0,
-    "total": 45.38,
+    "total": 45.22,
     "tags": []
   },
   {
@@ -5460,8 +5460,8 @@
     "symbol": "atom",
     "name": "Cosmos Hub",
     "rank": 95,
-    "market_cap": 1083946492,
-    "vol_to_mcap": 0.0466301015530202,
+    "market_cap": 1081621045,
+    "vol_to_mcap": 0.04699378884588918,
     "constitutional": 53.05,
     "constitutional_breakdown": {
       "sopx_curated_facts": {
@@ -5518,10 +5518,10 @@
         }
       }
     },
-    "demand": 35.88,
+    "demand": 36.01,
     "capture": 0,
     "risk": 10,
-    "total": 30.98,
+    "total": 31.02,
     "tags": [
       "Regional-Layer",
       "Federation",
@@ -5590,7 +5590,7 @@
     "name": "Bridged Wrapped Lido Staked Ether (Scroll)",
     "rank": 97,
     "market_cap": 1019920535,
-    "vol_to_mcap": 3.1475393325618254e-06,
+    "vol_to_mcap": 3.12945949264567e-06,
     "constitutional": 37.85,
     "constitutional_breakdown": {
       "sopx_curated_facts": {
@@ -5632,73 +5632,19 @@
         }
       }
     },
-    "demand": 14.0,
+    "demand": 13.97,
     "capture": 0,
     "risk": 30,
-    "total": 16.34,
-    "tags": []
-  },
-  {
-    "id": "vechain",
-    "symbol": "vet",
-    "name": "VeChain",
-    "rank": 98,
-    "market_cap": 1015094298,
-    "vol_to_mcap": 0.02538063907044033,
-    "constitutional": 37.85,
-    "constitutional_breakdown": {
-      "sopx_curated_facts": {
-        "score": 45.0,
-        "weight": 0.4,
-        "reason": "No curated entry; fallback",
-        "meta": {}
-      },
-      "sopx_age_maturity": {
-        "score": 35.0,
-        "weight": 0.15,
-        "reason": "No genesis_date; assume young/unknown",
-        "meta": {}
-      },
-      "sopx_decentralization_proxy": {
-        "score": 14.0,
-        "weight": 0.15,
-        "reason": "Dev proxy (commits=0, contrib=0) + interest",
-        "meta": {
-          "commits": 0,
-          "contributors": 0,
-          "alexa_rank": null
-        }
-      },
-      "sopx_governance_admin_risk": {
-        "score": 55.0,
-        "weight": 0.1,
-        "reason": "Admin/neutrality risk proxy (heuristic)",
-        "meta": {
-          "categories": []
-        }
-      },
-      "sopx_l2_settlement_anchor": {
-        "score": 35.0,
-        "weight": 0.2,
-        "reason": "Not identified as settlement anchor",
-        "meta": {
-          "tags": []
-        }
-      }
-    },
-    "demand": 26.65,
-    "capture": 0,
-    "risk": 10,
-    "total": 22.14,
+    "total": 16.33,
     "tags": []
   },
   {
     "id": "xdce-crowd-sale",
     "symbol": "xdc",
     "name": "XDC Network",
-    "rank": 100,
-    "market_cap": 1013703821,
-    "vol_to_mcap": 0.0293206086277542,
+    "rank": 98,
+    "market_cap": 1010308687,
+    "vol_to_mcap": 0.029593170270345304,
     "constitutional": 37.85,
     "constitutional_breakdown": {
       "sopx_curated_facts": {
@@ -5740,19 +5686,73 @@
         }
       }
     },
-    "demand": 27.1,
+    "demand": 27.11,
     "capture": 0,
     "risk": 10,
     "total": 22.27,
     "tags": []
   },
   {
+    "id": "vechain",
+    "symbol": "vet",
+    "name": "VeChain",
+    "rank": 99,
+    "market_cap": 1009167007,
+    "vol_to_mcap": 0.025782085442276056,
+    "constitutional": 37.85,
+    "constitutional_breakdown": {
+      "sopx_curated_facts": {
+        "score": 45.0,
+        "weight": 0.4,
+        "reason": "No curated entry; fallback",
+        "meta": {}
+      },
+      "sopx_age_maturity": {
+        "score": 35.0,
+        "weight": 0.15,
+        "reason": "No genesis_date; assume young/unknown",
+        "meta": {}
+      },
+      "sopx_decentralization_proxy": {
+        "score": 14.0,
+        "weight": 0.15,
+        "reason": "Dev proxy (commits=0, contrib=0) + interest",
+        "meta": {
+          "commits": 0,
+          "contributors": 0,
+          "alexa_rank": null
+        }
+      },
+      "sopx_governance_admin_risk": {
+        "score": 55.0,
+        "weight": 0.1,
+        "reason": "Admin/neutrality risk proxy (heuristic)",
+        "meta": {
+          "categories": []
+        }
+      },
+      "sopx_l2_settlement_anchor": {
+        "score": 35.0,
+        "weight": 0.2,
+        "reason": "Not identified as settlement anchor",
+        "meta": {
+          "tags": []
+        }
+      }
+    },
+    "demand": 26.6,
+    "capture": 0,
+    "risk": 10,
+    "total": 22.12,
+    "tags": []
+  },
+  {
     "id": "official-trump",
     "symbol": "trump",
     "name": "Official Trump",
-    "rank": 99,
-    "market_cap": 1010786596,
-    "vol_to_mcap": 0.2700899270729942,
+    "rank": 100,
+    "market_cap": 1005938927,
+    "vol_to_mcap": 0.27294279069091043,
     "constitutional": 37.85,
     "constitutional_breakdown": {
       "sopx_curated_facts": {
@@ -5801,10 +5801,10 @@
         }
       }
     },
-    "demand": 58.05,
+    "demand": 57.89,
     "capture": 100,
     "risk": 0,
-    "total": 52.56,
+    "total": 52.51,
     "tags": []
   }
 ]
