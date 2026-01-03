@@ -1,7 +1,7 @@
 coingecko:
   vs_currency: usd
   top_n: 100
-  request_delay_sec: 1.2
+  request_delay_sec: 2.5
 
 scoring:
   # 0-100 total
