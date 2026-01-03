@@ -1,0 +1,13 @@
+overrides:
+  ethereum:
+    constitutional_bonus: 20
+    tags: ["Civilization-Layer", "Settlement"]
+  bitcoin:
+    constitutional_bonus: 18
+    tags: ["Civilization-Layer", "Monetary"]
+  solana:
+    constitutional_bonus: 8
+    tags: ["Regional-Layer", "Consumer-HighFreq"]
+  cosmos:
+    constitutional_bonus: 6
+    tags: ["Regional-Layer", "Federation"]
