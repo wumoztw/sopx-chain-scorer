@@ -40,3 +40,7 @@ output:
 
 plurk:
   max_chars: 2900
+  
+stage2:
+  detail_top_n: 20
+  detail_extra_n: 10
