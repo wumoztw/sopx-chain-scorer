@@ -1,0 +1,42 @@
+coingecko:
+  vs_currency: usd
+  top_n: 100
+  request_delay_sec: 1.2
+
+scoring:
+  # 0-100 total
+  weights:
+    constitutional: 0.40
+    demand: 0.30
+    capture: 0.20
+    risk: 0.10
+
+  veto:
+    min_market_cap_usd: 50000000
+    min_volume_to_mcap: 0.002
+    missing_dev_data_penalty: 10
+
+dataset:
+  curated_path: curated_dataset.yml
+
+rules:
+  constitutional:
+    enabled:
+      - sopx_curated_facts
+      - sopx_age_maturity
+      - sopx_decentralization_proxy
+      - sopx_governance_admin_risk
+      - sopx_l2_settlement_anchor
+    weights:
+      sopx_curated_facts: 0.40
+      sopx_age_maturity: 0.15
+      sopx_decentralization_proxy: 0.15
+      sopx_governance_admin_risk: 0.10
+      sopx_l2_settlement_anchor: 0.20
+
+output:
+  top_to_post: 10
+  report_dir: reports
+
+plurk:
+  max_chars: 2900
