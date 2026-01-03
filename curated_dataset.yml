@@ -1,0 +1,123 @@
+version: 2
+last_updated_utc: "2026-01-03"
+
+enums:
+  layer: ["civilization", "regional", "application", "narrative"]
+  execution: ["l1", "l2", "appchain", "sidechain"]
+  vm: ["evm", "move", "wasm", "custom", "utxo"]
+  settlement_anchor: ["global", "regional", "none"]
+
+  admin_risk: ["low", "medium", "high"]
+  decentralization: ["high", "medium", "low"]
+
+  thesis: ["institutional", "ecosystem", "narrative"]
+
+  risk_flags:
+    - admin_key
+    - single_sequencer
+    - frequent_upgrades
+    - opaque_tokenomics
+    - high_centralization
+    - regulatory_dependency
+    - bridge_risk
+    - low_liquidity
+    - heavy_incentives
+    - security_incidents
+    - weak_exit_paths
+
+coins:
+  ethereum:
+    layer: civilization
+    execution: l1
+    vm: evm
+    settlement_anchor: global
+
+    decentralization: high
+    admin_risk: low
+    exit_test: true
+
+    thesis: institutional
+    review_interval_weeks: 12
+    risk_flags: []
+
+    notes:
+      - "Global settlement and credible neutrality"
+      - "L2 ecosystem depends on it as final arbiter"
+
+  bitcoin:
+    layer: civilization
+    execution: l1
+    vm: utxo
+    settlement_anchor: global
+
+    decentralization: high
+    admin_risk: low
+    exit_test: true
+
+    thesis: institutional
+    review_interval_weeks: 12
+    risk_flags: []
+
+    notes:
+      - "Monetary base layer; not a general world computer"
+
+  solana:
+    layer: regional
+    execution: l1
+    vm: custom
+    settlement_anchor: regional
+
+    decentralization: medium
+    admin_risk: medium
+    exit_test: partial
+
+    thesis: ecosystem
+    review_interval_weeks: 8
+    risk_flags:
+      - frequent_upgrades
+
+    notes:
+      - "Consumer/high-frequency ecosystem moat"
+      - "Non-EVM differentiation"
+
+  cosmos:
+    layer: regional
+    execution: appchain
+    vm: wasm
+    settlement_anchor: none
+
+    decentralization: medium
+    admin_risk: medium
+    exit_test: partial
+
+    thesis: ecosystem
+    review_interval_weeks: 8
+    risk_flags:
+      - weak_exit_paths
+
+    notes:
+      - "Federation model; IBC ecosystem"
+      - "Security fragmentation"
+
+  monad:
+    layer: application
+    execution: l1
+    vm: evm
+    settlement_anchor: none
+
+    decentralization: unknown
+    admin_risk: unknown
+    exit_test: unknown
+
+    thesis: narrative
+    review_interval_weeks: 4
+    risk_flags:
+      - heavy_incentives
+      - opaque_tokenomics
+
+    notes:
+      - "High-performance EVM L1; role not established yet"
+
+defaults:
+  unknown_value: "unknown"
+  default_review_interval_weeks: 8
