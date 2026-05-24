@@ -15,18 +15,41 @@ st.set_page_config(
     initial_sidebar_state="expanded"
 )
 
-# Custom premium styling (High-Contrast Plurk Brand Theme - Dark Gray Edition)
+# 高級視覺樣式（Premium Plurk Brand Theme - 進階玻璃擬態暗色版）
 st.markdown("""
 <style>
     @import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;800&family=Noto+Sans+TC:wght@300;400;700&display=swap');
-    
+
+    /* ── 基底排版與 Mesh Gradient 背景 ── */
     html, body, [class*="css"] {
         font-family: 'Outfit', 'Noto Sans TC', sans-serif;
-        background-color: #121212; /* Neutral Dark Gray */
-        color: #f5f4f0; /* Plurk Warm Cream White */
+        background-color: #121212;
+        color: rgba(255, 255, 255, 0.87);
     }
-    
-    /* Top Brand border representing Plurk theme and action colors */
+
+    body {
+        background-color: #121212;
+        background-image:
+            radial-gradient(at 15% 20%, rgba(207, 81, 48, 0.07) 0px, transparent 50%),
+            radial-gradient(at 85% 25%, rgba(56, 189, 248, 0.05) 0px, transparent 50%),
+            radial-gradient(at 50% 80%, rgba(168, 85, 247, 0.04) 0px, transparent 50%);
+        background-attachment: fixed;
+    }
+
+    /* ── SVG Grain Texture 覆蓋層 ── */
+    .stApp::after {
+        content: "";
+        position: fixed;
+        inset: 0;
+        opacity: 0.03;
+        pointer-events: none;
+        z-index: 9998;
+        background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)'/%3E%3C/svg%3E");
+        background-repeat: repeat;
+        background-size: 128px 128px;
+    }
+
+    /* ── 頂部品牌漸層條 ── */
     .stApp::before {
         content: "";
         position: absolute;
@@ -37,7 +60,8 @@ st.markdown("""
         background: linear-gradient(90deg, #cf5130, #ff6b4a, #84cc16, #3b82f6);
         z-index: 9999;
     }
-    
+
+    /* ── 標題 ── */
     .main-title {
         font-size: 2.8rem;
         font-weight: 800;
@@ -47,77 +71,118 @@ st.markdown("""
         margin-bottom: 0.2rem;
         letter-spacing: -0.02em;
     }
-    
+
     .subtitle {
         font-size: 1rem;
-        color: #a0a0a5; /* Plurk Warm Gray */
+        color: rgba(255, 255, 255, 0.60);
         margin-bottom: 2.2rem;
     }
-    
-    /* High contrast Plurk panel design on Dark Gray background */
+
+    /* ── 入場動畫 Keyframes ── */
+    @keyframes fadeSlideUp {
+        from { opacity: 0; transform: translateY(20px); }
+        to   { opacity: 1; transform: translateY(0); }
+    }
+
+    /* ── 增強玻璃擬態 Metric 卡片 ── */
     .metric-card {
-        background: rgba(30, 30, 30, 0.85); /* Pure Dark Gray Panel */
-        backdrop-filter: blur(12px);
-        -webkit-backdrop-filter: blur(12px);
+        background: rgba(255, 255, 255, 0.04);
+        backdrop-filter: blur(20px);
+        -webkit-backdrop-filter: blur(20px);
         border-radius: 16px;
         padding: 1.5rem;
-        border: 1px solid rgba(207, 81, 48, 0.16); /* Plurk Orange Subtle Border */
-        box-shadow: 0 4px 30px rgba(0, 0, 0, 0.6);
-        transition: all 0.3s ease;
+        border: 1px solid rgba(255, 255, 255, 0.08);
+        box-shadow: 0 4px 30px rgba(0, 0, 0, 0.5);
+        transition: transform 0.35s cubic-bezier(0.4, 0, 0.2, 1),
+                    box-shadow 0.35s cubic-bezier(0.4, 0, 0.2, 1),
+                    border-color 0.35s ease;
         margin-bottom: 1rem;
+        animation: fadeSlideUp 0.6s ease-out backwards;
     }
-    
-    .metric-card:hover {
-        transform: translateY(-2px);
-        border-color: rgba(207, 81, 48, 0.45); /* Plurk Orange Hover Border */
-        box-shadow: 0 10px 30px rgba(207, 81, 48, 0.2);
+
+    /* 依決策色系的 Hover 光暈 */
+    .metric-card--hold:hover {
+        transform: translateY(-6px);
+        border-color: rgba(132, 204, 22, 0.4);
+        box-shadow: 0 12px 36px rgba(132, 204, 22, 0.18);
     }
-    
+    .metric-card--rotate:hover {
+        transform: translateY(-6px);
+        border-color: rgba(56, 189, 248, 0.4);
+        box-shadow: 0 12px 36px rgba(56, 189, 248, 0.18);
+    }
+    .metric-card--trade:hover {
+        transform: translateY(-6px);
+        border-color: rgba(255, 107, 74, 0.4);
+        box-shadow: 0 12px 36px rgba(255, 107, 74, 0.18);
+    }
+    .metric-card--avoid:hover {
+        transform: translateY(-6px);
+        border-color: rgba(244, 63, 94, 0.4);
+        box-shadow: 0 12px 36px rgba(244, 63, 94, 0.18);
+    }
+
     .metric-value {
         font-size: 2.2rem;
         font-weight: 700;
         line-height: 1.1;
         margin-top: 0.4rem;
     }
-    
+
     .metric-label {
         font-size: 0.8rem;
-        color: #cbd5e1;
+        color: rgba(255, 255, 255, 0.60);
         font-weight: 600;
         text-transform: uppercase;
         letter-spacing: 0.08em;
     }
-    
-    /* Sidebar styling */
+
+    /* ── 側邊欄：漸層頂部重點色 ── */
     section[data-testid="stSidebar"] {
-        background-color: #0a0a0a !important; /* Deeper Dark Gray Black */
-        border-right: 1px solid rgba(207, 81, 48, 0.12);
+        background-color: #0a0a0a !important;
+        border-right: 1px solid rgba(255, 255, 255, 0.06);
+        background-image: linear-gradient(180deg, rgba(207, 81, 48, 0.10) 0%, transparent 120px);
     }
-    
-    /* Custom tab headers */
+
+    /* ── 頁籤樣式增強 ── */
     .stTabs [data-baseweb="tab-list"] {
         gap: 8px;
-        background-color: rgba(30, 30, 30, 0.6); /* Dark Gray Tab List Container */
+        background-color: rgba(255, 255, 255, 0.03);
         padding: 6px;
         border-radius: 12px;
-        border: 1px solid rgba(207, 81, 48, 0.12);
+        border: 1px solid rgba(255, 255, 255, 0.06);
     }
-    
+
     .stTabs [data-baseweb="tab"] {
         height: 40px;
         white-space: pre-wrap;
         background-color: transparent;
         border-radius: 8px;
-        color: #a0a0a5; /* Plurk Warm Gray tab text */
+        color: rgba(255, 255, 255, 0.50);
         font-weight: 600;
-        transition: all 0.2s ease;
+        transition: color 0.2s ease, background-color 0.2s ease, box-shadow 0.2s ease;
         border: none;
     }
-    
+
+    .stTabs [data-baseweb="tab"]:hover {
+        color: rgba(255, 255, 255, 0.80);
+        background-color: rgba(255, 255, 255, 0.05);
+    }
+
     .stTabs [aria-selected="true"] {
-        background-color: rgba(207, 81, 48, 0.15) !important; /* Plurk Orange active tab tint */
+        background-color: rgba(207, 81, 48, 0.15) !important;
         color: #ffffff !important;
-        border: 1px solid rgba(207, 81, 48, 0.3) !important;
+        border: 1px solid rgba(207, 81, 48, 0.30) !important;
+        box-shadow: 0 2px 12px rgba(207, 81, 48, 0.15),
+                    inset 0 -2px 0 rgba(207, 81, 48, 0.50);
+    }
+
+    /* ── 無障礙：減少動態偏好 ── */
+    @media (prefers-reduced-motion: reduce) {
+        .metric-card {
+            animation: none !important;
+            transition: none !important;
+        }
     }
 </style>
 """, unsafe_allow_html=True)
@@ -214,30 +279,30 @@ else:
     col1, col2, col3, col4 = st.columns(4)
     with col1:
         st.markdown(f"""
-        <div class="metric-card">
+        <div class="metric-card metric-card--hold" style="animation-delay: 0.1s;">
             <div class="metric-label" style="color: #84cc16;">🧱 長期核心 (HOLD)</div>
-            <div class="metric-value" style="color: #84cc16;">{(df_latest["action"] == "HOLD").sum()} <span style="font-size: 1rem; font-weight: 400; color: #a0a0a5;">項</span></div>
+            <div class="metric-value" style="color: #84cc16;">{(df_latest["action"] == "HOLD").sum()} <span style="font-size: 1rem; font-weight: 400; color: rgba(255,255,255,0.38);">項</span></div>
         </div>
         """, unsafe_allow_html=True)
     with col2:
         st.markdown(f"""
-        <div class="metric-card">
+        <div class="metric-card metric-card--rotate" style="animation-delay: 0.2s;">
             <div class="metric-label" style="color: #38bdf8;">🏗 成長配置 (ROTATE)</div>
-            <div class="metric-value" style="color: #38bdf8;">{(df_latest["action"] == "ROTATE").sum()} <span style="font-size: 1rem; font-weight: 400; color: #a0a0a5;">項</span></div>
+            <div class="metric-value" style="color: #38bdf8;">{(df_latest["action"] == "ROTATE").sum()} <span style="font-size: 1rem; font-weight: 400; color: rgba(255,255,255,0.38);">項</span></div>
         </div>
         """, unsafe_allow_html=True)
     with col3:
         st.markdown(f"""
-        <div class="metric-card">
+        <div class="metric-card metric-card--trade" style="animation-delay: 0.3s;">
             <div class="metric-label" style="color: #ff6b4a;">🎭 高波動交易 (TRADE)</div>
-            <div class="metric-value" style="color: #ff6b4a;">{(df_latest["action"] == "TRADE").sum()} <span style="font-size: 1rem; font-weight: 400; color: #a0a0a5;">項</span></div>
+            <div class="metric-value" style="color: #ff6b4a;">{(df_latest["action"] == "TRADE").sum()} <span style="font-size: 1rem; font-weight: 400; color: rgba(255,255,255,0.38);">項</span></div>
         </div>
         """, unsafe_allow_html=True)
     with col4:
         st.markdown(f"""
-        <div class="metric-card">
+        <div class="metric-card metric-card--avoid" style="animation-delay: 0.4s;">
             <div class="metric-label" style="color: #f43f5e;">⛔ 結構風險 (AVOID)</div>
-            <div class="metric-value" style="color: #f43f5e;">{(df_latest["action"] == "AVOID").sum()} <span style="font-size: 1rem; font-weight: 400; color: #a0a0a5;">項</span></div>
+            <div class="metric-value" style="color: #f43f5e;">{(df_latest["action"] == "AVOID").sum()} <span style="font-size: 1rem; font-weight: 400; color: rgba(255,255,255,0.38);">項</span></div>
         </div>
         """, unsafe_allow_html=True)
         
