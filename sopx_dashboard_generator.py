@@ -112,7 +112,7 @@ def generate_html_dashboard():
     movers_down = sorted(movers_list, key=lambda x: x["delta"])[:5]
     
     # 4. Generate Interactive Plots (Plotly to HTML)
-    # A. Trend Line Chart (Top 10 tokens by total score)
+    # A. Trend Line Chart (Top 10 tokens by total score) - Using soft Morandi Sequentials
     top_10_latest_symbols = df_latest["symbol"].head(10).tolist()
     df_trend_plot = df[df["symbol"].isin(top_10_latest_symbols)].copy()
     df_trend_plot = df_trend_plot.sort_values(by="date_utc")
@@ -125,32 +125,33 @@ def generate_html_dashboard():
         color="symbol",
         markers=True,
         line_shape="spline",  # Smooth lines
+        color_discrete_sequence=px.colors.qualitative.Pastel,
         title="SOPX 總分歷史趨勢 (Top 10 代幣)",
         labels={"date_str": "日期 (UTC)", "total": "SOPX 總分", "symbol": "代幣"},
         template="plotly_dark"
     )
-    fig_trend.update_traces(line=dict(width=3))
+    fig_trend.update_traces(line=dict(width=2.5))
     fig_trend.update_layout(
         plot_bgcolor="rgba(0,0,0,0)",
         paper_bgcolor="rgba(0,0,0,0)",
-        xaxis=dict(showgrid=True, gridcolor="rgba(255,255,255,0.04)"),
-        yaxis=dict(showgrid=True, gridcolor="rgba(255,255,255,0.04)"),
+        xaxis=dict(showgrid=True, gridcolor="rgba(255,255,255,0.03)"),
+        yaxis=dict(showgrid=True, gridcolor="rgba(255,255,255,0.03)"),
         margin=dict(l=40, r=40, t=50, b=40),
         font=dict(family="Outfit, Noto Sans TC, sans-serif")
     )
     trend_html = pio.to_html(fig_trend, include_plotlyjs=False, full_html=False, config={'displayModeBar': False})
     
-    # B. Score Distribution Histogram
+    # B. Score Distribution Histogram - Soft colors
     fig_dist = px.histogram(
         df_latest,
         x="total",
         nbins=20,
         color="action",
         color_discrete_map={
-            "HOLD": "#10B981",
-            "ROTATE": "#3B82F6",
-            "TRADE": "#F59E0B",
-            "AVOID": "#EF4444"
+            "HOLD": "#86EFAC",
+            "ROTATE": "#93C5FD",
+            "TRADE": "#FDE68A",
+            "AVOID": "#FCA5A5"
         },
         title="本週 SOPX 總分區間分佈",
         labels={"total": "SOPX 總分", "count": "項目數量", "action": "投資決策"},
@@ -161,13 +162,13 @@ def generate_html_dashboard():
         plot_bgcolor="rgba(0,0,0,0)",
         paper_bgcolor="rgba(0,0,0,0)",
         xaxis=dict(showgrid=False),
-        yaxis=dict(showgrid=True, gridcolor="rgba(255,255,255,0.04)"),
+        yaxis=dict(showgrid=True, gridcolor="rgba(255,255,255,0.03)"),
         margin=dict(l=40, r=40, t=50, b=40),
         font=dict(family="Outfit, Noto Sans TC, sans-serif")
     )
     dist_html = pio.to_html(fig_dist, include_plotlyjs=False, full_html=False, config={'displayModeBar': False})
     
-    # C. Dimensional Scatter Plot (Constitutional vs. Risk)
+    # C. Dimensional Scatter Plot (Constitutional vs. Risk) - Soft colors
     fig_scatter = px.scatter(
         df_latest,
         x="constitutional",
@@ -177,59 +178,59 @@ def generate_html_dashboard():
         hover_name="name",
         hover_data=["symbol", "total", "rank"],
         color_discrete_map={
-            "HOLD": "#10B981",
-            "ROTATE": "#3B82F6",
-            "TRADE": "#F59E0B",
-            "AVOID": "#EF4444"
+            "HOLD": "#86EFAC",
+            "ROTATE": "#93C5FD",
+            "TRADE": "#FDE68A",
+            "AVOID": "#FCA5A5"
         },
         title="🧱 制度分 vs. ⛔ 風險扣分（氣泡大小代表市值）",
         labels={"constitutional": "🧱 制度分", "risk": "⛔ 風險扣分", "action": "投資決策"},
         template="plotly_dark"
     )
-    fig_scatter.update_traces(marker=dict(line=dict(width=1, color='rgba(255,255,255,0.2)')))
+    fig_scatter.update_traces(marker=dict(line=dict(width=1, color='rgba(255,255,255,0.15)'), opacity=0.85))
     fig_scatter.update_layout(
         plot_bgcolor="rgba(0,0,0,0)",
         paper_bgcolor="rgba(0,0,0,0)",
-        xaxis=dict(showgrid=True, gridcolor="rgba(255,255,255,0.04)"),
-        yaxis=dict(showgrid=True, gridcolor="rgba(255,255,255,0.04)"),
+        xaxis=dict(showgrid=True, gridcolor="rgba(255,255,255,0.03)"),
+        yaxis=dict(showgrid=True, gridcolor="rgba(255,255,255,0.03)"),
         margin=dict(l=40, r=40, t=50, b=40),
         font=dict(family="Outfit, Noto Sans TC, sans-serif")
     )
     scatter_html = pio.to_html(fig_scatter, include_plotlyjs=False, full_html=False, config={'displayModeBar': False})
     
-    # 5. Build Top 100 HTML Table
+    # 5. Build Top 100 HTML Table - Soft styling
     table_rows_html = ""
     for idx, row in enumerate(df_latest.to_dict(orient="records"), 1):
         action_class = {
-            "HOLD": "bg-emerald-500/10 text-emerald-400 border-emerald-500/20 shadow-[0_0_12px_rgba(16,185,129,0.05)]",
-            "ROTATE": "bg-blue-500/10 text-blue-400 border-blue-500/20 shadow-[0_0_12px_rgba(59,130,246,0.05)]",
-            "TRADE": "bg-amber-500/10 text-amber-400 border-amber-500/20 shadow-[0_0_12px_rgba(245,158,11,0.05)]",
-            "AVOID": "bg-red-500/10 text-red-400 border-red-500/20 shadow-[0_0_12px_rgba(239,68,68,0.05)]"
-        }.get(row["action"], "bg-slate-500/10 text-slate-400 border-slate-500/20")
+            "HOLD": "bg-emerald-500/5 text-emerald-300 border-emerald-500/10",
+            "ROTATE": "bg-blue-500/5 text-blue-300 border-blue-500/10",
+            "TRADE": "bg-amber-500/5 text-amber-300 border-amber-500/10",
+            "AVOID": "bg-red-500/5 text-red-300 border-red-500/10"
+        }.get(row["action"], "bg-slate-500/5 text-slate-400 border-slate-500/10")
         
         tags = row.get("tags") or []
         tags_badges = " ".join([f'<span class="px-2 py-0.5 text-2xs bg-slate-900 text-slate-400 border border-slate-800 rounded font-medium">{t}</span>' for t in tags[:3]])
         
         table_rows_html += f"""
-        <tr class="border-b border-slate-900 token-row hover:bg-slate-900/40 transition-colors duration-150" 
+        <tr class="border-b border-slate-900 token-row hover:bg-slate-900/30 transition-colors duration-150" 
             data-symbol="{row["symbol"].upper()}" data-name="{row["name"].lower()}">
             <td class="px-4 py-3.5 text-slate-500 font-mono text-center">{idx}</td>
-            <td class="px-4 py-3.5 font-bold text-white tracking-wider">{row["symbol"].upper()}</td>
+            <td class="px-4 py-3.5 font-semibold text-white tracking-wider">{row["symbol"].upper()}</td>
             <td class="px-4 py-3.5 text-slate-300">
                 <div class="flex flex-col">
-                    <span class="font-medium">{row["name"]}</span>
+                    <span class="font-medium text-slate-200">{row["name"]}</span>
                     <div class="flex flex-wrap gap-1 mt-1">{tags_badges}</div>
                 </div>
             </td>
-            <td class="px-4 py-3.5 text-emerald-400 font-bold text-right text-base">{row["total"]:.1f}</td>
-            <td class="px-4 py-3.5 text-slate-300 text-right">{row["constitutional"]:.0f}</td>
-            <td class="px-4 py-3.5 text-slate-300 text-right">{row["demand"]:.0f}</td>
-            <td class="px-4 py-3.5 text-slate-300 text-right">{row["capture"]:.0f}</td>
-            <td class="px-4 py-3.5 text-red-400 text-right">{row["risk"]:.0f}</td>
+            <td class="px-4 py-3.5 text-emerald-300 font-bold text-right text-base">{row["total"]:.1f}</td>
+            <td class="px-4 py-3.5 text-slate-400 text-right">{row["constitutional"]:.0f}</td>
+            <td class="px-4 py-3.5 text-slate-400 text-right">{row["demand"]:.0f}</td>
+            <td class="px-4 py-3.5 text-slate-400 text-right">{row["capture"]:.0f}</td>
+            <td class="px-4 py-3.5 text-red-300 text-right">{row["risk"]:.0f}</td>
             <td class="px-4 py-3.5 text-center">
                 <span class="px-2.5 py-1 text-xs border rounded-full font-bold {action_class}">{row["action"]}</span>
             </td>
-            <td class="px-4 py-3.5 text-slate-500 text-right font-mono text-xs">{row["vol_to_mcap"]:.3f}</td>
+            <td class="px-4 py-3.5 text-slate-600 text-right font-mono text-xs">{row["vol_to_mcap"]:.3f}</td>
         </tr>
         """
         
@@ -237,22 +238,22 @@ def generate_html_dashboard():
     movers_up_html = "".join([
         f'<li class="flex justify-between items-center py-2.5 border-b border-slate-900/80">'
         f'<span class="font-semibold text-slate-300">{m["name"]} ({m["symbol"].upper()})</span>'
-        f'<span class="text-emerald-400 font-bold font-mono">+{m["delta"]:.2f} → {m["total"]:.1f}</span></li>'
+        f'<span class="text-emerald-300 font-bold font-mono">+{m["delta"]:.2f} → {m["total"]:.1f}</span></li>'
         for m in movers_up
     ])
     
     movers_down_html = "".join([
         f'<li class="flex justify-between items-center py-2.5 border-b border-slate-900/80">'
         f'<span class="font-semibold text-slate-300">{m["name"]} ({m["symbol"].upper()})</span>'
-        f'<span class="text-red-400 font-bold font-mono">{m["delta"]:.2f} → {m["total"]:.1f}</span></li>'
+        f'<span class="text-red-300 font-bold font-mono">{m["delta"]:.2f} → {m["total"]:.1f}</span></li>'
         for m in movers_down
     ])
     
     flags_html = "".join([
-        f'<li class="text-red-400/90 py-2.5 border-b border-slate-900/80 text-sm font-semibold flex items-center gap-2">'
-        f'<span class="w-1.5 h-1.5 rounded-full bg-red-500 animate-pulse"></span>{f}</li>'
+        f'<li class="text-red-300/90 py-2.5 border-b border-slate-900/80 text-sm font-semibold flex items-center gap-2">'
+        f'<span class="w-1.5 h-1.5 rounded-full bg-red-400/70"></span>{f}</li>'
         for f in drift_flags
-    ]) if drift_flags else '<li class="text-slate-500 py-3 text-sm">無異常變動警訊</li>'
+    ]) if drift_flags else '<li class="text-slate-600 py-3 text-sm">無異常變動警訊</li>'
 
     # 6. HTML Template (Jinja2)
     html_template = """<!DOCTYPE html>
@@ -269,23 +270,23 @@ def generate_html_dashboard():
     <style>
         body {
             font-family: 'Outfit', 'Noto Sans TC', sans-serif;
-            background-color: #020617;
+            background-color: #0b0f19;
             background-image: 
-                radial-gradient(at 0% 0%, rgba(16, 185, 129, 0.05) 0px, transparent 50%),
-                radial-gradient(at 100% 0%, rgba(59, 130, 246, 0.05) 0px, transparent 50%);
+                radial-gradient(at 0% 0%, rgba(148, 163, 184, 0.03) 0px, transparent 50%),
+                radial-gradient(at 100% 0%, rgba(148, 163, 184, 0.03) 0px, transparent 50%);
         }
         .glass-panel {
-            background: rgba(15, 23, 42, 0.45);
+            background: rgba(30, 41, 59, 0.25);
             backdrop-filter: blur(16px);
             -webkit-backdrop-filter: blur(16px);
-            border: 1px solid rgba(255, 255, 255, 0.04);
-            box-shadow: 0 10px 30px -10px rgba(0, 0, 0, 0.7);
-            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            border: 1px solid rgba(255, 255, 255, 0.03);
+            box-shadow: 0 4px 20px -2px rgba(0, 0, 0, 0.4);
+            transition: all 0.2s ease;
         }
         .glass-panel-hover:hover {
-            transform: translateY(-2px);
-            border-color: rgba(59, 130, 246, 0.2);
-            box-shadow: 0 20px 40px -15px rgba(59, 130, 246, 0.12);
+            transform: translateY(-1px);
+            border-color: rgba(148, 163, 184, 0.15);
+            box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.5);
         }
         /* Custom scrollbar for table */
         ::-webkit-scrollbar {
@@ -296,11 +297,11 @@ def generate_html_dashboard():
             background: rgba(15, 23, 42, 0.2);
         }
         ::-webkit-scrollbar-thumb {
-            background: rgba(255, 255, 255, 0.08);
+            background: rgba(255, 255, 255, 0.05);
             border-radius: 4px;
         }
         ::-webkit-scrollbar-thumb:hover {
-            background: rgba(255, 255, 255, 0.15);
+            background: rgba(255, 255, 255, 0.1);
         }
         .text-2xs {
             font-size: 0.65rem;
@@ -309,54 +310,50 @@ def generate_html_dashboard():
 </head>
 <body class="min-h-screen pb-16 relative overflow-x-hidden">
     
-    <!-- Top Glow Line -->
-    <div class="w-full h-1 bg-gradient-to-r from-emerald-500 via-blue-500 to-amber-500 absolute top-0 left-0 z-50"></div>
-    
-    <!-- Decorative Ambient Glows -->
-    <div class="absolute top-[-100px] left-1/4 w-[600px] h-[600px] bg-emerald-500/5 rounded-full blur-[120px] pointer-events-none"></div>
-    <div class="absolute top-[200px] right-1/4 w-[500px] h-[500px] bg-blue-500/5 rounded-full blur-[120px] pointer-events-none"></div>
+    <!-- Top Soft Border -->
+    <div class="w-full h-[3px] bg-gradient-to-r from-slate-600 via-slate-400 to-slate-600 absolute top-0 left-0 z-50"></div>
 
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-10 relative z-10">
         
         <!-- Header -->
-        <header class="flex flex-col md:flex-row justify-between items-start md:items-center mb-10 gap-4 border-b border-slate-900 pb-8">
+        <header class="flex flex-col md:flex-row justify-between items-start md:items-center mb-10 border-b border-slate-900 pb-8">
             <div>
-                <h1 class="text-4xl sm:text-5xl font-extrabold tracking-tight bg-gradient-to-r from-emerald-400 via-blue-500 to-blue-300 bg-clip-text text-transparent">
+                <h1 class="text-4xl sm:text-5xl font-extrabold tracking-tight bg-gradient-to-r from-slate-100 via-slate-300 to-slate-400 bg-clip-text text-transparent">
                     SOPX Chain Scorer 儀表板
                 </h1>
                 <p class="text-slate-400 mt-3 text-sm sm:text-base font-medium">每週加密貨幣量化評分與制度分析趨勢監控系統</p>
             </div>
-            <div class="flex flex-col md:items-end bg-slate-900/40 border border-slate-900 rounded-2xl px-5 py-3 glass-panel">
+            <div class="flex flex-col md:items-end bg-slate-900/20 border border-slate-900/60 rounded-2xl px-5 py-3 glass-panel">
                 <span class="text-2xs text-slate-500 uppercase tracking-widest font-bold">最後更新時間</span>
                 <span class="text-base sm:text-lg font-extrabold text-white font-mono mt-1">{{ latest_date_str }} UTC</span>
             </div>
         </header>
 
-        <!-- Metric Cards -->
+        <!-- Metric Cards (Soft Morandi Pastels) -->
         <section class="grid grid-cols-2 lg:grid-cols-4 gap-5 mb-10">
             <div class="glass-panel glass-panel-hover p-6 rounded-2xl flex flex-col justify-between">
                 <span class="text-xs text-slate-400 font-semibold tracking-wider uppercase flex items-center gap-1.5">
-                    <span class="w-2 h-2 rounded-full bg-emerald-500"></span>🧱 長期核心 (HOLD)
+                    <span class="w-2 h-2 rounded-full bg-emerald-400/80"></span>🧱 長期核心 (HOLD)
                 </span>
-                <span class="text-3xl sm:text-4xl font-extrabold text-emerald-400 mt-4 font-mono">{{ hold_count }} <span class="text-sm font-normal text-slate-500">個項目</span></span>
+                <span class="text-3xl sm:text-4xl font-extrabold text-emerald-300 mt-4 font-mono">{{ hold_count }} <span class="text-sm font-normal text-slate-500">個項目</span></span>
             </div>
             <div class="glass-panel glass-panel-hover p-6 rounded-2xl flex flex-col justify-between">
                 <span class="text-xs text-slate-400 font-semibold tracking-wider uppercase flex items-center gap-1.5">
-                    <span class="w-2 h-2 rounded-full bg-blue-500"></span>🏗 成長配置 (ROTATE)
+                    <span class="w-2 h-2 rounded-full bg-blue-400/80"></span>🏗 成長配置 (ROTATE)
                 </span>
-                <span class="text-3xl sm:text-4xl font-extrabold text-blue-400 mt-4 font-mono">{{ rotate_count }} <span class="text-sm font-normal text-slate-500">個項目</span></span>
+                <span class="text-3xl sm:text-4xl font-extrabold text-blue-300 mt-4 font-mono">{{ rotate_count }} <span class="text-sm font-normal text-slate-500">個項目</span></span>
             </div>
             <div class="glass-panel glass-panel-hover p-6 rounded-2xl flex flex-col justify-between">
                 <span class="text-xs text-slate-400 font-semibold tracking-wider uppercase flex items-center gap-1.5">
-                    <span class="w-2 h-2 rounded-full bg-amber-500"></span>🎭 高波動交易 (TRADE)
+                    <span class="w-2 h-2 rounded-full bg-amber-300/80"></span>🎭 高波動交易 (TRADE)
                 </span>
-                <span class="text-3xl sm:text-4xl font-extrabold text-amber-500 mt-4 font-mono">{{ trade_count }} <span class="text-sm font-normal text-slate-500">個項目</span></span>
+                <span class="text-3xl sm:text-4xl font-extrabold text-amber-300 mt-4 font-mono">{{ trade_count }} <span class="text-sm font-normal text-slate-500">個項目</span></span>
             </div>
             <div class="glass-panel glass-panel-hover p-6 rounded-2xl flex flex-col justify-between">
                 <span class="text-xs text-slate-400 font-semibold tracking-wider uppercase flex items-center gap-1.5">
-                    <span class="w-2 h-2 rounded-full bg-red-500"></span>⛔ 結構風險 (AVOID)
+                    <span class="w-2 h-2 rounded-full bg-red-400/80"></span>⛔ 結構風險 (AVOID)
                 </span>
-                <span class="text-3xl sm:text-4xl font-extrabold text-red-500 mt-4 font-mono">{{ avoid_count }} <span class="text-sm font-normal text-slate-500">個項目</span></span>
+                <span class="text-3xl sm:text-4xl font-extrabold text-red-300 mt-4 font-mono">{{ avoid_count }} <span class="text-sm font-normal text-slate-500">個項目</span></span>
             </div>
         </section>
 
@@ -412,17 +409,17 @@ def generate_html_dashboard():
 
         <!-- Searchable Table -->
         <section class="glass-panel rounded-2xl overflow-hidden mb-10">
-            <div class="p-6 border-b border-slate-900 flex flex-col sm:flex-row justify-between items-start sm:items-center gap-4 bg-slate-900/20">
+            <div class="p-6 border-b border-slate-900 flex flex-col sm:flex-row justify-between items-start sm:items-center gap-4 bg-slate-900/10">
                 <h2 class="text-lg font-bold text-white flex items-center gap-2">🏆 本週 Top 100 評分大盤</h2>
                 <div class="w-full sm:w-72 relative">
                     <input type="text" id="token-search" placeholder="搜尋項目符號或名稱..." 
-                           class="w-full bg-slate-950 border border-slate-900 rounded-xl px-4 py-2.5 text-sm text-white placeholder-slate-500 focus:outline-none focus:border-blue-500 focus:ring-1 focus:ring-blue-500 transition-all duration-200">
+                           class="w-full bg-slate-950 border border-slate-900 rounded-xl px-4 py-2.5 text-sm text-white placeholder-slate-500 focus:outline-none focus:border-slate-500 focus:ring-1 focus:ring-slate-500 transition-all duration-200">
                 </div>
             </div>
             <div class="overflow-x-auto">
                 <table class="w-full text-left border-collapse">
                     <thead>
-                        <tr class="bg-slate-950/80 border-b border-slate-900 text-2xs font-bold uppercase tracking-widest text-slate-500">
+                        <tr class="bg-slate-950/40 border-b border-slate-900 text-2xs font-bold uppercase tracking-widest text-slate-500">
                             <th class="px-4 py-3.5 text-center w-16">排名</th>
                             <th class="px-4 py-3.5 w-24">代幣</th>
                             <th class="px-4 py-3.5">項目 / 標籤</th>

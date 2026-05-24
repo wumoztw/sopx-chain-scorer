@@ -15,33 +15,33 @@ st.set_page_config(
     initial_sidebar_state="expanded"
 )
 
-# Custom premium styling (SaaS Premium Dark Theme + Neon Borders)
+# Custom premium styling (Morandi Pastels Theme - Soft & Eye-friendly)
 st.markdown("""
 <style>
     @import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;800&family=Noto+Sans+TC:wght@300;400;700&display=swap');
     
     html, body, [class*="css"] {
         font-family: 'Outfit', 'Noto Sans TC', sans-serif;
-        background-color: #020617;
-        color: #f8fafc;
+        background-color: #0b0f19;
+        color: #e2e8f0;
     }
     
-    /* Top Neon Glow line */
+    /* Top Soft border */
     .stApp::before {
         content: "";
         position: absolute;
         top: 0;
         left: 0;
         width: 100%;
-        height: 4px;
-        background: linear-gradient(90deg, #10b981, #3b82f6, #f59e0b, #ef4444);
+        height: 3px;
+        background: linear-gradient(90deg, #475569, #64748b, #475569);
         z-index: 9999;
     }
     
     .main-title {
         font-size: 2.8rem;
         font-weight: 800;
-        background: linear-gradient(135deg, #10B981, #3B82F6);
+        background: linear-gradient(135deg, #e2e8f0, #94a3b8);
         -webkit-background-clip: text;
         -webkit-text-fill-color: transparent;
         margin-bottom: 0.2rem;
@@ -49,33 +49,33 @@ st.markdown("""
     }
     
     .subtitle {
-        font-size: 1.1rem;
+        font-size: 1rem;
         color: #94a3b8;
         margin-bottom: 2.2rem;
     }
     
-    /* Premium Glassmorphism Card */
+    /* Elegant Morandi Glassmorphism Card */
     .metric-card {
-        background: rgba(15, 23, 42, 0.45);
-        backdrop-filter: blur(12px);
-        -webkit-backdrop-filter: blur(12px);
+        background: rgba(30, 41, 59, 0.3);
+        backdrop-filter: blur(10px);
+        -webkit-backdrop-filter: blur(10px);
         border-radius: 16px;
         padding: 1.5rem;
-        border: 1px solid rgba(255, 255, 255, 0.05);
-        box-shadow: 0 10px 30px -10px rgba(0, 0, 0, 0.5);
-        transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        border: 1px solid rgba(255, 255, 255, 0.04);
+        box-shadow: 0 4px 20px -2px rgba(0, 0, 0, 0.4);
+        transition: all 0.3s ease;
         margin-bottom: 1rem;
     }
     
     .metric-card:hover {
-        transform: translateY(-2px);
-        border-color: rgba(59, 130, 246, 0.3);
-        box-shadow: 0 10px 30px -10px rgba(59, 130, 246, 0.15);
+        transform: translateY(-1px);
+        border-color: rgba(148, 163, 184, 0.2);
+        box-shadow: 0 8px 24px -4px rgba(0, 0, 0, 0.5);
     }
     
     .metric-value {
         font-size: 2.2rem;
-        font-weight: 800;
+        font-weight: 700;
         line-height: 1.1;
         margin-top: 0.4rem;
     }
@@ -90,14 +90,14 @@ st.markdown("""
     
     /* Sidebar styling */
     section[data-testid="stSidebar"] {
-        background-color: #0b0f19 !important;
+        background-color: #070a13 !important;
         border-right: 1px solid rgba(255, 255, 255, 0.03);
     }
     
     /* Custom tab headers */
     .stTabs [data-baseweb="tab-list"] {
         gap: 8px;
-        background-color: rgba(15, 23, 42, 0.3);
+        background-color: rgba(30, 41, 59, 0.2);
         padding: 6px;
         border-radius: 12px;
         border: 1px solid rgba(255, 255, 255, 0.03);
@@ -115,9 +115,9 @@ st.markdown("""
     }
     
     .stTabs [aria-selected="true"] {
-        background-color: rgba(59, 130, 246, 0.15) !important;
-        color: #3b82f6 !important;
-        border: 1px solid rgba(59, 130, 246, 0.2) !important;
+        background-color: rgba(148, 163, 184, 0.1) !important;
+        color: #cbd5e1 !important;
+        border: 1px solid rgba(148, 163, 184, 0.15) !important;
     }
 </style>
 """, unsafe_allow_html=True)
@@ -184,7 +184,7 @@ else:
     df_latest = df_hist[df_hist["date_utc"] == latest_date]
     
     # ----------------- Sidebar -----------------
-    st.sidebar.markdown("<h2 style='font-weight: 800; color: #fff;'>⚙️ 篩選控制項</h2>", unsafe_allow_html=True)
+    st.sidebar.markdown("<h2 style='font-weight: 700; color: #fff;'>⚙️ 篩選控制項</h2>", unsafe_allow_html=True)
     st.sidebar.markdown("<hr style='border: 1px solid rgba(255,255,255,0.05); margin-top: 0.5rem; margin-bottom: 1.5rem;'/>", unsafe_allow_html=True)
     
     # Lookback Filter
@@ -210,34 +210,34 @@ else:
     st.markdown('<div class="main-title">SOPX Chain Scorer 視覺化儀表板</div>', unsafe_allow_html=True)
     st.markdown(f'<div class="subtitle">每週加密貨幣量化評分與制度分析趨勢看板（最新更新：{latest_date.strftime("%Y-%m-%d")} UTC）</div>', unsafe_allow_html=True)
     
-    # High-level metrics
+    # High-level metrics (Soft Morandi Pastels)
     col1, col2, col3, col4 = st.columns(4)
     with col1:
         st.markdown(f"""
         <div class="metric-card">
-            <div class="metric-label" style="color: #10b981;">🧱 長期核心 (HOLD)</div>
-            <div class="metric-value" style="color: #10b981;">{(df_latest["action"] == "HOLD").sum()} <span style="font-size: 1rem; font-weight: 400; color: #94a3b8;">項</span></div>
+            <div class="metric-label" style="color: #86efac; opacity: 0.9;">🧱 長期核心 (HOLD)</div>
+            <div class="metric-value" style="color: #86efac;">{(df_latest["action"] == "HOLD").sum()} <span style="font-size: 1rem; font-weight: 400; color: #94a3b8;">項</span></div>
         </div>
         """, unsafe_allow_html=True)
     with col2:
         st.markdown(f"""
         <div class="metric-card">
-            <div class="metric-label" style="color: #3b82f6;">🏗 成長配置 (ROTATE)</div>
-            <div class="metric-value" style="color: #3b82f6;">{(df_latest["action"] == "ROTATE").sum()} <span style="font-size: 1rem; font-weight: 400; color: #94a3b8;">項</span></div>
+            <div class="metric-label" style="color: #93c5fd; opacity: 0.9;">🏗 成長配置 (ROTATE)</div>
+            <div class="metric-value" style="color: #93c5fd;">{(df_latest["action"] == "ROTATE").sum()} <span style="font-size: 1rem; font-weight: 400; color: #94a3b8;">項</span></div>
         </div>
         """, unsafe_allow_html=True)
     with col3:
         st.markdown(f"""
         <div class="metric-card">
-            <div class="metric-label" style="color: #f59e0b;">🎭 高波動交易 (TRADE)</div>
-            <div class="metric-value" style="color: #f59e0b;">{(df_latest["action"] == "TRADE").sum()} <span style="font-size: 1rem; font-weight: 400; color: #94a3b8;">項</span></div>
+            <div class="metric-label" style="color: #fde68a; opacity: 0.9;">🎭 高波動交易 (TRADE)</div>
+            <div class="metric-value" style="color: #fde68a;">{(df_latest["action"] == "TRADE").sum()} <span style="font-size: 1rem; font-weight: 400; color: #94a3b8;">項</span></div>
         </div>
         """, unsafe_allow_html=True)
     with col4:
         st.markdown(f"""
         <div class="metric-card">
-            <div class="metric-label" style="color: #ef4444;">⛔ 結構風險 (AVOID)</div>
-            <div class="metric-value" style="color: #ef4444;">{(df_latest["action"] == "AVOID").sum()} <span style="font-size: 1rem; font-weight: 400; color: #94a3b8;">項</span></div>
+            <div class="metric-label" style="color: #fca5a5; opacity: 0.9;">⛔ 結構風險 (AVOID)</div>
+            <div class="metric-value" style="color: #fca5a5;">{(df_latest["action"] == "AVOID").sum()} <span style="font-size: 1rem; font-weight: 400; color: #94a3b8;">項</span></div>
         </div>
         """, unsafe_allow_html=True)
         
@@ -267,10 +267,10 @@ else:
         # Color styling function
         def style_action(val):
             color_map = {
-                "HOLD": "background-color: rgba(16, 185, 129, 0.15); color: #10b981; font-weight: bold; border: 1px solid rgba(16, 185, 129, 0.2); border-radius: 6px;",
-                "ROTATE": "background-color: rgba(59, 130, 246, 0.15); color: #3b82f6; font-weight: bold; border: 1px solid rgba(59, 130, 246, 0.2); border-radius: 6px;",
-                "TRADE": "background-color: rgba(245, 158, 11, 0.15); color: #f59e0b; font-weight: bold; border: 1px solid rgba(245, 158, 11, 0.2); border-radius: 6px;",
-                "AVOID": "background-color: rgba(239, 68, 68, 0.15); color: #ef4444; font-weight: bold; border: 1px solid rgba(239, 68, 68, 0.2); border-radius: 6px;"
+                "HOLD": "background-color: rgba(134, 239, 172, 0.1); color: #86efac; font-weight: bold; border: 1px solid rgba(134, 239, 172, 0.15); border-radius: 6px;",
+                "ROTATE": "background-color: rgba(147, 197, 253, 0.1); color: #93c5fd; font-weight: bold; border: 1px solid rgba(147, 197, 253, 0.15); border-radius: 6px;",
+                "TRADE": "background-color: rgba(253, 230, 138, 0.1); color: #fde68a; font-weight: bold; border: 1px solid rgba(253, 230, 138, 0.15); border-radius: 6px;",
+                "AVOID": "background-color: rgba(252, 165, 165, 0.1); color: #fca5a5; font-weight: bold; border: 1px solid rgba(252, 165, 165, 0.15); border-radius: 6px;"
             }
             return color_map.get(val, "")
 
@@ -313,21 +313,23 @@ else:
             }
             target_col = dim_map[dimension]
             
+            # Using soft Morandi colors for trend plots
             fig = px.line(
                 df_trend,
                 x="date_str",
                 y=target_col,
                 color="symbol",
                 markers=True,
-                line_shape="spline",  # Smooth line spline
+                line_shape="spline",
+                color_discrete_sequence=px.colors.qualitative.Pastel,
                 labels={"date_str": "日期 (UTC)", target_col: "分數", "symbol": "代幣"},
                 template="plotly_dark"
             )
-            fig.update_traces(line=dict(width=3))
+            fig.update_traces(line=dict(width=2.5))
             fig.update_layout(
                 hovermode="x unified",
-                xaxis={"tickangle": -45, "showgrid": True, "gridcolor": "rgba(255,255,255,0.05)"},
-                yaxis={"showgrid": True, "gridcolor": "rgba(255,255,255,0.05)"},
+                xaxis={"tickangle": -45, "showgrid": True, "gridcolor": "rgba(255,255,255,0.03)"},
+                yaxis={"showgrid": True, "gridcolor": "rgba(255,255,255,0.03)"},
                 plot_bgcolor="rgba(0,0,0,0)",
                 paper_bgcolor="rgba(0,0,0,0)",
                 margin=dict(l=20, r=20, t=30, b=20),
@@ -361,18 +363,18 @@ else:
             hover_name="name",
             hover_data=["symbol", "total", "rank"],
             color_discrete_map={
-                "HOLD": "#10b981",
-                "ROTATE": "#3b82f6",
-                "TRADE": "#f59e0b",
-                "AVOID": "#ef4444"
+                "HOLD": "#86efac",
+                "ROTATE": "#93c5fd",
+                "TRADE": "#fde68a",
+                "AVOID": "#fca5a5"
             },
             labels={x_col: col_x, y_col: col_y, "action": "投資決策"},
             template="plotly_dark"
         )
-        fig.update_traces(marker=dict(line=dict(width=1, color='rgba(255,255,255,0.2)')))
+        fig.update_traces(marker=dict(line=dict(width=1, color='rgba(255,255,255,0.15)'), opacity=0.85))
         fig.update_layout(
-            xaxis={"showgrid": True, "gridcolor": "rgba(255,255,255,0.05)"},
-            yaxis={"showgrid": True, "gridcolor": "rgba(255,255,255,0.05)"},
+            xaxis={"showgrid": True, "gridcolor": "rgba(255,255,255,0.03)"},
+            yaxis={"showgrid": True, "gridcolor": "rgba(255,255,255,0.03)"},
             plot_bgcolor="rgba(0,0,0,0)",
             paper_bgcolor="rgba(0,0,0,0)",
             margin=dict(l=20, r=20, t=30, b=20),
@@ -390,10 +392,10 @@ else:
             nbins=20,
             color="action",
             color_discrete_map={
-                "HOLD": "#10b981",
-                "ROTATE": "#3b82f6",
-                "TRADE": "#f59e0b",
-                "AVOID": "#ef4444"
+                "HOLD": "#86efac",
+                "ROTATE": "#93c5fd",
+                "TRADE": "#fde68a",
+                "AVOID": "#fca5a5"
             },
             labels={"total": "SOPX 總分", "count": "項目數量", "action": "投資決策"},
             template="plotly_dark"
@@ -401,7 +403,7 @@ else:
         fig.update_layout(
             bargap=0.08,
             xaxis={"showgrid": False},
-            yaxis={"showgrid": True, "gridcolor": "rgba(255,255,255,0.05)"},
+            yaxis={"showgrid": True, "gridcolor": "rgba(255,255,255,0.03)"},
             plot_bgcolor="rgba(0,0,0,0)",
             paper_bgcolor="rgba(0,0,0,0)",
             margin=dict(l=20, r=20, t=30, b=20),
