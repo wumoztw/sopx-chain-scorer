@@ -62,127 +62,55 @@ def sopx_fmt_line(s):
 
 def sopx_build_investor_plurk_post(scores, ts, flags=None, max_chars=320):
     """
-    Investor-friendly Plurk output with stable formatting.
-    Never slices mid-text (except ultra fallback end-trim), so newlines won't break.
+    Investor-friendly Plurk output containing top tokens and Streamlit dashboard link.
     """
     flags = flags or []
+    sorted_scores = sorted(scores, key=lambda x: x["total"], reverse=True)
+    
+    hold = []
+    rotate = []
+    for s in sorted_scores:
+        act = sopx_action_label(s)
+        if act == "HOLD":
+            hold.append(s.get("symbol", "").upper())
+        elif act == "ROTATE":
+            rotate.append(s.get("symbol", "").upper())
 
-    def build_with_caps(hold_cap, rotate_cap, trade_cap, avoid_cap, flag_cap):
-        # Sort by total score
-        sorted_scores = sorted(scores, key=lambda x: x["total"], reverse=True)
-
-        hold, rotate, trade, avoid = [], [], [], []
-        for s in sorted_scores:
-            act = sopx_action_label(s)
-            if act == "HOLD":
-                hold.append(s)
-            elif act == "ROTATE":
-                rotate.append(s)
-            elif act == "TRADE":
-                trade.append(s)
-            else:
-                avoid.append(s)
-
-        hold = hold[:hold_cap]
-        rotate = rotate[:rotate_cap]
-        trade = trade[:trade_cap]
-        avoid = avoid[:avoid_cap]
-        show_flags = flags[:flag_cap] if flags else []
-
-        lines = []
-        lines.append(f"【Weekly SOPX｜投資人版】{ts} UTC")
-
-        lines.append("")
-        lines.append("🧱 長期核心（HOLD）")
-        if hold:
-            for s in hold:
-                lines.append(sopx_fmt_line(s))
-        else:
-            lines.append("• 無")
-
-        lines.append("")
-        lines.append("🏗 成長配置（ROTATE）")
-        if rotate:
-            for s in rotate:
-                lines.append(sopx_fmt_line(s))
-        else:
-            lines.append("• 無")
-
-        lines.append("")
-        lines.append("🎭 高波動交易（TRADE）")
-        if trade:
-            for s in trade:
-                lines.append(sopx_fmt_line(s))
-        else:
-            lines.append("• 無")
-
-        if avoid:
-            lines.append("")
-            lines.append("⛔ 結構風險（AVOID）")
-            for s in avoid:
-                lines.append(sopx_fmt_line(s))
-
-        if show_flags:
-            lines.append("")
-            lines.append("⚠️ 本週結構警訊")
-            for i, (_, name, kind, v) in enumerate(show_flags, 1):
-                lines.append(f"{i}. {name}｜{kind} ({v:+.1f})")
-
-        lines.append("")
-        lines.append("（SOPX＝制度×需求×捕獲－風險｜非投資建議）")
-
-        return "\n".join(lines)
-
-    # Start caps (the “nice” version)
-    msg = build_with_caps(3, 4, 4, 3, 3)
-
-    # If too long, progressively shrink by reducing items (never by slicing the string)
-    shrink_steps = [
-        (3, 4, 3, 2, 2),
-        (2, 3, 3, 2, 2),
-        (2, 3, 2, 1, 2),
-        (2, 2, 2, 1, 1),
-        (1, 2, 2, 0, 1),
-        (1, 1, 2, 0, 0),
-        (1, 1, 1, 0, 0),
-    ]
-
+    # Build the message
+    lines = []
+    lines.append(f"【Weekly SOPX｜量化評分週報】{ts} UTC")
+    lines.append("")
+    
+    hold_str = ", ".join(hold[:3]) if hold else "無"
+    lines.append(f"🧱 長期核心 (HOLD): {hold_str}")
+    
+    rotate_str = ", ".join(rotate[:4]) if rotate else "無"
+    lines.append(f"🏗 成長配置 (ROTATE): {rotate_str}")
+    
+    if flags:
+        lines.append(f"⚠️ 本週有 {len(flags)} 個結構警訊，請特別留意！")
+    
+    lines.append("")
+    lines.append("📊 完整數據與歷史趨勢儀表板：")
+    lines.append("https://sopx-chain-scorer.streamlit.app/")
+    
+    msg = "\n".join(lines)
+    
+    # Fallback to shorter text if exceeds character limit
     if len(msg) > max_chars:
-        for caps in shrink_steps:
-            msg2 = build_with_caps(*caps)
-            if len(msg2) <= max_chars:
-                return msg2
-
-        # Ultra-compact fallback with guaranteed newlines
-        sorted_scores = sorted(scores, key=lambda x: x["total"], reverse=True)
-        ultra = []
-        ultra.append(f"【Weekly SOPX｜投資人版】{ts} UTC")
-        ultra.append("")
-
-        def pick_syms(act, n):
-            out = []
-            for s in sorted_scores:
-                if sopx_action_label(s) == act:
-                    out.append((s.get("symbol") or "").upper())
-                if len(out) >= n:
-                    break
-            return out
-
-        ultra.append("🧱 HOLD：" + (", ".join(pick_syms("HOLD", 2)) or "無"))
-        ultra.append("🏗 ROTATE：" + (", ".join(pick_syms("ROTATE", 2)) or "無"))
-        ultra.append("🎭 TRADE：" + (", ".join(pick_syms("TRADE", 3)) or "無"))
-        if flags:
-            _, name, kind, _ = flags[0]
-            ultra.append(f"⚠️ 警訊：{name}({kind})")
-        ultra.append("（非投資建議）")
-
-        msg3 = "\n".join(ultra)
-
-        # final safeguard (rare): trim only at the very end
-        if len(msg3) > max_chars:
-            msg3 = msg3[:max_chars]
-        return msg3
-
+        lines = [
+            f"【Weekly SOPX｜量化評分週報】{ts} UTC",
+            "",
+            f"🧱 HOLD: {', '.join(hold[:2]) if hold else '無'}",
+            f"🏗 ROTATE: {', '.join(rotate[:2]) if rotate else '無'}",
+            "",
+            "📊 完整數據與趨勢儀表板：",
+            "https://sopx-chain-scorer.streamlit.app/"
+        ]
+        msg = "\n".join(lines)
+        if len(msg) > max_chars:
+            msg = msg[:max_chars]
+            
     return msg
 
 
