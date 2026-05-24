@@ -272,23 +272,23 @@ def generate_html_dashboard():
     <style>
         body {
             font-family: 'Outfit', 'Noto Sans TC', sans-serif;
-            background-color: #18181c; /* Plurk Warm Charcoal */
+            background-color: #121212; /* Neutral Dark Gray */
             background-image: 
                 radial-gradient(at 0% 0%, rgba(207, 81, 48, 0.03) 0px, transparent 50%),
                 radial-gradient(at 100% 0%, rgba(56, 189, 248, 0.02) 0px, transparent 50%);
         }
         .glass-panel {
-            background: rgba(36, 36, 40, 0.85); /* Plurk Panel Background */
+            background: rgba(30, 30, 30, 0.85); /* Pure Dark Gray Panel */
             backdrop-filter: blur(12px);
             -webkit-backdrop-filter: blur(12px);
             border: 1px solid rgba(207, 81, 48, 0.16); /* Plurk Orange border */
-            box-shadow: 0 4px 30px rgba(0, 0, 0, 0.5);
+            box-shadow: 0 4px 30px rgba(0, 0, 0, 0.6);
             transition: all 0.25s ease;
         }
         .glass-panel-hover:hover {
             transform: translateY(-2px);
             border-color: rgba(207, 81, 48, 0.45); /* Plurk Orange hover border */
-            box-shadow: 0 10px 30px rgba(207, 81, 48, 0.15);
+            box-shadow: 0 10px 30px rgba(207, 81, 48, 0.2);
         }
         /* Custom scrollbar for table */
         ::-webkit-scrollbar {
@@ -296,7 +296,7 @@ def generate_html_dashboard():
             height: 6px;
         }
         ::-webkit-scrollbar-track {
-            background: rgba(24, 24, 28, 0.2);
+            background: rgba(20, 20, 20, 0.2);
         }
         ::-webkit-scrollbar-thumb {
             background: rgba(207, 81, 48, 0.12);

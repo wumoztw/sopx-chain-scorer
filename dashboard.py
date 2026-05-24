@@ -15,14 +15,14 @@ st.set_page_config(
     initial_sidebar_state="expanded"
 )
 
-# Custom premium styling (High-Contrast Plurk Brand Theme)
+# Custom premium styling (High-Contrast Plurk Brand Theme - Dark Gray Edition)
 st.markdown("""
 <style>
     @import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;800&family=Noto+Sans+TC:wght@300;400;700&display=swap');
     
     html, body, [class*="css"] {
         font-family: 'Outfit', 'Noto Sans TC', sans-serif;
-        background-color: #18181c; /* Plurk Warm Charcoal */
+        background-color: #121212; /* Neutral Dark Gray */
         color: #f5f4f0; /* Plurk Warm Cream White */
     }
     
@@ -54,15 +54,15 @@ st.markdown("""
         margin-bottom: 2.2rem;
     }
     
-    /* High contrast Plurk panel design */
+    /* High contrast Plurk panel design on Dark Gray background */
     .metric-card {
-        background: rgba(36, 36, 40, 0.85); /* Plurk Dashboard Panel Color */
+        background: rgba(30, 30, 30, 0.85); /* Pure Dark Gray Panel */
         backdrop-filter: blur(12px);
         -webkit-backdrop-filter: blur(12px);
         border-radius: 16px;
         padding: 1.5rem;
         border: 1px solid rgba(207, 81, 48, 0.16); /* Plurk Orange Subtle Border */
-        box-shadow: 0 4px 30px rgba(0, 0, 0, 0.5);
+        box-shadow: 0 4px 30px rgba(0, 0, 0, 0.6);
         transition: all 0.3s ease;
         margin-bottom: 1rem;
     }
@@ -70,7 +70,7 @@ st.markdown("""
     .metric-card:hover {
         transform: translateY(-2px);
         border-color: rgba(207, 81, 48, 0.45); /* Plurk Orange Hover Border */
-        box-shadow: 0 10px 30px rgba(207, 81, 48, 0.15);
+        box-shadow: 0 10px 30px rgba(207, 81, 48, 0.2);
     }
     
     .metric-value {
@@ -90,14 +90,14 @@ st.markdown("""
     
     /* Sidebar styling */
     section[data-testid="stSidebar"] {
-        background-color: #101012 !important; /* Deeper Warm Black */
+        background-color: #0a0a0a !important; /* Deeper Dark Gray Black */
         border-right: 1px solid rgba(207, 81, 48, 0.12);
     }
     
     /* Custom tab headers */
     .stTabs [data-baseweb="tab-list"] {
         gap: 8px;
-        background-color: rgba(36, 36, 40, 0.6);
+        background-color: rgba(30, 30, 30, 0.6); /* Dark Gray Tab List Container */
         padding: 6px;
         border-radius: 12px;
         border: 1px solid rgba(207, 81, 48, 0.12);
@@ -115,7 +115,7 @@ st.markdown("""
     }
     
     .stTabs [aria-selected="true"] {
-        background-color: rgba(207, 81, 48, 0.15) !important; /* Plurk Orange tint active tab background */
+        background-color: rgba(207, 81, 48, 0.15) !important; /* Plurk Orange active tab tint */
         color: #ffffff !important;
         border: 1px solid rgba(207, 81, 48, 0.3) !important;
     }
