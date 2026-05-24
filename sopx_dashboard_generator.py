@@ -132,12 +132,19 @@ def generate_html_dashboard():
     )
     fig_trend.update_traces(line=dict(width=3.0)) # Thicker lines
     fig_trend.update_layout(
+        hovermode="x unified",
         plot_bgcolor="rgba(0,0,0,0)",
         paper_bgcolor="rgba(0,0,0,0)",
-        xaxis=dict(showgrid=True, gridcolor="rgba(255,255,255,0.08)"),
+        xaxis=dict(tickangle=-45, showgrid=True, gridcolor="rgba(255,255,255,0.08)", rangeslider=dict(visible=True)),
         yaxis=dict(showgrid=True, gridcolor="rgba(255,255,255,0.08)"),
         margin=dict(l=40, r=40, t=50, b=40),
-        font=dict(family="Outfit, Noto Sans TC, sans-serif", size=12)
+        font=dict(family="Outfit, Noto Sans TC, sans-serif", size=12),
+        hoverlabel=dict(
+            bgcolor="rgba(18,18,18,0.9)",
+            font_size=13,
+            font_family="Outfit, Noto Sans TC, sans-serif",
+            bordercolor="rgba(255,255,255,0.1)"
+        )
     )
     trend_html = pio.to_html(fig_trend, include_plotlyjs=False, full_html=False, config={'displayModeBar': False})
     
@@ -147,6 +154,7 @@ def generate_html_dashboard():
         x="total",
         nbins=20,
         color="action",
+        marginal="box",
         color_discrete_map={
             "HOLD": "#84cc16",
             "ROTATE": "#38bdf8",
@@ -154,21 +162,29 @@ def generate_html_dashboard():
             "AVOID": "#f43f5e"
         },
         title="本週 SOPX 總分區間分佈",
-        labels={"total": "SOPX 總分", "count": "項目數量", "action": "投資決策"},
+        labels={"total": "SOPX 總分", "action": "投資決策"},
         template="plotly_dark"
     )
     fig_dist.update_layout(
         bargap=0.08,
         plot_bgcolor="rgba(0,0,0,0)",
         paper_bgcolor="rgba(0,0,0,0)",
-        xaxis=dict(showgrid=False),
+        xaxis=dict(showgrid=True, gridcolor="rgba(255,255,255,0.08)"),
         yaxis=dict(showgrid=True, gridcolor="rgba(255,255,255,0.08)"),
         margin=dict(l=40, r=40, t=50, b=40),
-        font=dict(family="Outfit, Noto Sans TC, sans-serif", size=12)
+        font=dict(family="Outfit, Noto Sans TC, sans-serif", size=12),
+        hoverlabel=dict(
+            bgcolor="rgba(18,18,18,0.9)",
+            font_size=13,
+            font_family="Outfit, Noto Sans TC, sans-serif",
+            bordercolor="rgba(255,255,255,0.1)"
+        )
     )
     dist_html = pio.to_html(fig_dist, include_plotlyjs=False, full_html=False, config={'displayModeBar': False})
     
-    # C. Dimensional Scatter Plot (Constitutional vs. Risk) - Plurk brand colors
+    median_c = df_latest["constitutional"].median()
+    median_r = df_latest["risk"].median()
+
     fig_scatter = px.scatter(
         df_latest,
         x="constitutional",
@@ -187,14 +203,34 @@ def generate_html_dashboard():
         labels={"constitutional": "🧱 制度分", "risk": "⛔ 風險扣分", "action": "投資決策"},
         template="plotly_dark"
     )
-    fig_scatter.update_traces(marker=dict(line=dict(width=1.2, color='rgba(255,255,255,0.25)'), opacity=0.9))
+    
+    fig_scatter.update_traces(
+        hovertemplate="<br>".join([
+            "<b>%{hovertext}</b> (%{customdata[0]})",
+            "🧱 制度分: <b>%{x:.1f}</b>",
+            "⛔ 風險扣分: <b>%{y:.1f}</b>",
+            "SOPX 總分: %{customdata[1]:.1f} (Rank #%{customdata[2]})"
+        ]),
+        marker=dict(line=dict(width=1.2, color='rgba(255,255,255,0.25)'), opacity=0.9)
+    )
+    
+    # Add Quadrant Crosshairs
+    fig_scatter.add_vline(x=median_c, line_dash="dash", line_color="rgba(255,255,255,0.15)", annotation_text=" 中位數", annotation_position="top right", annotation_font_color="rgba(255,255,255,0.4)")
+    fig_scatter.add_hline(y=median_r, line_dash="dash", line_color="rgba(255,255,255,0.15)", annotation_text="中位數", annotation_position="top right", annotation_font_color="rgba(255,255,255,0.4)")
+
     fig_scatter.update_layout(
         plot_bgcolor="rgba(0,0,0,0)",
         paper_bgcolor="rgba(0,0,0,0)",
         xaxis=dict(showgrid=True, gridcolor="rgba(255,255,255,0.08)"),
         yaxis=dict(showgrid=True, gridcolor="rgba(255,255,255,0.08)"),
         margin=dict(l=40, r=40, t=50, b=40),
-        font=dict(family="Outfit, Noto Sans TC, sans-serif", size=12)
+        font=dict(family="Outfit, Noto Sans TC, sans-serif", size=12),
+        hoverlabel=dict(
+            bgcolor="rgba(18,18,18,0.9)",
+            font_size=13,
+            font_family="Outfit, Noto Sans TC, sans-serif",
+            bordercolor="rgba(255,255,255,0.1)"
+        )
     )
     scatter_html = pio.to_html(fig_scatter, include_plotlyjs=False, full_html=False, config={'displayModeBar': False})
     

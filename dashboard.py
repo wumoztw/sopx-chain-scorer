@@ -401,24 +401,30 @@ else:
             # Custom high-contrast color sequence for lines
             fig = px.line(
                 df_trend,
-                x="date_str",
+                x="date_utc",
                 y=target_col,
                 color="symbol",
                 markers=True,
                 line_shape="spline",
                 color_discrete_sequence=["#ff6b4a", "#84cc16", "#38bdf8", "#f43f5e", "#a78bfa", "#fb923c", "#2dd4bf", "#f472b6"],
-                labels={"date_str": "日期 (UTC)", target_col: "分數", "symbol": "代幣"},
+                labels={"date_utc": "日期 (UTC)", target_col: "分數", "symbol": "代幣"},
                 template="plotly_dark"
             )
             fig.update_traces(line=dict(width=3.0)) # Thicker lines for readability
             fig.update_layout(
                 hovermode="x unified",
-                xaxis={"tickangle": -45, "showgrid": True, "gridcolor": "rgba(255,255,255,0.08)"},
+                xaxis={"tickangle": -45, "showgrid": True, "gridcolor": "rgba(255,255,255,0.08)", "rangeslider": {"visible": True}},
                 yaxis={"showgrid": True, "gridcolor": "rgba(255,255,255,0.08)"},
                 plot_bgcolor="rgba(0,0,0,0)",
                 paper_bgcolor="rgba(0,0,0,0)",
                 margin=dict(l=20, r=20, t=30, b=20),
-                font=dict(family="Outfit, Noto Sans TC, sans-serif", size=12)
+                font=dict(family="Outfit, Noto Sans TC, sans-serif", size=12),
+                hoverlabel=dict(
+                    bgcolor="rgba(18,18,18,0.9)",
+                    font_size=13,
+                    font_family="Outfit, Noto Sans TC, sans-serif",
+                    bordercolor="rgba(255,255,255,0.1)"
+                )
             )
             st.plotly_chart(fig, use_container_width=True)
             
@@ -439,6 +445,9 @@ else:
         x_col = dim_map_xy[col_x]
         y_col = dim_map_xy[col_y]
         
+        median_x = df_latest[x_col].median()
+        median_y = df_latest[y_col].median()
+        
         fig = px.scatter(
             df_latest,
             x=x_col,
@@ -456,14 +465,34 @@ else:
             labels={x_col: col_x, y_col: col_y, "action": "投資決策"},
             template="plotly_dark"
         )
-        fig.update_traces(marker=dict(line=dict(width=1.2, color='rgba(255,255,255,0.25)'), opacity=0.9))
+        
+        fig.update_traces(
+            hovertemplate="<br>".join([
+                "<b>%{hovertext}</b> (%{customdata[0]})",
+                f"{col_x.split(' ')[1]}: <b>%{{x:.1f}}</b>",
+                f"{col_y.split(' ')[1]}: <b>%{{y:.1f}}</b>",
+                "SOPX 總分: %{customdata[1]:.1f} (Rank #%{customdata[2]})"
+            ]),
+            marker=dict(line=dict(width=1.2, color='rgba(255,255,255,0.25)'), opacity=0.9)
+        )
+        
+        # Add Quadrant Crosshairs
+        fig.add_vline(x=median_x, line_dash="dash", line_color="rgba(255,255,255,0.15)", annotation_text=" 中位數", annotation_position="top right", annotation_font_color="rgba(255,255,255,0.4)")
+        fig.add_hline(y=median_y, line_dash="dash", line_color="rgba(255,255,255,0.15)", annotation_text="中位數", annotation_position="top right", annotation_font_color="rgba(255,255,255,0.4)")
+        
         fig.update_layout(
             xaxis={"showgrid": True, "gridcolor": "rgba(255,255,255,0.08)"},
             yaxis={"showgrid": True, "gridcolor": "rgba(255,255,255,0.08)"},
             plot_bgcolor="rgba(0,0,0,0)",
             paper_bgcolor="rgba(0,0,0,0)",
             margin=dict(l=20, r=20, t=30, b=20),
-            font=dict(family="Outfit, Noto Sans TC, sans-serif", size=12)
+            font=dict(family="Outfit, Noto Sans TC, sans-serif", size=12),
+            hoverlabel=dict(
+                bgcolor="rgba(18,18,18,0.9)",
+                font_size=13,
+                font_family="Outfit, Noto Sans TC, sans-serif",
+                bordercolor="rgba(255,255,255,0.1)"
+            )
         )
         st.plotly_chart(fig, use_container_width=True)
         
@@ -476,22 +505,29 @@ else:
             x="total",
             nbins=20,
             color="action",
+            marginal="box",
             color_discrete_map={
                 "HOLD": "#84cc16",
                 "ROTATE": "#38bdf8",
                 "TRADE": "#ff6b4a",
                 "AVOID": "#f43f5e"
             },
-            labels={"total": "SOPX 總分", "count": "項目數量", "action": "投資決策"},
+            labels={"total": "SOPX 總分", "action": "投資決策"},
             template="plotly_dark"
         )
         fig.update_layout(
-            bargap=0.08,
-            xaxis={"showgrid": False},
+            bargap=0.1,
+            xaxis={"showgrid": True, "gridcolor": "rgba(255,255,255,0.08)"},
             yaxis={"showgrid": True, "gridcolor": "rgba(255,255,255,0.08)"},
             plot_bgcolor="rgba(0,0,0,0)",
             paper_bgcolor="rgba(0,0,0,0)",
             margin=dict(l=20, r=20, t=30, b=20),
-            font=dict(family="Outfit, Noto Sans TC, sans-serif", size=12)
+            font=dict(family="Outfit, Noto Sans TC, sans-serif", size=12),
+            hoverlabel=dict(
+                bgcolor="rgba(18,18,18,0.9)",
+                font_size=13,
+                font_family="Outfit, Noto Sans TC, sans-serif",
+                bordercolor="rgba(255,255,255,0.1)"
+            )
         )
         st.plotly_chart(fig, use_container_width=True)
