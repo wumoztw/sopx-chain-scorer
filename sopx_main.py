@@ -264,6 +264,13 @@ def main():
     else:
         print("Plurk secrets missing; skipping Plurk post.")
 
+    # ---------- Generate Dashboard ----------
+    try:
+        from sopx_dashboard_generator import generate_html_dashboard
+        generate_html_dashboard()
+    except Exception as e:
+        print(f"[WARN] Failed to generate HTML dashboard: {e}")
+
 
 if __name__ == "__main__":
     main()

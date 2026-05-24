@@ -34,11 +34,11 @@ jobs:
         run: |
           python sopx_main.py
 
-      - name: Commit reports
+      - name: Commit reports and dashboard
         run: |
           git config user.name "github-actions"
           git config user.email "github-actions@github.com"
-          git add reports || true
+          git add reports docs || true
           git status
-          git commit -m "chore: weekly report" || echo "No changes"
+          git commit -m "chore: weekly report and dashboard update" || echo "No changes"
           git push
