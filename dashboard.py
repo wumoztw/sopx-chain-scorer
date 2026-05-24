@@ -15,18 +15,18 @@ st.set_page_config(
     initial_sidebar_state="expanded"
 )
 
-# Custom premium styling (High-Contrast Premium Dark Theme)
+# Custom premium styling (High-Contrast Plurk Brand Theme)
 st.markdown("""
 <style>
     @import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;800&family=Noto+Sans+TC:wght@300;400;700&display=swap');
     
     html, body, [class*="css"] {
         font-family: 'Outfit', 'Noto Sans TC', sans-serif;
-        background-color: #0b0f19;
-        color: #f9fafb; /* High contrast body text */
+        background-color: #18181c; /* Plurk Warm Charcoal */
+        color: #f5f4f0; /* Plurk Warm Cream White */
     }
     
-    /* Top Brand border representing decisions */
+    /* Top Brand border representing Plurk theme and action colors */
     .stApp::before {
         content: "";
         position: absolute;
@@ -34,14 +34,14 @@ st.markdown("""
         left: 0;
         width: 100%;
         height: 3px;
-        background: linear-gradient(90deg, #10b981, #38bdf8, #fbbf24, #f43f5e);
+        background: linear-gradient(90deg, #cf5130, #ff6b4a, #84cc16, #3b82f6);
         z-index: 9999;
     }
     
     .main-title {
         font-size: 2.8rem;
         font-weight: 800;
-        background: linear-gradient(135deg, #ffffff, #e2e8f0);
+        background: linear-gradient(135deg, #ffffff, #f5f4f0);
         -webkit-background-clip: text;
         -webkit-text-fill-color: transparent;
         margin-bottom: 0.2rem;
@@ -50,18 +50,18 @@ st.markdown("""
     
     .subtitle {
         font-size: 1rem;
-        color: #cbd5e1; /* Brighter subtitle */
+        color: #a0a0a5; /* Plurk Warm Gray */
         margin-bottom: 2.2rem;
     }
     
-    /* High contrast premium card design */
+    /* High contrast Plurk panel design */
     .metric-card {
-        background: rgba(17, 24, 39, 0.75); /* Elevated Gray-900 panel */
+        background: rgba(36, 36, 40, 0.85); /* Plurk Dashboard Panel Color */
         backdrop-filter: blur(12px);
         -webkit-backdrop-filter: blur(12px);
         border-radius: 16px;
         padding: 1.5rem;
-        border: 1px solid rgba(255, 255, 255, 0.08); /* More visible border */
+        border: 1px solid rgba(207, 81, 48, 0.16); /* Plurk Orange Subtle Border */
         box-shadow: 0 4px 30px rgba(0, 0, 0, 0.5);
         transition: all 0.3s ease;
         margin-bottom: 1rem;
@@ -69,8 +69,8 @@ st.markdown("""
     
     .metric-card:hover {
         transform: translateY(-2px);
-        border-color: rgba(255, 255, 255, 0.18);
-        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.6);
+        border-color: rgba(207, 81, 48, 0.45); /* Plurk Orange Hover Border */
+        box-shadow: 0 10px 30px rgba(207, 81, 48, 0.15);
     }
     
     .metric-value {
@@ -82,7 +82,7 @@ st.markdown("""
     
     .metric-label {
         font-size: 0.8rem;
-        color: #cbd5e1; /* Brighter label */
+        color: #cbd5e1;
         font-weight: 600;
         text-transform: uppercase;
         letter-spacing: 0.08em;
@@ -90,17 +90,17 @@ st.markdown("""
     
     /* Sidebar styling */
     section[data-testid="stSidebar"] {
-        background-color: #070a13 !important;
-        border-right: 1px solid rgba(255, 255, 255, 0.06);
+        background-color: #101012 !important; /* Deeper Warm Black */
+        border-right: 1px solid rgba(207, 81, 48, 0.12);
     }
     
     /* Custom tab headers */
     .stTabs [data-baseweb="tab-list"] {
         gap: 8px;
-        background-color: rgba(17, 24, 39, 0.5);
+        background-color: rgba(36, 36, 40, 0.6);
         padding: 6px;
         border-radius: 12px;
-        border: 1px solid rgba(255, 255, 255, 0.06);
+        border: 1px solid rgba(207, 81, 48, 0.12);
     }
     
     .stTabs [data-baseweb="tab"] {
@@ -108,16 +108,16 @@ st.markdown("""
         white-space: pre-wrap;
         background-color: transparent;
         border-radius: 8px;
-        color: #9ca3af; /* High contrast unselected tab */
+        color: #a0a0a5; /* Plurk Warm Gray tab text */
         font-weight: 600;
         transition: all 0.2s ease;
         border: none;
     }
     
     .stTabs [aria-selected="true"] {
-        background-color: rgba(255, 255, 255, 0.08) !important;
-        color: #ffffff !important; /* Pure white active tab text */
-        border: 1px solid rgba(255, 255, 255, 0.12) !important;
+        background-color: rgba(207, 81, 48, 0.15) !important; /* Plurk Orange tint active tab background */
+        color: #ffffff !important;
+        border: 1px solid rgba(207, 81, 48, 0.3) !important;
     }
 </style>
 """, unsafe_allow_html=True)
@@ -210,34 +210,34 @@ else:
     st.markdown('<div class="main-title">SOPX Chain Scorer 視覺化儀表板</div>', unsafe_allow_html=True)
     st.markdown(f'<div class="subtitle">每週加密貨幣量化評分與制度分析趨勢看板（最新更新：{latest_date.strftime("%Y-%m-%d")} UTC）</div>', unsafe_allow_html=True)
     
-    # High-level metrics (High Contrast & Salience SaaS Theme)
+    # High-level metrics (High Contrast Plurk Brand Theme)
     col1, col2, col3, col4 = st.columns(4)
     with col1:
         st.markdown(f"""
         <div class="metric-card">
-            <div class="metric-label" style="color: #34d399;">🧱 長期核心 (HOLD)</div>
-            <div class="metric-value" style="color: #34d399;">{(df_latest["action"] == "HOLD").sum()} <span style="font-size: 1rem; font-weight: 400; color: #d1d5db;">項</span></div>
+            <div class="metric-label" style="color: #84cc16;">🧱 長期核心 (HOLD)</div>
+            <div class="metric-value" style="color: #84cc16;">{(df_latest["action"] == "HOLD").sum()} <span style="font-size: 1rem; font-weight: 400; color: #a0a0a5;">項</span></div>
         </div>
         """, unsafe_allow_html=True)
     with col2:
         st.markdown(f"""
         <div class="metric-card">
             <div class="metric-label" style="color: #38bdf8;">🏗 成長配置 (ROTATE)</div>
-            <div class="metric-value" style="color: #38bdf8;">{(df_latest["action"] == "ROTATE").sum()} <span style="font-size: 1rem; font-weight: 400; color: #d1d5db;">項</span></div>
+            <div class="metric-value" style="color: #38bdf8;">{(df_latest["action"] == "ROTATE").sum()} <span style="font-size: 1rem; font-weight: 400; color: #a0a0a5;">項</span></div>
         </div>
         """, unsafe_allow_html=True)
     with col3:
         st.markdown(f"""
         <div class="metric-card">
-            <div class="metric-label" style="color: #fbbf24;">🎭 高波動交易 (TRADE)</div>
-            <div class="metric-value" style="color: #fbbf24;">{(df_latest["action"] == "TRADE").sum()} <span style="font-size: 1rem; font-weight: 400; color: #d1d5db;">項</span></div>
+            <div class="metric-label" style="color: #ff6b4a;">🎭 高波動交易 (TRADE)</div>
+            <div class="metric-value" style="color: #ff6b4a;">{(df_latest["action"] == "TRADE").sum()} <span style="font-size: 1rem; font-weight: 400; color: #a0a0a5;">項</span></div>
         </div>
         """, unsafe_allow_html=True)
     with col4:
         st.markdown(f"""
         <div class="metric-card">
             <div class="metric-label" style="color: #f43f5e;">⛔ 結構風險 (AVOID)</div>
-            <div class="metric-value" style="color: #f43f5e;">{(df_latest["action"] == "AVOID").sum()} <span style="font-size: 1rem; font-weight: 400; color: #d1d5db;">項</span></div>
+            <div class="metric-value" style="color: #f43f5e;">{(df_latest["action"] == "AVOID").sum()} <span style="font-size: 1rem; font-weight: 400; color: #a0a0a5;">項</span></div>
         </div>
         """, unsafe_allow_html=True)
         
@@ -264,23 +264,23 @@ else:
         df_latest_show = df_latest_show.sort_values(by="total", ascending=False)
         display_cols = ["rank", "symbol", "name", "total", "constitutional", "demand", "capture", "risk", "action", "vol_to_mcap"]
         
-        # High-contrast cell styling function for DataFrame
+        # High-contrast cell styling function for Plurk theme
         def style_columns(row):
             styles = pd.Series("", index=row.index)
-            # Action styling (SaaS Bright Glow Badges)
+            # Action styling (Plurk Qualifiers Colors)
             action_map = {
-                "HOLD": "background-color: rgba(16, 185, 129, 0.15); color: #34d399; font-weight: bold; border: 1px solid rgba(16, 185, 129, 0.3); border-radius: 6px;",
-                "ROTATE": "background-color: rgba(56, 189, 248, 0.15); color: #38bdf8; font-weight: bold; border: 1px solid rgba(56, 189, 248, 0.3); border-radius: 6px;",
-                "TRADE": "background-color: rgba(251, 191, 36, 0.15); color: #fbbf24; font-weight: bold; border: 1px solid rgba(251, 191, 36, 0.3); border-radius: 6px;",
-                "AVOID": "background-color: rgba(244, 63, 94, 0.15); color: #f43f5e; font-weight: bold; border: 1px solid rgba(244, 63, 94, 0.3); border-radius: 6px;"
+                "HOLD": "background-color: rgba(115, 164, 0, 0.18); color: #84cc16; font-weight: bold; border: 1px solid rgba(115, 164, 0, 0.35); border-radius: 6px;",
+                "ROTATE": "background-color: rgba(51, 102, 153, 0.18); color: #38bdf8; font-weight: bold; border: 1px solid rgba(51, 102, 153, 0.35); border-radius: 6px;",
+                "TRADE": "background-color: rgba(207, 81, 48, 0.18); color: #ff6b4a; font-weight: bold; border: 1px solid rgba(207, 81, 48, 0.38); border-radius: 6px;",
+                "AVOID": "background-color: rgba(225, 29, 72, 0.18); color: #f43f5e; font-weight: bold; border: 1px solid rgba(225, 29, 72, 0.35); border-radius: 6px;"
             }
             styles["action"] = action_map.get(row["action"], "")
             
-            # Highlight Total Score
+            # Highlight Total Score (Plurk Orange-Red Highlight)
             if row["action"] == "AVOID":
                 styles["total"] = "color: #f43f5e; font-weight: bold; font-size: 1.05rem;"
             else:
-                styles["total"] = "color: #ffffff; font-weight: bold; font-size: 1.05rem;"
+                styles["total"] = "color: #ff6b4a; font-weight: bold; font-size: 1.05rem;"
                 
             # Highlight high risk values
             if float(row["risk"]) >= 40:
@@ -288,7 +288,7 @@ else:
             elif float(row["risk"]) > 0:
                 styles["risk"] = "color: #fca5a5; font-weight: 500;"
                 
-            # Brighter defaults for regular columns to avoid low contrast
+            # Brighter defaults for regular columns
             for col in ["rank", "symbol", "name", "constitutional", "demand", "capture", "vol_to_mcap"]:
                 styles[col] = "color: #e5e7eb;"
                 
@@ -341,7 +341,7 @@ else:
                 color="symbol",
                 markers=True,
                 line_shape="spline",
-                color_discrete_sequence=["#38bdf8", "#34d399", "#fbbf24", "#f43f5e", "#a78bfa", "#fb923c", "#2dd4bf", "#f472b6"],
+                color_discrete_sequence=["#ff6b4a", "#84cc16", "#38bdf8", "#f43f5e", "#a78bfa", "#fb923c", "#2dd4bf", "#f472b6"],
                 labels={"date_str": "日期 (UTC)", target_col: "分數", "symbol": "代幣"},
                 template="plotly_dark"
             )
@@ -383,9 +383,9 @@ else:
             hover_name="name",
             hover_data=["symbol", "total", "rank"],
             color_discrete_map={
-                "HOLD": "#34d399",
+                "HOLD": "#84cc16",
                 "ROTATE": "#38bdf8",
-                "TRADE": "#fbbf24",
+                "TRADE": "#ff6b4a",
                 "AVOID": "#f43f5e"
             },
             labels={x_col: col_x, y_col: col_y, "action": "投資決策"},
@@ -412,9 +412,9 @@ else:
             nbins=20,
             color="action",
             color_discrete_map={
-                "HOLD": "#34d399",
+                "HOLD": "#84cc16",
                 "ROTATE": "#38bdf8",
-                "TRADE": "#fbbf24",
+                "TRADE": "#ff6b4a",
                 "AVOID": "#f43f5e"
             },
             labels={"total": "SOPX 總分", "count": "項目數量", "action": "投資決策"},

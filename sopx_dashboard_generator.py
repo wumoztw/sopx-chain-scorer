@@ -125,7 +125,7 @@ def generate_html_dashboard():
         color="symbol",
         markers=True,
         line_shape="spline",  # Smooth lines
-        color_discrete_sequence=["#38bdf8", "#34d399", "#fbbf24", "#f43f5e", "#a78bfa", "#fb923c", "#2dd4bf", "#f472b6"],
+        color_discrete_sequence=["#ff6b4a", "#84cc16", "#38bdf8", "#f43f5e", "#a78bfa", "#fb923c", "#2dd4bf", "#f472b6"],
         title="SOPX 總分歷史趨勢 (Top 10 代幣)",
         labels={"date_str": "日期 (UTC)", "total": "SOPX 總分", "symbol": "代幣"},
         template="plotly_dark"
@@ -141,16 +141,16 @@ def generate_html_dashboard():
     )
     trend_html = pio.to_html(fig_trend, include_plotlyjs=False, full_html=False, config={'displayModeBar': False})
     
-    # B. Score Distribution Histogram - High contrast colors
+    # B. Score Distribution Histogram - Plurk brand colors
     fig_dist = px.histogram(
         df_latest,
         x="total",
         nbins=20,
         color="action",
         color_discrete_map={
-            "HOLD": "#34d399",
+            "HOLD": "#84cc16",
             "ROTATE": "#38bdf8",
-            "TRADE": "#fbbf24",
+            "TRADE": "#ff6b4a",
             "AVOID": "#f43f5e"
         },
         title="本週 SOPX 總分區間分佈",
@@ -168,7 +168,7 @@ def generate_html_dashboard():
     )
     dist_html = pio.to_html(fig_dist, include_plotlyjs=False, full_html=False, config={'displayModeBar': False})
     
-    # C. Dimensional Scatter Plot (Constitutional vs. Risk) - High contrast
+    # C. Dimensional Scatter Plot (Constitutional vs. Risk) - Plurk brand colors
     fig_scatter = px.scatter(
         df_latest,
         x="constitutional",
@@ -178,9 +178,9 @@ def generate_html_dashboard():
         hover_name="name",
         hover_data=["symbol", "total", "rank"],
         color_discrete_map={
-            "HOLD": "#34d399",
+            "HOLD": "#84cc16",
             "ROTATE": "#38bdf8",
-            "TRADE": "#fbbf24",
+            "TRADE": "#ff6b4a",
             "AVOID": "#f43f5e"
         },
         title="🧱 制度分 vs. ⛔ 風險扣分（氣泡大小代表市值）",
@@ -198,20 +198,20 @@ def generate_html_dashboard():
     )
     scatter_html = pio.to_html(fig_scatter, include_plotlyjs=False, full_html=False, config={'displayModeBar': False})
     
-    # 5. Build Top 100 HTML Table - High Contrast styling
+    # 5. Build Top 100 HTML Table - Plurk theme styling
     table_rows_html = ""
     for idx, row in enumerate(df_latest.to_dict(orient="records"), 1):
         action_class = {
-            "HOLD": "bg-emerald-500/15 text-emerald-400 border-emerald-500/30",
-            "ROTATE": "bg-sky-500/15 text-sky-400 border-sky-500/30",
-            "TRADE": "bg-amber-500/15 text-amber-400 border-amber-500/30",
-            "AVOID": "bg-rose-500/15 text-rose-400 border-rose-500/30"
+            "HOLD": "bg-[#73a400]/15 text-[#84cc16] border-[#73a400]/30",
+            "ROTATE": "bg-[#336699]/15 text-[#38bdf8] border-[#336699]/30",
+            "TRADE": "bg-[#cf5130]/15 text-[#ff6b4a] border-[#cf5130]/30",
+            "AVOID": "bg-[#b2003b]/15 text-[#f43f5e] border-[#b2003b]/30"
         }.get(row["action"], "bg-slate-500/15 text-slate-400 border-slate-500/30")
         
         tags = row.get("tags") or []
         tags_badges = " ".join([f'<span class="px-2 py-0.5 text-2xs bg-slate-950 text-slate-300 border border-slate-800 rounded font-medium">{t}</span>' for t in tags[:3]])
         
-        total_score_class = "text-rose-400" if row["action"] == "AVOID" else "text-white"
+        total_score_class = "text-[#f43f5e]" if row["action"] == "AVOID" else "text-[#ff6b4a]"
         
         table_rows_html += f"""
         <tr class="border-b border-slate-900 token-row hover:bg-slate-900/30 transition-colors duration-150" 
@@ -228,7 +228,7 @@ def generate_html_dashboard():
             <td class="px-4 py-3.5 text-slate-200 text-right">{row["constitutional"]:.0f}</td>
             <td class="px-4 py-3.5 text-slate-200 text-right">{row["demand"]:.0f}</td>
             <td class="px-4 py-3.5 text-slate-200 text-right">{row["capture"]:.0f}</td>
-            <td class="px-4 py-3.5 text-rose-400 font-medium text-right">{row["risk"]:.0f}</td>
+            <td class="px-4 py-3.5 text-[#f43f5e] font-medium text-right">{row["risk"]:.0f}</td>
             <td class="px-4 py-3.5 text-center">
                 <span class="px-2.5 py-1 text-xs border rounded-full font-bold {action_class}">{row["action"]}</span>
             </td>
@@ -236,24 +236,24 @@ def generate_html_dashboard():
         </tr>
         """
         
-    # Generate movers HTML lists - Higher contrast
+    # Generate movers HTML lists - Plurk theme colors
     movers_up_html = "".join([
         f'<li class="flex justify-between items-center py-2.5 border-b border-slate-900/80">'
         f'<span class="font-semibold text-slate-200">{m["name"]} ({m["symbol"].upper()})</span>'
-        f'<span class="text-emerald-400 font-bold font-mono">+{m["delta"]:.2f} → {m["total"]:.1f}</span></li>'
+        f'<span class="text-[#84cc16] font-bold font-mono">+{m["delta"]:.2f} → {m["total"]:.1f}</span></li>'
         for m in movers_up
     ])
     
     movers_down_html = "".join([
         f'<li class="flex justify-between items-center py-2.5 border-b border-slate-900/80">'
         f'<span class="font-semibold text-slate-200">{m["name"]} ({m["symbol"].upper()})</span>'
-        f'<span class="text-rose-400 font-bold font-mono">{m["delta"]:.2f} → {m["total"]:.1f}</span></li>'
+        f'<span class="text-[#f43f5e] font-bold font-mono">{m["delta"]:.2f} → {m["total"]:.1f}</span></li>'
         for m in movers_down
     ])
     
     flags_html = "".join([
-        f'<li class="text-rose-400 py-2.5 border-b border-slate-900/80 text-sm font-semibold flex items-center gap-2">'
-        f'<span class="w-1.5 h-1.5 rounded-full bg-rose-500"></span>{f}</li>'
+        f'<li class="text-[#f43f5e] py-2.5 border-b border-slate-900/80 text-sm font-semibold flex items-center gap-2">'
+        f'<span class="w-1.5 h-1.5 rounded-full bg-[#f43f5e]"></span>{f}</li>'
         for f in drift_flags
     ]) if drift_flags else '<li class="text-slate-500 py-3 text-sm">無異常變動警訊</li>'
 
@@ -272,23 +272,23 @@ def generate_html_dashboard():
     <style>
         body {
             font-family: 'Outfit', 'Noto Sans TC', sans-serif;
-            background-color: #0b0f19;
+            background-color: #18181c; /* Plurk Warm Charcoal */
             background-image: 
-                radial-gradient(at 0% 0%, rgba(56, 189, 248, 0.03) 0px, transparent 50%),
-                radial-gradient(at 100% 0%, rgba(16, 185, 129, 0.03) 0px, transparent 50%);
+                radial-gradient(at 0% 0%, rgba(207, 81, 48, 0.03) 0px, transparent 50%),
+                radial-gradient(at 100% 0%, rgba(56, 189, 248, 0.02) 0px, transparent 50%);
         }
         .glass-panel {
-            background: rgba(17, 24, 39, 0.75); /* High contrast panel background */
+            background: rgba(36, 36, 40, 0.85); /* Plurk Panel Background */
             backdrop-filter: blur(12px);
             -webkit-backdrop-filter: blur(12px);
-            border: 1px solid rgba(255, 255, 255, 0.08); /* More visible border */
+            border: 1px solid rgba(207, 81, 48, 0.16); /* Plurk Orange border */
             box-shadow: 0 4px 30px rgba(0, 0, 0, 0.5);
             transition: all 0.25s ease;
         }
         .glass-panel-hover:hover {
             transform: translateY(-2px);
-            border-color: rgba(255, 255, 255, 0.18);
-            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.6);
+            border-color: rgba(207, 81, 48, 0.45); /* Plurk Orange hover border */
+            box-shadow: 0 10px 30px rgba(207, 81, 48, 0.15);
         }
         /* Custom scrollbar for table */
         ::-webkit-scrollbar {
@@ -296,14 +296,14 @@ def generate_html_dashboard():
             height: 6px;
         }
         ::-webkit-scrollbar-track {
-            background: rgba(15, 23, 42, 0.2);
+            background: rgba(24, 24, 28, 0.2);
         }
         ::-webkit-scrollbar-thumb {
-            background: rgba(255, 255, 255, 0.08);
+            background: rgba(207, 81, 48, 0.12);
             border-radius: 4px;
         }
         ::-webkit-scrollbar-thumb:hover {
-            background: rgba(255, 255, 255, 0.15);
+            background: rgba(207, 81, 48, 0.25);
         }
         .text-2xs {
             font-size: 0.65rem;
@@ -312,15 +312,15 @@ def generate_html_dashboard():
 </head>
 <body class="min-h-screen pb-16 relative overflow-x-hidden">
     
-    <!-- Top Brand Gradient Border -->
-    <div class="w-full h-[3px] bg-gradient-to-r from-emerald-500 via-sky-500 via-amber-500 to-rose-500 absolute top-0 left-0 z-50"></div>
+    <!-- Top Plurk Brand Gradient Border -->
+    <div class="w-full h-[3px] bg-gradient-to-r from-[#cf5130] via-[#ff6b4a] via-[#84cc16] to-[#3b82f6] absolute top-0 left-0 z-50"></div>
  
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-10 relative z-10">
         
         <!-- Header -->
         <header class="flex flex-col md:flex-row justify-between items-start md:items-center mb-10 border-b border-slate-900 pb-8">
             <div>
-                <h1 class="text-4xl sm:text-5xl font-extrabold tracking-tight bg-gradient-to-r from-white via-slate-100 to-slate-300 bg-clip-text text-transparent">
+                <h1 class="text-4xl sm:text-5xl font-extrabold tracking-tight bg-gradient-to-r from-white via-slate-100 to-[#f5f4f0] bg-clip-text text-transparent">
                     SOPX Chain Scorer 儀表板
                 </h1>
                 <p class="text-slate-300 mt-3 text-sm sm:text-base font-medium">每週加密貨幣量化評分與制度分析趨勢監控系統</p>
@@ -331,29 +331,33 @@ def generate_html_dashboard():
             </div>
         </header>
  
-        <!-- Metric Cards (High Contrast & High Salience) -->
+        <!-- Metric Cards (Plurk brand style) -->
         <section class="grid grid-cols-2 lg:grid-cols-4 gap-5 mb-10">
             <div class="glass-panel glass-panel-hover p-6 rounded-2xl flex flex-col justify-between">
                 <span class="text-xs text-slate-300 font-semibold tracking-wider uppercase flex items-center gap-1.5">
-                    <span class="w-2.5 h-2.5 rounded-full bg-emerald-400"></span>🧱 長期核心 (HOLD)
+                    <span class="w-2.5 h-2.5 rounded-full bg-[#84cc16]"></span>🧱 長期核心 (HOLD)
                 </span>
-                <span class="text-3xl sm:text-4xl font-extrabold text-emerald-400 mt-4 font-mono">{{ hold_count }} <span class="text-sm font-normal text-slate-400">個項目</span></span>
+                <span class="text-3xl sm:text-4xl font-extrabold text-[#84cc16] mt-4 font-mono">{{ hold_count }} <span class="text-sm font-normal text-slate-400">個項目</span></span>
             </div>
             <div class="glass-panel glass-panel-hover p-6 rounded-2xl flex flex-col justify-between">
                 <span class="text-xs text-slate-300 font-semibold tracking-wider uppercase flex items-center gap-1.5">
-                    <span class="w-2.5 h-2.5 rounded-full bg-sky-400"></span>🏗 成長配置 (ROTATE)
+                    <span class="w-2.5 h-2.5 rounded-full bg-[#38bdf8]"></span>🏗 成長配置 (ROTATE)
                 </span>
-                <span class="text-3xl sm:text-4xl font-extrabold text-sky-400 mt-4 font-mono">{{ rotate_count }} <span class="text-sm font-normal text-slate-400">個項目</span></span>
+                <span class="text-3xl sm:text-4xl font-extrabold text-[#38bdf8] mt-4 font-mono">{{ rotate_count }} <span class="text-sm font-normal text-slate-400">個項目</span></span>
             </div>
             <div class="glass-panel glass-panel-hover p-6 rounded-2xl flex flex-col justify-between">
                 <span class="text-xs text-slate-300 font-semibold tracking-wider uppercase flex items-center gap-1.5">
-                    <span class="w-2.5 h-2.5 rounded-full bg-amber-400"></span>🎭 高波動交易 (TRADE)
+                    <span class="w-2.5 h-2.5 rounded-full bg-[#ff6b4a]"></span>🎭 高波動交易 (TRADE)
                 </span>
-                <span class="text-3xl sm:text-4xl font-extrabold text-amber-400 mt-4 font-mono">{{ trade_count }} <span class="text-sm font-normal text-slate-400">個項目</span></span>
+                <span class="text-3xl sm:text-4xl font-extrabold text-[#ff6b4a] mt-4 font-mono">{{ trade_count }} <span class="text-sm font-normal text-slate-400">個項目</span></span>
             </div>
             <div class="glass-panel glass-panel-hover p-6 rounded-2xl flex flex-col justify-between">
                 <span class="text-xs text-slate-300 font-semibold tracking-wider uppercase flex items-center gap-1.5">
-                    <span class="w-2.5 h-2.5 rounded-full bg-rose-400"></span>⛔ 結構風險 (AVOID)
+                    <span class="w-2.5 h-2.5 rounded-full bg-[#f43f5e]"></span>⛔ 結構風險 (AVOID)
+                </span>
+                <span class="text-3xl sm:text-4xl font-extrabold text-[#f43f5e] mt-4 font-mono">{{ avoid_count }} <span class="text-sm font-normal text-slate-400">個項目</span></span>
+            </div>
+        </section>"w-2.5 h-2.5 rounded-full bg-rose-400"></span>⛔ 結構風險 (AVOID)
                 </span>
                 <span class="text-3xl sm:text-4xl font-extrabold text-rose-400 mt-4 font-mono">{{ avoid_count }} <span class="text-sm font-normal text-slate-400">個項目</span></span>
             </div>
