@@ -4,7 +4,6 @@ import plotly.express as px
 import plotly.graph_objects as go
 import os
 import json
-import yaml
 from glob import glob
 from datetime import datetime
 
@@ -16,50 +15,109 @@ st.set_page_config(
     initial_sidebar_state="expanded"
 )
 
-# Custom premium styling
+# Custom premium styling (SaaS Premium Dark Theme + Neon Borders)
 st.markdown("""
 <style>
-    @import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;800&display=swap');
+    @import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;800&family=Noto+Sans+TC:wght@300;400;700&display=swap');
     
     html, body, [class*="css"] {
-        font-family: 'Outfit', sans-serif;
+        font-family: 'Outfit', 'Noto Sans TC', sans-serif;
+        background-color: #020617;
+        color: #f8fafc;
+    }
+    
+    /* Top Neon Glow line */
+    .stApp::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 4px;
+        background: linear-gradient(90deg, #10b981, #3b82f6, #f59e0b, #ef4444);
+        z-index: 9999;
     }
     
     .main-title {
-        font-size: 2.5rem;
+        font-size: 2.8rem;
         font-weight: 800;
-        background: linear-gradient(135deg, #FF4B4B, #FF8F8F);
+        background: linear-gradient(135deg, #10B981, #3B82F6);
         -webkit-background-clip: text;
         -webkit-text-fill-color: transparent;
-        margin-bottom: 0.5rem;
+        margin-bottom: 0.2rem;
+        letter-spacing: -0.02em;
     }
     
     .subtitle {
         font-size: 1.1rem;
-        color: #88888b;
-        margin-bottom: 2rem;
+        color: #94a3b8;
+        margin-bottom: 2.2rem;
     }
     
-    .card {
-        background: rgba(255, 255, 255, 0.05);
-        backdrop-filter: blur(10px);
-        border-radius: 12px;
+    /* Premium Glassmorphism Card */
+    .metric-card {
+        background: rgba(15, 23, 42, 0.45);
+        backdrop-filter: blur(12px);
+        -webkit-backdrop-filter: blur(12px);
+        border-radius: 16px;
         padding: 1.5rem;
-        border: 1px solid rgba(255, 255, 255, 0.1);
+        border: 1px solid rgba(255, 255, 255, 0.05);
+        box-shadow: 0 10px 30px -10px rgba(0, 0, 0, 0.5);
+        transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
         margin-bottom: 1rem;
     }
     
+    .metric-card:hover {
+        transform: translateY(-2px);
+        border-color: rgba(59, 130, 246, 0.3);
+        box-shadow: 0 10px 30px -10px rgba(59, 130, 246, 0.15);
+    }
+    
     .metric-value {
-        font-size: 1.8rem;
+        font-size: 2.2rem;
         font-weight: 800;
-        color: #ffffff;
+        line-height: 1.1;
+        margin-top: 0.4rem;
     }
     
     .metric-label {
-        font-size: 0.9rem;
-        color: #88888b;
+        font-size: 0.8rem;
+        color: #94a3b8;
+        font-weight: 600;
         text-transform: uppercase;
-        letter-spacing: 0.05em;
+        letter-spacing: 0.08em;
+    }
+    
+    /* Sidebar styling */
+    section[data-testid="stSidebar"] {
+        background-color: #0b0f19 !important;
+        border-right: 1px solid rgba(255, 255, 255, 0.03);
+    }
+    
+    /* Custom tab headers */
+    .stTabs [data-baseweb="tab-list"] {
+        gap: 8px;
+        background-color: rgba(15, 23, 42, 0.3);
+        padding: 6px;
+        border-radius: 12px;
+        border: 1px solid rgba(255, 255, 255, 0.03);
+    }
+    
+    .stTabs [data-baseweb="tab"] {
+        height: 40px;
+        white-space: pre-wrap;
+        background-color: transparent;
+        border-radius: 8px;
+        color: #94a3b8;
+        font-weight: 600;
+        transition: all 0.2s ease;
+        border: none;
+    }
+    
+    .stTabs [aria-selected="true"] {
+        background-color: rgba(59, 130, 246, 0.15) !important;
+        color: #3b82f6 !important;
+        border: 1px solid rgba(59, 130, 246, 0.2) !important;
     }
 </style>
 """, unsafe_allow_html=True)
@@ -126,7 +184,8 @@ else:
     df_latest = df_hist[df_hist["date_utc"] == latest_date]
     
     # ----------------- Sidebar -----------------
-    st.sidebar.markdown("## ⚙️ 篩選控制項")
+    st.sidebar.markdown("<h2 style='font-weight: 800; color: #fff;'>⚙️ 篩選控制項</h2>", unsafe_allow_html=True)
+    st.sidebar.markdown("<hr style='border: 1px solid rgba(255,255,255,0.05); margin-top: 0.5rem; margin-bottom: 1.5rem;'/>", unsafe_allow_html=True)
     
     # Lookback Filter
     dates = sorted(df_hist["date_utc"].unique())
@@ -139,12 +198,13 @@ else:
     
     # Search/Filter Tokens
     all_tokens = sorted(df_latest["symbol"].str.upper().unique())
-    # Default to top 5 tokens from latest scores
     default_tokens = df_latest.sort_values(by="total", ascending=False)["symbol"].head(5).str.upper().tolist()
-    selected_tokens = st.sidebar.multiselect("選擇 Token 進行趨勢對比", options=all_tokens, default=default_tokens)
     
-    # Action labels filter
-    actions_filter = st.sidebar.multiselect("篩選投資決策 (最新)", options=["HOLD", "ROTATE", "TRADE", "AVOID"], default=["HOLD", "ROTATE", "TRADE"])
+    st.sidebar.markdown("<p style='font-size: 0.9rem; font-weight: 600; color: #94a3b8; margin-bottom: 0.3rem;'>🔍 對比代幣代號</p>", unsafe_allow_html=True)
+    selected_tokens = st.sidebar.multiselect("選擇對比代幣", options=all_tokens, default=default_tokens, label_visibility="collapsed")
+    
+    st.sidebar.markdown("<p style='font-size: 0.9rem; font-weight: 600; color: #94a3b8; margin-bottom: 0.3rem; margin-top: 1rem;'>⚖️ 篩選投資決策</p>", unsafe_allow_html=True)
+    actions_filter = st.sidebar.multiselect("篩選決策類型", options=["HOLD", "ROTATE", "TRADE", "AVOID"], default=["HOLD", "ROTATE", "TRADE"], label_visibility="collapsed")
 
     # ----------------- Main Interface -----------------
     st.markdown('<div class="main-title">SOPX Chain Scorer 視覺化儀表板</div>', unsafe_allow_html=True)
@@ -154,46 +214,46 @@ else:
     col1, col2, col3, col4 = st.columns(4)
     with col1:
         st.markdown(f"""
-        <div class="card">
-            <div class="metric-label">🧱 長期核心 (HOLD)</div>
-            <div class="metric-value">{(df_latest["action"] == "HOLD").sum()} 個項目</div>
+        <div class="metric-card">
+            <div class="metric-label" style="color: #10b981;">🧱 長期核心 (HOLD)</div>
+            <div class="metric-value" style="color: #10b981;">{(df_latest["action"] == "HOLD").sum()} <span style="font-size: 1rem; font-weight: 400; color: #94a3b8;">項</span></div>
         </div>
         """, unsafe_allow_html=True)
     with col2:
         st.markdown(f"""
-        <div class="card">
-            <div class="metric-label">🏗 成長配置 (ROTATE)</div>
-            <div class="metric-value">{(df_latest["action"] == "ROTATE").sum()} 個項目</div>
+        <div class="metric-card">
+            <div class="metric-label" style="color: #3b82f6;">🏗 成長配置 (ROTATE)</div>
+            <div class="metric-value" style="color: #3b82f6;">{(df_latest["action"] == "ROTATE").sum()} <span style="font-size: 1rem; font-weight: 400; color: #94a3b8;">項</span></div>
         </div>
         """, unsafe_allow_html=True)
     with col3:
         st.markdown(f"""
-        <div class="card">
-            <div class="metric-label">🎭 高波動交易 (TRADE)</div>
-            <div class="metric-value">{(df_latest["action"] == "TRADE").sum()} 個項目</div>
+        <div class="metric-card">
+            <div class="metric-label" style="color: #f59e0b;">🎭 高波動交易 (TRADE)</div>
+            <div class="metric-value" style="color: #f59e0b;">{(df_latest["action"] == "TRADE").sum()} <span style="font-size: 1rem; font-weight: 400; color: #94a3b8;">項</span></div>
         </div>
         """, unsafe_allow_html=True)
     with col4:
         st.markdown(f"""
-        <div class="card">
-            <div class="metric-label">⛔ 結構風險 (AVOID)</div>
-            <div class="metric-value">{(df_latest["action"] == "AVOID").sum()} 個項目</div>
+        <div class="metric-card">
+            <div class="metric-label" style="color: #ef4444;">⛔ 結構風險 (AVOID)</div>
+            <div class="metric-value" style="color: #ef4444;">{(df_latest["action"] == "AVOID").sum()} <span style="font-size: 1rem; font-weight: 400; color: #94a3b8;">項</span></div>
         </div>
         """, unsafe_allow_html=True)
         
     # Tabs
-    tab1, tab2, tab3, tab4 = st.tabs(["📊 最新評分大盤", "📈 歷史趨勢追蹤", "⚖️ 核心維度對比", "📉 分數分佈分析"])
+    tab1, tab2, tab3, tab4 = st.tabs(["🏆 最新評分大盤", "📈 歷史趨勢追蹤", "⚖️ 核心維度對比", "📉 分數分佈分析"])
     
     # Tab 1: Latest Standings
     with tab1:
-        st.markdown("### 🏆 本週 Top 100 評分大盤")
+        st.markdown("<h3 style='font-weight: 700; color: #fff; margin-bottom: 1rem;'>🏆 本週 Top 100 評分大盤</h3>", unsafe_allow_html=True)
         
         # Filtering latest dataframe
         df_latest_show = df_latest.copy()
         if actions_filter:
             df_latest_show = df_latest_show[df_latest_show["action"].isin(actions_filter)]
             
-        search_query = st.text_input("🔍 搜尋項目名稱或代幣符號：")
+        search_query = st.text_input("🔍 搜尋項目名稱或代幣符號：", placeholder="請輸入例如 eth, btc...")
         if search_query:
             df_latest_show = df_latest_show[
                 df_latest_show["name"].str.contains(search_query, case=False) |
@@ -207,34 +267,35 @@ else:
         # Color styling function
         def style_action(val):
             color_map = {
-                "HOLD": "background-color: rgba(46, 204, 113, 0.2); color: #2ecc71; font-weight: bold;",
-                "ROTATE": "background-color: rgba(52, 152, 219, 0.2); color: #3498db; font-weight: bold;",
-                "TRADE": "background-color: rgba(241, 196, 15, 0.2); color: #f1c40f; font-weight: bold;",
-                "AVOID": "background-color: rgba(231, 76, 60, 0.2); color: #e74c3c; font-weight: bold;"
+                "HOLD": "background-color: rgba(16, 185, 129, 0.15); color: #10b981; font-weight: bold; border: 1px solid rgba(16, 185, 129, 0.2); border-radius: 6px;",
+                "ROTATE": "background-color: rgba(59, 130, 246, 0.15); color: #3b82f6; font-weight: bold; border: 1px solid rgba(59, 130, 246, 0.2); border-radius: 6px;",
+                "TRADE": "background-color: rgba(245, 158, 11, 0.15); color: #f59e0b; font-weight: bold; border: 1px solid rgba(245, 158, 11, 0.2); border-radius: 6px;",
+                "AVOID": "background-color: rgba(239, 68, 68, 0.15); color: #ef4444; font-weight: bold; border: 1px solid rgba(239, 68, 68, 0.2); border-radius: 6px;"
             }
             return color_map.get(val, "")
 
         st.dataframe(
             df_latest_show[display_cols].style.map(style_action, subset=["action"]),
             column_config={
-                "rank": "市值排名",
-                "symbol": "代幣符號",
-                "name": "項目名稱",
-                "total": "SOPX 總分",
-                "constitutional": "🧱 制度分",
-                "demand": "🏗 需求分",
-                "capture": "🎭 捕獲分",
-                "risk": "⛔ 風險扣分",
-                "action": "投資決策",
-                "vol_to_mcap": "Vol/Mcap"
+                "rank": st.column_config.NumberColumn("市值排名", format="%d"),
+                "symbol": st.column_config.TextColumn("代幣符號"),
+                "name": st.column_config.TextColumn("項目名稱"),
+                "total": st.column_config.NumberColumn("SOPX 總分", format="%.1f"),
+                "constitutional": st.column_config.NumberColumn("🧱 制度分", format="%d"),
+                "demand": st.column_config.NumberColumn("🏗 需求分", format="%d"),
+                "capture": st.column_config.NumberColumn("🎭 捕獲分", format="%d"),
+                "risk": st.column_config.NumberColumn("⛔ 風險扣分", format="%d"),
+                "action": st.column_config.TextColumn("投資決策"),
+                "vol_to_mcap": st.column_config.NumberColumn("Vol/Mcap", format="%.3f")
             },
             hide_index=True,
-            use_container_width=True
+            use_container_width=True,
+            height=500
         )
         
     # Tab 2: Historical Trends
     with tab2:
-        st.markdown("### 📈 歷史評分趨勢對比")
+        st.markdown("<h3 style='font-weight: 700; color: #fff; margin-bottom: 1rem;'>📈 歷史評分趨勢對比</h3>", unsafe_allow_html=True)
         if not selected_tokens:
             st.warning("請在側邊欄選擇至少一個 Token 來查看趨勢。")
         else:
@@ -258,21 +319,25 @@ else:
                 y=target_col,
                 color="symbol",
                 markers=True,
-                title=f"{dimension} 歷史變化趨勢",
+                line_shape="spline",  # Smooth line spline
                 labels={"date_str": "日期 (UTC)", target_col: "分數", "symbol": "代幣"},
                 template="plotly_dark"
             )
+            fig.update_traces(line=dict(width=3))
             fig.update_layout(
                 hovermode="x unified",
-                xaxis={"tickangle": -45},
+                xaxis={"tickangle": -45, "showgrid": True, "gridcolor": "rgba(255,255,255,0.05)"},
+                yaxis={"showgrid": True, "gridcolor": "rgba(255,255,255,0.05)"},
                 plot_bgcolor="rgba(0,0,0,0)",
-                paper_bgcolor="rgba(0,0,0,0)"
+                paper_bgcolor="rgba(0,0,0,0)",
+                margin=dict(l=20, r=20, t=30, b=20),
+                font=dict(family="Outfit, Noto Sans TC, sans-serif")
             )
             st.plotly_chart(fig, use_container_width=True)
             
     # Tab 3: Dimensional Comparison
     with tab3:
-        st.markdown("### ⚖️ 多維度分佈與交叉對比")
+        st.markdown("<h3 style='font-weight: 700; color: #fff; margin-bottom: 1rem;'>⚖️ 多維度分佈與交叉對比</h3>", unsafe_allow_html=True)
         
         col_x = st.selectbox("橫軸 (X 軸)", options=["🧱 制度分 (Constitutional)", "🏗 需求分 (Demand)", "🎭 捕獲分 (Capture)", "⛔ 風險分 (Risk)"], index=0)
         col_y = st.selectbox("縱軸 (Y 軸)", options=["🧱 制度分 (Constitutional)", "🏗 需求分 (Demand)", "🎭 捕獲分 (Capture)", "⛔ 風險分 (Risk)"], index=1)
@@ -296,24 +361,28 @@ else:
             hover_name="name",
             hover_data=["symbol", "total", "rank"],
             color_discrete_map={
-                "HOLD": "#2ecc71",
-                "ROTATE": "#3498db",
-                "TRADE": "#f1c40f",
-                "AVOID": "#e74c3c"
+                "HOLD": "#10b981",
+                "ROTATE": "#3b82f6",
+                "TRADE": "#f59e0b",
+                "AVOID": "#ef4444"
             },
-            title=f"{col_x} vs. {col_y} 交叉對比（氣泡大小代表市值）",
             labels={x_col: col_x, y_col: col_y, "action": "投資決策"},
             template="plotly_dark"
         )
+        fig.update_traces(marker=dict(line=dict(width=1, color='rgba(255,255,255,0.2)')))
         fig.update_layout(
+            xaxis={"showgrid": True, "gridcolor": "rgba(255,255,255,0.05)"},
+            yaxis={"showgrid": True, "gridcolor": "rgba(255,255,255,0.05)"},
             plot_bgcolor="rgba(0,0,0,0)",
-            paper_bgcolor="rgba(0,0,0,0)"
+            paper_bgcolor="rgba(0,0,0,0)",
+            margin=dict(l=20, r=20, t=30, b=20),
+            font=dict(family="Outfit, Noto Sans TC, sans-serif")
         )
         st.plotly_chart(fig, use_container_width=True)
         
     # Tab 4: Score Distribution
     with tab4:
-        st.markdown("### 📉 評分區間分佈（最新一期）")
+        st.markdown("<h3 style='font-weight: 700; color: #fff; margin-bottom: 1rem;'>📉 評分區間分佈（最新一期）</h3>", unsafe_allow_html=True)
         
         fig = px.histogram(
             df_latest,
@@ -321,18 +390,21 @@ else:
             nbins=20,
             color="action",
             color_discrete_map={
-                "HOLD": "#2ecc71",
-                "ROTATE": "#3498db",
-                "TRADE": "#f1c40f",
-                "AVOID": "#e74c3c"
+                "HOLD": "#10b981",
+                "ROTATE": "#3b82f6",
+                "TRADE": "#f59e0b",
+                "AVOID": "#ef4444"
             },
-            title="SOPX 總分區間直方圖",
             labels={"total": "SOPX 總分", "count": "項目數量", "action": "投資決策"},
             template="plotly_dark"
         )
         fig.update_layout(
-            bargap=0.05,
+            bargap=0.08,
+            xaxis={"showgrid": False},
+            yaxis={"showgrid": True, "gridcolor": "rgba(255,255,255,0.05)"},
             plot_bgcolor="rgba(0,0,0,0)",
-            paper_bgcolor="rgba(0,0,0,0)"
+            paper_bgcolor="rgba(0,0,0,0)",
+            margin=dict(l=20, r=20, t=30, b=20),
+            font=dict(family="Outfit, Noto Sans TC, sans-serif")
         )
         st.plotly_chart(fig, use_container_width=True)
