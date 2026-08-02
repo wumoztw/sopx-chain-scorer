@@ -1,0 +1,5902 @@
+[
+  {
+    "id": "bitcoin",
+    "symbol": "btc",
+    "name": "Bitcoin",
+    "rank": 1,
+    "market_cap": 1273853902751,
+    "vol_to_mcap": 0.011736586226813492,
+    "constitutional": 100,
+    "constitutional_breakdown": {
+      "sopx_curated_facts": {
+        "score": 100.0,
+        "weight": 0.4,
+        "reason": "curated: layer=civilization, anchor=global, dec=high, admin=low, exit=True, thesis=institutional, flags=0",
+        "meta": {
+          "layer": "civilization",
+          "settlement_anchor": "global",
+          "decentralization": "high",
+          "admin_risk": "low",
+          "exit_test": true,
+          "thesis": "institutional",
+          "review_interval_weeks": 12,
+          "risk_flags": [],
+          "penalties": 0
+        }
+      },
+      "sopx_age_maturity": {
+        "score": 100.0,
+        "weight": 0.15,
+        "reason": "Age≈17.6y",
+        "meta": {
+          "age_years": 17.57700205338809
+        }
+      },
+      "sopx_decentralization_proxy": {
+        "score": 79.0,
+        "weight": 0.15,
+        "reason": "Dev proxy (commits=108, contrib=846) + interest",
+        "meta": {
+          "commits": 108,
+          "contributors": 846,
+          "alexa_rank": null
+        }
+      },
+      "sopx_governance_admin_risk": {
+        "score": 55.0,
+        "weight": 0.1,
+        "reason": "Admin/neutrality risk proxy (heuristic)",
+        "meta": {
+          "categories": [
+            "Smart Contract Platform",
+            "Layer 1 (L1)",
+            "FTX Holdings",
+            "Proof of Work (PoW)",
+            "Bitcoin Ecosystem",
+            "GMCI 30 Index",
+            "GMCI Index",
+            "Coinbase 50 Index"
+          ]
+        }
+      },
+      "sopx_l2_settlement_anchor": {
+        "score": 95.0,
+        "weight": 0.2,
+        "reason": "Manual tag: settlement/civilization anchor",
+        "meta": {
+          "tags": [
+            "Civilization-Layer",
+            "Monetary"
+          ]
+        }
+      }
+    },
+    "demand": 17.36,
+    "capture": 100,
+    "risk": 0,
+    "total": 65.21,
+    "tags": [
+      "Civilization-Layer",
+      "Monetary",
+      "layer:civilization",
+      "anchor:global",
+      "thesis:institutional"
+    ]
+  },
+  {
+    "id": "ethereum",
+    "symbol": "eth",
+    "name": "Ethereum",
+    "rank": 2,
+    "market_cap": 226669618115,
+    "vol_to_mcap": 0.0230446256778439,
+    "constitutional": 100,
+    "constitutional_breakdown": {
+      "sopx_curated_facts": {
+        "score": 100.0,
+        "weight": 0.4,
+        "reason": "curated: layer=civilization, anchor=global, dec=high, admin=low, exit=True, thesis=institutional, flags=0",
+        "meta": {
+          "layer": "civilization",
+          "settlement_anchor": "global",
+          "decentralization": "high",
+          "admin_risk": "low",
+          "exit_test": true,
+          "thesis": "institutional",
+          "review_interval_weeks": 12,
+          "risk_flags": [],
+          "penalties": 0
+        }
+      },
+      "sopx_age_maturity": {
+        "score": 100.0,
+        "weight": 0.15,
+        "reason": "Age≈11.0y",
+        "meta": {
+          "age_years": 11.008898015058179
+        }
+      },
+      "sopx_decentralization_proxy": {
+        "score": 79.0,
+        "weight": 0.15,
+        "reason": "Dev proxy (commits=41, contrib=906) + interest",
+        "meta": {
+          "commits": 41,
+          "contributors": 906,
+          "alexa_rank": null
+        }
+      },
+      "sopx_governance_admin_risk": {
+        "score": 55.0,
+        "weight": 0.1,
+        "reason": "Admin/neutrality risk proxy (heuristic)",
+        "meta": {
+          "categories": [
+            "Smart Contract Platform",
+            "Layer 1 (L1)",
+            "Ethereum Ecosystem",
+            "FTX Holdings",
+            "Multicoin Capital Portfolio",
+            "Proof of Stake (PoS)",
+            "Alameda Research Portfolio",
+            "Andreessen Horowitz (a16z) Portfolio",
+            "GMCI Layer 1 Index",
+            "GMCI 30 Index",
+            "Delphi Ventures Portfolio",
+            "Galaxy Digital Portfolio",
+            "GMCI Index",
+            "World Liberty Financial Portfolio",
+            "Coinbase 50 Index"
+          ]
+        }
+      },
+      "sopx_l2_settlement_anchor": {
+        "score": 95.0,
+        "weight": 0.2,
+        "reason": "Manual tag: settlement/civilization anchor",
+        "meta": {
+          "tags": [
+            "Civilization-Layer",
+            "Settlement"
+          ]
+        }
+      }
+    },
+    "demand": 22.82,
+    "capture": 56.67,
+    "risk": 0,
+    "total": 58.18,
+    "tags": [
+      "Civilization-Layer",
+      "Settlement",
+      "layer:civilization",
+      "anchor:global",
+      "thesis:institutional"
+    ]
+  },
+  {
+    "id": "tether",
+    "symbol": "usdt",
+    "name": "Tether",
+    "rank": 3,
+    "market_cap": 183307681573,
+    "vol_to_mcap": 0.13300880530906914,
+    "constitutional": 37.85,
+    "constitutional_breakdown": {
+      "sopx_curated_facts": {
+        "score": 45.0,
+        "weight": 0.4,
+        "reason": "No curated entry; fallback",
+        "meta": {}
+      },
+      "sopx_age_maturity": {
+        "score": 35.0,
+        "weight": 0.15,
+        "reason": "No genesis_date; assume young/unknown",
+        "meta": {}
+      },
+      "sopx_decentralization_proxy": {
+        "score": 14.0,
+        "weight": 0.15,
+        "reason": "Dev proxy (commits=0, contrib=0) + interest",
+        "meta": {
+          "commits": 0,
+          "contributors": 0,
+          "alexa_rank": null
+        }
+      },
+      "sopx_governance_admin_risk": {
+        "score": 55.0,
+        "weight": 0.1,
+        "reason": "Admin/neutrality risk proxy (heuristic)",
+        "meta": {
+          "categories": [
+            "Stablecoins",
+            "USD Stablecoin",
+            "Solana Ecosystem",
+            "Avalanche Ecosystem",
+            "Near Protocol Ecosystem",
+            "Celo Ecosystem",
+            "Ethereum Ecosystem",
+            "Tezos Ecosystem",
+            "Kaia Ecosystem",
+            "Aptos Ecosystem",
+            "FTX Holdings",
+            "TON Ecosystem",
+            "Tron Ecosystem",
+            "Kava Ecosystem",
+            "Fiat-backed Stablecoin",
+            "World Liberty Financial Portfolio",
+            "Tether Ecosystem"
+          ]
+        }
+      },
+      "sopx_l2_settlement_anchor": {
+        "score": 35.0,
+        "weight": 0.2,
+        "reason": "Not identified as settlement anchor",
+        "meta": {
+          "tags": []
+        }
+      }
+    },
+    "demand": 57.5,
+    "capture": 56.67,
+    "risk": 0,
+    "total": 43.72,
+    "tags": []
+  },
+  {
+    "id": "binancecoin",
+    "symbol": "bnb",
+    "name": "BNB",
+    "rank": 4,
+    "market_cap": 77756534690,
+    "vol_to_mcap": 0.00869335091507021,
+    "constitutional": 49.12,
+    "constitutional_breakdown": {
+      "sopx_curated_facts": {
+        "score": 45.0,
+        "weight": 0.4,
+        "reason": "No curated entry; fallback",
+        "meta": {}
+      },
+      "sopx_age_maturity": {
+        "score": 100.0,
+        "weight": 0.15,
+        "reason": "Age≈9.1y",
+        "meta": {
+          "age_years": 9.067761806981519
+        }
+      },
+      "sopx_decentralization_proxy": {
+        "score": 24.14,
+        "weight": 0.15,
+        "reason": "Dev proxy (commits=0, contrib=26) + interest",
+        "meta": {
+          "commits": 0,
+          "contributors": 26,
+          "alexa_rank": null
+        }
+      },
+      "sopx_governance_admin_risk": {
+        "score": 55.0,
+        "weight": 0.1,
+        "reason": "Admin/neutrality risk proxy (heuristic)",
+        "meta": {
+          "categories": [
+            "Smart Contract Platform",
+            "Exchange-based Tokens",
+            "BNB Chain Ecosystem",
+            "Centralized Exchange (CEX) Token",
+            "Layer 1 (L1)",
+            "Ethereum Ecosystem",
+            "Alleged SEC Securities",
+            "FTX Holdings",
+            "Proof of Stake (PoS)",
+            "GMCI Layer 1 Index",
+            "GMCI 30 Index",
+            "GMCI Index",
+            "Made in China"
+          ]
+        }
+      },
+      "sopx_l2_settlement_anchor": {
+        "score": 35.0,
+        "weight": 0.2,
+        "reason": "Not identified as settlement anchor",
+        "meta": {
+          "tags": []
+        }
+      }
+    },
+    "demand": 16.94,
+    "capture": 100,
+    "risk": 0,
+    "total": 44.73,
+    "tags": []
+  },
+  {
+    "id": "usd-coin",
+    "symbol": "usdc",
+    "name": "USDC",
+    "rank": 5,
+    "market_cap": 71947758555,
+    "vol_to_mcap": 0.06527249563181337,
+    "constitutional": 39.61,
+    "constitutional_breakdown": {
+      "sopx_curated_facts": {
+        "score": 45.0,
+        "weight": 0.4,
+        "reason": "No curated entry; fallback",
+        "meta": {}
+      },
+      "sopx_age_maturity": {
+        "score": 35.0,
+        "weight": 0.15,
+        "reason": "No genesis_date; assume young/unknown",
+        "meta": {}
+      },
+      "sopx_decentralization_proxy": {
+        "score": 25.7,
+        "weight": 0.15,
+        "reason": "Dev proxy (commits=0, contrib=30) + interest",
+        "meta": {
+          "commits": 0,
+          "contributors": 30,
+          "alexa_rank": null
+        }
+      },
+      "sopx_governance_admin_risk": {
+        "score": 55.0,
+        "weight": 0.1,
+        "reason": "Admin/neutrality risk proxy (heuristic)",
+        "meta": {
+          "categories": [
+            "Stablecoins",
+            "USD Stablecoin",
+            "Solana Ecosystem",
+            "Avalanche Ecosystem",
+            "Polygon Ecosystem",
+            "Near Protocol Ecosystem",
+            "Arbitrum Ecosystem",
+            "Celo Ecosystem",
+            "Ethereum Ecosystem",
+            "XDC Ecosystem",
+            "Cronos Ecosystem",
+            "Algorand Ecosystem",
+            "Optimism Ecosystem",
+            "Aptos Ecosystem",
+            "ZkSync Ecosystem",
+            "Sui Ecosystem",
+            "Base Ecosystem",
+            "Tron Ecosystem",
+            "Injective Ecosystem",
+            "Starknet Ecosystem",
+            "Hedera Ecosystem",
+            "Stellar Ecosystem",
+            "XRP Ledger Ecosystem",
+            "Sonic Ecosystem",
+            "Fiat-backed Stablecoin",
+            "Sei Network Ecosystem",
+            "World Chain Ecosystem",
+            "Morph L2 Ecosystem",
+            "World Liberty Financial Portfolio",
+            "Ink Ecosystem",
+            "Made in USA",
+            "Unichain Ecosystem",
+            "HyperEVM Ecosystem",
+            "Plume Network Ecosystem",
+            "Monad Ecosystem",
+            "Base Native",
+            "MiCA-Compliant Stablecoin",
+            "GENIUS Act Compliant Stablecoin",
+            "Pharos Ecosystem"
+          ]
+        }
+      },
+      "sopx_l2_settlement_anchor": {
+        "score": 35.0,
+        "weight": 0.2,
+        "reason": "Not identified as settlement anchor",
+        "meta": {
+          "tags": []
+        }
+      }
+    },
+    "demand": 41.87,
+    "capture": 56.67,
+    "risk": 0,
+    "total": 39.74,
+    "tags": []
+  },
+  {
+    "id": "ripple",
+    "symbol": "xrp",
+    "name": "XRP",
+    "rank": 6,
+    "market_cap": 67394827313,
+    "vol_to_mcap": 0.010194095888238544,
+    "constitutional": 41.61,
+    "constitutional_breakdown": {
+      "sopx_curated_facts": {
+        "score": 45.0,
+        "weight": 0.4,
+        "reason": "No curated entry; fallback",
+        "meta": {}
+      },
+      "sopx_age_maturity": {
+        "score": 35.0,
+        "weight": 0.15,
+        "reason": "No genesis_date; assume young/unknown",
+        "meta": {}
+      },
+      "sopx_decentralization_proxy": {
+        "score": 39.09,
+        "weight": 0.15,
+        "reason": "Dev proxy (commits=4, contrib=62) + interest",
+        "meta": {
+          "commits": 4,
+          "contributors": 62,
+          "alexa_rank": null
+        }
+      },
+      "sopx_governance_admin_risk": {
+        "score": 55.0,
+        "weight": 0.1,
+        "reason": "Admin/neutrality risk proxy (heuristic)",
+        "meta": {
+          "categories": [
+            "Smart Contract Platform",
+            "Layer 1 (L1)",
+            "FTX Holdings",
+            "Pantera Capital Portfolio",
+            "Andreessen Horowitz (a16z) Portfolio",
+            "XRP Ledger Ecosystem",
+            "GMCI 30 Index",
+            "Blockchain Capital Portfolio",
+            "GMCI Index",
+            "Made in USA",
+            "Coinbase 50 Index"
+          ]
+        }
+      },
+      "sopx_l2_settlement_anchor": {
+        "score": 35.0,
+        "weight": 0.2,
+        "reason": "Not identified as settlement anchor",
+        "meta": {
+          "tags": []
+        }
+      }
+    },
+    "demand": 16.56,
+    "capture": 100,
+    "risk": 0,
+    "total": 41.61,
+    "tags": []
+  },
+  {
+    "id": "solana",
+    "symbol": "sol",
+    "name": "Solana",
+    "rank": 7,
+    "market_cap": 42532536562,
+    "vol_to_mcap": 0.02839068813212627,
+    "constitutional": 68.8,
+    "constitutional_breakdown": {
+      "sopx_curated_facts": {
+        "score": 78.0,
+        "weight": 0.4,
+        "reason": "curated: layer=regional, anchor=regional, dec=medium, admin=medium, exit=partial, thesis=ecosystem, flags=1",
+        "meta": {
+          "layer": "regional",
+          "settlement_anchor": "regional",
+          "decentralization": "medium",
+          "admin_risk": "medium",
+          "exit_test": "partial",
+          "thesis": "ecosystem",
+          "review_interval_weeks": 8,
+          "risk_flags": [
+            "frequent_upgrades"
+          ],
+          "penalties": 4
+        }
+      },
+      "sopx_age_maturity": {
+        "score": 35.0,
+        "weight": 0.15,
+        "reason": "No genesis_date; assume young/unknown",
+        "meta": {}
+      },
+      "sopx_decentralization_proxy": {
+        "score": 79.0,
+        "weight": 0.15,
+        "reason": "Dev proxy (commits=171, contrib=411) + interest",
+        "meta": {
+          "commits": 171,
+          "contributors": 411,
+          "alexa_rank": null
+        }
+      },
+      "sopx_governance_admin_risk": {
+        "score": 55.0,
+        "weight": 0.1,
+        "reason": "Admin/neutrality risk proxy (heuristic)",
+        "meta": {
+          "categories": [
+            "Smart Contract Platform",
+            "Solana Ecosystem",
+            "Layer 1 (L1)",
+            "FTX Holdings",
+            "Multicoin Capital Portfolio",
+            "Proof of Stake (PoS)",
+            "Alameda Research Portfolio",
+            "Andreessen Horowitz (a16z) Portfolio",
+            "GMCI Layer 1 Index",
+            "GMCI 30 Index",
+            "Delphi Ventures Portfolio",
+            "GMCI Index",
+            "Polychain Capital Portfolio",
+            "Made in USA",
+            "Coinbase 50 Index",
+            "CoinList Launchpad"
+          ]
+        }
+      },
+      "sopx_l2_settlement_anchor": {
+        "score": 35.0,
+        "weight": 0.2,
+        "reason": "Not identified as settlement anchor",
+        "meta": {
+          "tags": [
+            "Regional-Layer",
+            "Consumer-HighFreq"
+          ]
+        }
+      }
+    },
+    "demand": 24.7,
+    "capture": 56.67,
+    "risk": 0,
+    "total": 46.26,
+    "tags": [
+      "Regional-Layer",
+      "Consumer-HighFreq",
+      "layer:regional",
+      "anchor:regional",
+      "thesis:ecosystem",
+      "flag:frequent_upgrades"
+    ]
+  },
+  {
+    "id": "tron",
+    "symbol": "trx",
+    "name": "TRON",
+    "rank": 8,
+    "market_cap": 31119539470,
+    "vol_to_mcap": 0.010948345020608366,
+    "constitutional": 57.35,
+    "constitutional_breakdown": {
+      "sopx_curated_facts": {
+        "score": 45.0,
+        "weight": 0.4,
+        "reason": "No curated entry; fallback",
+        "meta": {}
+      },
+      "sopx_age_maturity": {
+        "score": 100.0,
+        "weight": 0.15,
+        "reason": "Age≈8.9y",
+        "meta": {
+          "age_years": 8.928131416837783
+        }
+      },
+      "sopx_decentralization_proxy": {
+        "score": 79.0,
+        "weight": 0.15,
+        "reason": "Dev proxy (commits=19, contrib=190) + interest",
+        "meta": {
+          "commits": 19,
+          "contributors": 190,
+          "alexa_rank": null
+        }
+      },
+      "sopx_governance_admin_risk": {
+        "score": 55.0,
+        "weight": 0.1,
+        "reason": "Admin/neutrality risk proxy (heuristic)",
+        "meta": {
+          "categories": [
+            "Smart Contract Platform",
+            "Layer 1 (L1)",
+            "Alleged SEC Securities",
+            "FTX Holdings",
+            "DWF Labs Portfolio",
+            "Tron Ecosystem",
+            "Proof of Stake (PoS)",
+            "GMCI Layer 1 Index",
+            "GMCI 30 Index",
+            "GMCI Index",
+            "World Liberty Financial Portfolio",
+            "Made in China"
+          ]
+        }
+      },
+      "sopx_l2_settlement_anchor": {
+        "score": 35.0,
+        "weight": 0.2,
+        "reason": "Not identified as settlement anchor",
+        "meta": {
+          "tags": []
+        }
+      }
+    },
+    "demand": 17.18,
+    "capture": 56.67,
+    "risk": 0,
+    "total": 39.43,
+    "tags": []
+  },
+  {
+    "id": "figure-heloc",
+    "symbol": "figr_heloc",
+    "name": "Figure Heloc",
+    "rank": 9,
+    "market_cap": 20829985693,
+    "vol_to_mcap": 0.00019168457716904684,
+    "constitutional": 37.85,
+    "constitutional_breakdown": {
+      "sopx_curated_facts": {
+        "score": 45.0,
+        "weight": 0.4,
+        "reason": "No curated entry; fallback",
+        "meta": {}
+      },
+      "sopx_age_maturity": {
+        "score": 35.0,
+        "weight": 0.15,
+        "reason": "No genesis_date; assume young/unknown",
+        "meta": {}
+      },
+      "sopx_decentralization_proxy": {
+        "score": 14.0,
+        "weight": 0.15,
+        "reason": "Dev proxy (commits=0, contrib=0) + interest",
+        "meta": {
+          "commits": 0,
+          "contributors": 0,
+          "alexa_rank": null
+        }
+      },
+      "sopx_governance_admin_risk": {
+        "score": 55.0,
+        "weight": 0.1,
+        "reason": "Admin/neutrality risk proxy (heuristic)",
+        "meta": {
+          "categories": [
+            "Real World Assets (RWA)",
+            "Made in USA",
+            "Provenance Ecosystem",
+            "Tokenized Private Credit"
+          ]
+        }
+      },
+      "sopx_l2_settlement_anchor": {
+        "score": 35.0,
+        "weight": 0.2,
+        "reason": "Not identified as settlement anchor",
+        "meta": {
+          "tags": []
+        }
+      }
+    },
+    "demand": 11.96,
+    "capture": 56.67,
+    "risk": 20,
+    "total": 28.06,
+    "tags": []
+  },
+  {
+    "id": "whitebit",
+    "symbol": "wbt",
+    "name": "WhiteBIT Coin",
+    "rank": 18,
+    "market_cap": 16278658686,
+    "vol_to_mcap": 0.0023517551254345404,
+    "constitutional": 37.85,
+    "constitutional_breakdown": {
+      "sopx_curated_facts": {
+        "score": 45.0,
+        "weight": 0.4,
+        "reason": "No curated entry; fallback",
+        "meta": {}
+      },
+      "sopx_age_maturity": {
+        "score": 35.0,
+        "weight": 0.15,
+        "reason": "No genesis_date; assume young/unknown",
+        "meta": {}
+      },
+      "sopx_decentralization_proxy": {
+        "score": 14.0,
+        "weight": 0.15,
+        "reason": "Dev proxy (commits=0, contrib=0) + interest",
+        "meta": {
+          "commits": 0,
+          "contributors": 0,
+          "alexa_rank": null
+        }
+      },
+      "sopx_governance_admin_risk": {
+        "score": 55.0,
+        "weight": 0.1,
+        "reason": "Admin/neutrality risk proxy (heuristic)",
+        "meta": {
+          "categories": []
+        }
+      },
+      "sopx_l2_settlement_anchor": {
+        "score": 35.0,
+        "weight": 0.2,
+        "reason": "Not identified as settlement anchor",
+        "meta": {
+          "tags": []
+        }
+      }
+    },
+    "demand": 13.16,
+    "capture": 0,
+    "risk": 10,
+    "total": 18.09,
+    "tags": []
+  },
+  {
+    "id": "hyperliquid",
+    "symbol": "hype",
+    "name": "Hyperliquid",
+    "rank": 10,
+    "market_cap": 11735656269,
+    "vol_to_mcap": 0.019790057809846714,
+    "constitutional": 37.85,
+    "constitutional_breakdown": {
+      "sopx_curated_facts": {
+        "score": 45.0,
+        "weight": 0.4,
+        "reason": "No curated entry; fallback",
+        "meta": {}
+      },
+      "sopx_age_maturity": {
+        "score": 35.0,
+        "weight": 0.15,
+        "reason": "No genesis_date; assume young/unknown",
+        "meta": {}
+      },
+      "sopx_decentralization_proxy": {
+        "score": 14.0,
+        "weight": 0.15,
+        "reason": "Dev proxy (commits=0, contrib=0) + interest",
+        "meta": {
+          "commits": 0,
+          "contributors": 0,
+          "alexa_rank": null
+        }
+      },
+      "sopx_governance_admin_risk": {
+        "score": 55.0,
+        "weight": 0.1,
+        "reason": "Admin/neutrality risk proxy (heuristic)",
+        "meta": {
+          "categories": [
+            "Decentralized Exchange (DEX)",
+            "Smart Contract Platform",
+            "Exchange-based Tokens",
+            "Decentralized Finance (DeFi)",
+            "Derivatives",
+            "Perpetuals",
+            "Layer 1 (L1)",
+            "Proof of Stake (PoS)",
+            "Hyperliquid Ecosystem",
+            "Governance"
+          ]
+        }
+      },
+      "sopx_l2_settlement_anchor": {
+        "score": 35.0,
+        "weight": 0.2,
+        "reason": "Not identified as settlement anchor",
+        "meta": {
+          "tags": []
+        }
+      }
+    },
+    "demand": 18.93,
+    "capture": 100,
+    "risk": 0,
+    "total": 40.82,
+    "tags": []
+  },
+  {
+    "id": "dogecoin",
+    "symbol": "doge",
+    "name": "Dogecoin",
+    "rank": 11,
+    "market_cap": 10874309689,
+    "vol_to_mcap": 0.03758523112629738,
+    "constitutional": 37.85,
+    "constitutional_breakdown": {
+      "sopx_curated_facts": {
+        "score": 45.0,
+        "weight": 0.4,
+        "reason": "No curated entry; fallback",
+        "meta": {}
+      },
+      "sopx_age_maturity": {
+        "score": 35.0,
+        "weight": 0.15,
+        "reason": "No genesis_date; assume young/unknown",
+        "meta": {}
+      },
+      "sopx_decentralization_proxy": {
+        "score": 14.0,
+        "weight": 0.15,
+        "reason": "Dev proxy (commits=0, contrib=0) + interest",
+        "meta": {
+          "commits": 0,
+          "contributors": 0,
+          "alexa_rank": null
+        }
+      },
+      "sopx_governance_admin_risk": {
+        "score": 55.0,
+        "weight": 0.1,
+        "reason": "Admin/neutrality risk proxy (heuristic)",
+        "meta": {
+          "categories": []
+        }
+      },
+      "sopx_l2_settlement_anchor": {
+        "score": 35.0,
+        "weight": 0.2,
+        "reason": "Not identified as settlement anchor",
+        "meta": {
+          "tags": []
+        }
+      }
+    },
+    "demand": 28.59,
+    "capture": 0,
+    "risk": 10,
+    "total": 22.72,
+    "tags": []
+  },
+  {
+    "id": "usds",
+    "symbol": "usds",
+    "name": "USDS",
+    "rank": 12,
+    "market_cap": 9718342936,
+    "vol_to_mcap": 0.005948614530348572,
+    "constitutional": 37.85,
+    "constitutional_breakdown": {
+      "sopx_curated_facts": {
+        "score": 45.0,
+        "weight": 0.4,
+        "reason": "No curated entry; fallback",
+        "meta": {}
+      },
+      "sopx_age_maturity": {
+        "score": 35.0,
+        "weight": 0.15,
+        "reason": "No genesis_date; assume young/unknown",
+        "meta": {}
+      },
+      "sopx_decentralization_proxy": {
+        "score": 14.0,
+        "weight": 0.15,
+        "reason": "Dev proxy (commits=0, contrib=0) + interest",
+        "meta": {
+          "commits": 0,
+          "contributors": 0,
+          "alexa_rank": null
+        }
+      },
+      "sopx_governance_admin_risk": {
+        "score": 55.0,
+        "weight": 0.1,
+        "reason": "Admin/neutrality risk proxy (heuristic)",
+        "meta": {
+          "categories": []
+        }
+      },
+      "sopx_l2_settlement_anchor": {
+        "score": 35.0,
+        "weight": 0.2,
+        "reason": "Not identified as settlement anchor",
+        "meta": {
+          "tags": []
+        }
+      }
+    },
+    "demand": 15.18,
+    "capture": 0,
+    "risk": 10,
+    "total": 18.69,
+    "tags": []
+  },
+  {
+    "id": "leo-token",
+    "symbol": "leo",
+    "name": "LEO Token",
+    "rank": 13,
+    "market_cap": 9017310635,
+    "vol_to_mcap": 2.4368352039144317e-05,
+    "constitutional": 37.85,
+    "constitutional_breakdown": {
+      "sopx_curated_facts": {
+        "score": 45.0,
+        "weight": 0.4,
+        "reason": "No curated entry; fallback",
+        "meta": {}
+      },
+      "sopx_age_maturity": {
+        "score": 35.0,
+        "weight": 0.15,
+        "reason": "No genesis_date; assume young/unknown",
+        "meta": {}
+      },
+      "sopx_decentralization_proxy": {
+        "score": 14.0,
+        "weight": 0.15,
+        "reason": "Dev proxy (commits=0, contrib=0) + interest",
+        "meta": {
+          "commits": 0,
+          "contributors": 0,
+          "alexa_rank": null
+        }
+      },
+      "sopx_governance_admin_risk": {
+        "score": 55.0,
+        "weight": 0.1,
+        "reason": "Admin/neutrality risk proxy (heuristic)",
+        "meta": {
+          "categories": []
+        }
+      },
+      "sopx_l2_settlement_anchor": {
+        "score": 35.0,
+        "weight": 0.2,
+        "reason": "Not identified as settlement anchor",
+        "meta": {
+          "tags": []
+        }
+      }
+    },
+    "demand": 12.34,
+    "capture": 0,
+    "risk": 30,
+    "total": 15.84,
+    "tags": []
+  },
+  {
+    "id": "rain",
+    "symbol": "rain",
+    "name": "Rain",
+    "rank": 14,
+    "market_cap": 8529847325,
+    "vol_to_mcap": 0.002014953180888264,
+    "constitutional": 37.85,
+    "constitutional_breakdown": {
+      "sopx_curated_facts": {
+        "score": 45.0,
+        "weight": 0.4,
+        "reason": "No curated entry; fallback",
+        "meta": {}
+      },
+      "sopx_age_maturity": {
+        "score": 35.0,
+        "weight": 0.15,
+        "reason": "No genesis_date; assume young/unknown",
+        "meta": {}
+      },
+      "sopx_decentralization_proxy": {
+        "score": 14.0,
+        "weight": 0.15,
+        "reason": "Dev proxy (commits=0, contrib=0) + interest",
+        "meta": {
+          "commits": 0,
+          "contributors": 0,
+          "alexa_rank": null
+        }
+      },
+      "sopx_governance_admin_risk": {
+        "score": 55.0,
+        "weight": 0.1,
+        "reason": "Admin/neutrality risk proxy (heuristic)",
+        "meta": {
+          "categories": []
+        }
+      },
+      "sopx_l2_settlement_anchor": {
+        "score": 35.0,
+        "weight": 0.2,
+        "reason": "Not identified as settlement anchor",
+        "meta": {
+          "tags": []
+        }
+      }
+    },
+    "demand": 10.56,
+    "capture": 0,
+    "risk": 10,
+    "total": 17.31,
+    "tags": []
+  },
+  {
+    "id": "zcash",
+    "symbol": "zec",
+    "name": "Zcash",
+    "rank": 15,
+    "market_cap": 7933787282,
+    "vol_to_mcap": 0.018233348066717173,
+    "constitutional": 37.85,
+    "constitutional_breakdown": {
+      "sopx_curated_facts": {
+        "score": 45.0,
+        "weight": 0.4,
+        "reason": "No curated entry; fallback",
+        "meta": {}
+      },
+      "sopx_age_maturity": {
+        "score": 35.0,
+        "weight": 0.15,
+        "reason": "No genesis_date; assume young/unknown",
+        "meta": {}
+      },
+      "sopx_decentralization_proxy": {
+        "score": 14.0,
+        "weight": 0.15,
+        "reason": "Dev proxy (commits=0, contrib=0) + interest",
+        "meta": {
+          "commits": 0,
+          "contributors": 0,
+          "alexa_rank": null
+        }
+      },
+      "sopx_governance_admin_risk": {
+        "score": 55.0,
+        "weight": 0.1,
+        "reason": "Admin/neutrality risk proxy (heuristic)",
+        "meta": {
+          "categories": []
+        }
+      },
+      "sopx_l2_settlement_anchor": {
+        "score": 35.0,
+        "weight": 0.2,
+        "reason": "Not identified as settlement anchor",
+        "meta": {
+          "tags": []
+        }
+      }
+    },
+    "demand": 19.98,
+    "capture": 0,
+    "risk": 10,
+    "total": 20.13,
+    "tags": []
+  },
+  {
+    "id": "monero",
+    "symbol": "xmr",
+    "name": "Monero",
+    "rank": 16,
+    "market_cap": 6853138273,
+    "vol_to_mcap": 0.011946410496714051,
+    "constitutional": 37.85,
+    "constitutional_breakdown": {
+      "sopx_curated_facts": {
+        "score": 45.0,
+        "weight": 0.4,
+        "reason": "No curated entry; fallback",
+        "meta": {}
+      },
+      "sopx_age_maturity": {
+        "score": 35.0,
+        "weight": 0.15,
+        "reason": "No genesis_date; assume young/unknown",
+        "meta": {}
+      },
+      "sopx_decentralization_proxy": {
+        "score": 14.0,
+        "weight": 0.15,
+        "reason": "Dev proxy (commits=0, contrib=0) + interest",
+        "meta": {
+          "commits": 0,
+          "contributors": 0,
+          "alexa_rank": null
+        }
+      },
+      "sopx_governance_admin_risk": {
+        "score": 55.0,
+        "weight": 0.1,
+        "reason": "Admin/neutrality risk proxy (heuristic)",
+        "meta": {
+          "categories": []
+        }
+      },
+      "sopx_l2_settlement_anchor": {
+        "score": 35.0,
+        "weight": 0.2,
+        "reason": "Not identified as settlement anchor",
+        "meta": {
+          "tags": []
+        }
+      }
+    },
+    "demand": 17.68,
+    "capture": 0,
+    "risk": 10,
+    "total": 19.44,
+    "tags": []
+  },
+  {
+    "id": "cardano",
+    "symbol": "ada",
+    "name": "Cardano",
+    "rank": 17,
+    "market_cap": 6782652037,
+    "vol_to_mcap": 0.05981545062120662,
+    "constitutional": 42.53,
+    "constitutional_breakdown": {
+      "sopx_curated_facts": {
+        "score": 45.0,
+        "weight": 0.4,
+        "reason": "No curated entry; fallback",
+        "meta": {}
+      },
+      "sopx_age_maturity": {
+        "score": 35.0,
+        "weight": 0.15,
+        "reason": "No genesis_date; assume young/unknown",
+        "meta": {}
+      },
+      "sopx_decentralization_proxy": {
+        "score": 45.2,
+        "weight": 0.15,
+        "reason": "Dev proxy (commits=0, contrib=80) + interest",
+        "meta": {
+          "commits": 0,
+          "contributors": 80,
+          "alexa_rank": null
+        }
+      },
+      "sopx_governance_admin_risk": {
+        "score": 55.0,
+        "weight": 0.1,
+        "reason": "Admin/neutrality risk proxy (heuristic)",
+        "meta": {
+          "categories": [
+            "Smart Contract Platform",
+            "Layer 1 (L1)",
+            "Cardano Ecosystem",
+            "Proof of Stake (PoS)",
+            "GMCI Layer 1 Index",
+            "GMCI 30 Index",
+            "GMCI Index",
+            "Made in USA",
+            "Coinbase 50 Index"
+          ]
+        }
+      },
+      "sopx_l2_settlement_anchor": {
+        "score": 35.0,
+        "weight": 0.2,
+        "reason": "Not identified as settlement anchor",
+        "meta": {
+          "tags": []
+        }
+      }
+    },
+    "demand": 41.59,
+    "capture": 100,
+    "risk": 0,
+    "total": 49.49,
+    "tags": []
+  },
+  {
+    "id": "chainlink",
+    "symbol": "link",
+    "name": "Chainlink",
+    "rank": 19,
+    "market_cap": 6198622135,
+    "vol_to_mcap": 0.026531363489863704,
+    "constitutional": 37.85,
+    "constitutional_breakdown": {
+      "sopx_curated_facts": {
+        "score": 45.0,
+        "weight": 0.4,
+        "reason": "No curated entry; fallback",
+        "meta": {}
+      },
+      "sopx_age_maturity": {
+        "score": 35.0,
+        "weight": 0.15,
+        "reason": "No genesis_date; assume young/unknown",
+        "meta": {}
+      },
+      "sopx_decentralization_proxy": {
+        "score": 14.0,
+        "weight": 0.15,
+        "reason": "Dev proxy (commits=0, contrib=0) + interest",
+        "meta": {
+          "commits": 0,
+          "contributors": 0,
+          "alexa_rank": null
+        }
+      },
+      "sopx_governance_admin_risk": {
+        "score": 55.0,
+        "weight": 0.1,
+        "reason": "Admin/neutrality risk proxy (heuristic)",
+        "meta": {
+          "categories": []
+        }
+      },
+      "sopx_l2_settlement_anchor": {
+        "score": 35.0,
+        "weight": 0.2,
+        "reason": "Not identified as settlement anchor",
+        "meta": {
+          "tags": []
+        }
+      }
+    },
+    "demand": 24.06,
+    "capture": 0,
+    "risk": 10,
+    "total": 21.36,
+    "tags": []
+  },
+  {
+    "id": "stellar",
+    "symbol": "xlm",
+    "name": "Stellar",
+    "rank": 20,
+    "market_cap": 5957170026,
+    "vol_to_mcap": 0.013546281480601809,
+    "constitutional": 37.85,
+    "constitutional_breakdown": {
+      "sopx_curated_facts": {
+        "score": 45.0,
+        "weight": 0.4,
+        "reason": "No curated entry; fallback",
+        "meta": {}
+      },
+      "sopx_age_maturity": {
+        "score": 35.0,
+        "weight": 0.15,
+        "reason": "No genesis_date; assume young/unknown",
+        "meta": {}
+      },
+      "sopx_decentralization_proxy": {
+        "score": 14.0,
+        "weight": 0.15,
+        "reason": "Dev proxy (commits=0, contrib=0) + interest",
+        "meta": {
+          "commits": 0,
+          "contributors": 0,
+          "alexa_rank": null
+        }
+      },
+      "sopx_governance_admin_risk": {
+        "score": 55.0,
+        "weight": 0.1,
+        "reason": "Admin/neutrality risk proxy (heuristic)",
+        "meta": {
+          "categories": []
+        }
+      },
+      "sopx_l2_settlement_anchor": {
+        "score": 35.0,
+        "weight": 0.2,
+        "reason": "Not identified as settlement anchor",
+        "meta": {
+          "tags": []
+        }
+      }
+    },
+    "demand": 18.07,
+    "capture": 0,
+    "risk": 10,
+    "total": 19.56,
+    "tags": []
+  },
+  {
+    "id": "canton-network",
+    "symbol": "cc",
+    "name": "Canton",
+    "rank": 21,
+    "market_cap": 4591310516,
+    "vol_to_mcap": 0.0013235848411521378,
+    "constitutional": 37.85,
+    "constitutional_breakdown": {
+      "sopx_curated_facts": {
+        "score": 45.0,
+        "weight": 0.4,
+        "reason": "No curated entry; fallback",
+        "meta": {}
+      },
+      "sopx_age_maturity": {
+        "score": 35.0,
+        "weight": 0.15,
+        "reason": "No genesis_date; assume young/unknown",
+        "meta": {}
+      },
+      "sopx_decentralization_proxy": {
+        "score": 14.0,
+        "weight": 0.15,
+        "reason": "Dev proxy (commits=0, contrib=0) + interest",
+        "meta": {
+          "commits": 0,
+          "contributors": 0,
+          "alexa_rank": null
+        }
+      },
+      "sopx_governance_admin_risk": {
+        "score": 55.0,
+        "weight": 0.1,
+        "reason": "Admin/neutrality risk proxy (heuristic)",
+        "meta": {
+          "categories": []
+        }
+      },
+      "sopx_l2_settlement_anchor": {
+        "score": 35.0,
+        "weight": 0.2,
+        "reason": "Not identified as settlement anchor",
+        "meta": {
+          "tags": []
+        }
+      }
+    },
+    "demand": 12.1,
+    "capture": 0,
+    "risk": 30,
+    "total": 15.77,
+    "tags": []
+  },
+  {
+    "id": "dai",
+    "symbol": "dai",
+    "name": "Dai",
+    "rank": 22,
+    "market_cap": 4590606644,
+    "vol_to_mcap": 0.013335630069723743,
+    "constitutional": 37.85,
+    "constitutional_breakdown": {
+      "sopx_curated_facts": {
+        "score": 45.0,
+        "weight": 0.4,
+        "reason": "No curated entry; fallback",
+        "meta": {}
+      },
+      "sopx_age_maturity": {
+        "score": 35.0,
+        "weight": 0.15,
+        "reason": "No genesis_date; assume young/unknown",
+        "meta": {}
+      },
+      "sopx_decentralization_proxy": {
+        "score": 14.0,
+        "weight": 0.15,
+        "reason": "Dev proxy (commits=0, contrib=0) + interest",
+        "meta": {
+          "commits": 0,
+          "contributors": 0,
+          "alexa_rank": null
+        }
+      },
+      "sopx_governance_admin_risk": {
+        "score": 55.0,
+        "weight": 0.1,
+        "reason": "Admin/neutrality risk proxy (heuristic)",
+        "meta": {
+          "categories": []
+        }
+      },
+      "sopx_l2_settlement_anchor": {
+        "score": 35.0,
+        "weight": 0.2,
+        "reason": "Not identified as settlement anchor",
+        "meta": {
+          "tags": []
+        }
+      }
+    },
+    "demand": 18.5,
+    "capture": 0,
+    "risk": 10,
+    "total": 19.69,
+    "tags": []
+  },
+  {
+    "id": "bitcoin-cash",
+    "symbol": "bch",
+    "name": "Bitcoin Cash",
+    "rank": 23,
+    "market_cap": 4198018571,
+    "vol_to_mcap": 0.013596903642663758,
+    "constitutional": 37.85,
+    "constitutional_breakdown": {
+      "sopx_curated_facts": {
+        "score": 45.0,
+        "weight": 0.4,
+        "reason": "No curated entry; fallback",
+        "meta": {}
+      },
+      "sopx_age_maturity": {
+        "score": 35.0,
+        "weight": 0.15,
+        "reason": "No genesis_date; assume young/unknown",
+        "meta": {}
+      },
+      "sopx_decentralization_proxy": {
+        "score": 14.0,
+        "weight": 0.15,
+        "reason": "Dev proxy (commits=0, contrib=0) + interest",
+        "meta": {
+          "commits": 0,
+          "contributors": 0,
+          "alexa_rank": null
+        }
+      },
+      "sopx_governance_admin_risk": {
+        "score": 55.0,
+        "weight": 0.1,
+        "reason": "Admin/neutrality risk proxy (heuristic)",
+        "meta": {
+          "categories": []
+        }
+      },
+      "sopx_l2_settlement_anchor": {
+        "score": 35.0,
+        "weight": 0.2,
+        "reason": "Not identified as settlement anchor",
+        "meta": {
+          "tags": []
+        }
+      }
+    },
+    "demand": 18.54,
+    "capture": 0,
+    "risk": 10,
+    "total": 19.7,
+    "tags": []
+  },
+  {
+    "id": "usd1-wlfi",
+    "symbol": "usd1",
+    "name": "USD1",
+    "rank": 24,
+    "market_cap": 3993765016,
+    "vol_to_mcap": 0.10684428309890329,
+    "constitutional": 37.85,
+    "constitutional_breakdown": {
+      "sopx_curated_facts": {
+        "score": 45.0,
+        "weight": 0.4,
+        "reason": "No curated entry; fallback",
+        "meta": {}
+      },
+      "sopx_age_maturity": {
+        "score": 35.0,
+        "weight": 0.15,
+        "reason": "No genesis_date; assume young/unknown",
+        "meta": {}
+      },
+      "sopx_decentralization_proxy": {
+        "score": 14.0,
+        "weight": 0.15,
+        "reason": "Dev proxy (commits=0, contrib=0) + interest",
+        "meta": {
+          "commits": 0,
+          "contributors": 0,
+          "alexa_rank": null
+        }
+      },
+      "sopx_governance_admin_risk": {
+        "score": 55.0,
+        "weight": 0.1,
+        "reason": "Admin/neutrality risk proxy (heuristic)",
+        "meta": {
+          "categories": [
+            "Stablecoins",
+            "USD Stablecoin",
+            "Solana Ecosystem",
+            "Ethereum Ecosystem",
+            "Aptos Ecosystem",
+            "Mantle Ecosystem",
+            "Tron Ecosystem",
+            "Morph L2 Ecosystem",
+            "World Liberty Financial Portfolio",
+            "Plume Network Ecosystem",
+            "Trump-Affiliated",
+            "Monad Ecosystem"
+          ]
+        }
+      },
+      "sopx_l2_settlement_anchor": {
+        "score": 35.0,
+        "weight": 0.2,
+        "reason": "Not identified as settlement anchor",
+        "meta": {
+          "tags": []
+        }
+      }
+    },
+    "demand": 57.5,
+    "capture": 56.67,
+    "risk": 0,
+    "total": 43.72,
+    "tags": []
+  },
+  {
+    "id": "ethena-usde",
+    "symbol": "usde",
+    "name": "Ethena USDe",
+    "rank": 25,
+    "market_cap": 3877466393,
+    "vol_to_mcap": 0.0057276994173550795,
+    "constitutional": 37.85,
+    "constitutional_breakdown": {
+      "sopx_curated_facts": {
+        "score": 45.0,
+        "weight": 0.4,
+        "reason": "No curated entry; fallback",
+        "meta": {}
+      },
+      "sopx_age_maturity": {
+        "score": 35.0,
+        "weight": 0.15,
+        "reason": "No genesis_date; assume young/unknown",
+        "meta": {}
+      },
+      "sopx_decentralization_proxy": {
+        "score": 14.0,
+        "weight": 0.15,
+        "reason": "Dev proxy (commits=0, contrib=0) + interest",
+        "meta": {
+          "commits": 0,
+          "contributors": 0,
+          "alexa_rank": null
+        }
+      },
+      "sopx_governance_admin_risk": {
+        "score": 55.0,
+        "weight": 0.1,
+        "reason": "Admin/neutrality risk proxy (heuristic)",
+        "meta": {
+          "categories": []
+        }
+      },
+      "sopx_l2_settlement_anchor": {
+        "score": 35.0,
+        "weight": 0.2,
+        "reason": "Not identified as settlement anchor",
+        "meta": {
+          "tags": []
+        }
+      }
+    },
+    "demand": 15.05,
+    "capture": 0,
+    "risk": 10,
+    "total": 18.66,
+    "tags": []
+  },
+  {
+    "id": "the-open-network",
+    "symbol": "gram",
+    "name": "Gram (prev. Toncoin)",
+    "rank": 26,
+    "market_cap": 3841624940,
+    "vol_to_mcap": 0.003904189564117105,
+    "constitutional": 37.85,
+    "constitutional_breakdown": {
+      "sopx_curated_facts": {
+        "score": 45.0,
+        "weight": 0.4,
+        "reason": "No curated entry; fallback",
+        "meta": {}
+      },
+      "sopx_age_maturity": {
+        "score": 35.0,
+        "weight": 0.15,
+        "reason": "No genesis_date; assume young/unknown",
+        "meta": {}
+      },
+      "sopx_decentralization_proxy": {
+        "score": 14.0,
+        "weight": 0.15,
+        "reason": "Dev proxy (commits=0, contrib=0) + interest",
+        "meta": {
+          "commits": 0,
+          "contributors": 0,
+          "alexa_rank": null
+        }
+      },
+      "sopx_governance_admin_risk": {
+        "score": 55.0,
+        "weight": 0.1,
+        "reason": "Admin/neutrality risk proxy (heuristic)",
+        "meta": {
+          "categories": []
+        }
+      },
+      "sopx_l2_settlement_anchor": {
+        "score": 35.0,
+        "weight": 0.2,
+        "reason": "Not identified as settlement anchor",
+        "meta": {
+          "tags": []
+        }
+      }
+    },
+    "demand": 12.43,
+    "capture": 0,
+    "risk": 10,
+    "total": 17.87,
+    "tags": []
+  },
+  {
+    "id": "litecoin",
+    "symbol": "ltc",
+    "name": "Litecoin",
+    "rank": 27,
+    "market_cap": 3454959244,
+    "vol_to_mcap": 0.04707612319377044,
+    "constitutional": 37.85,
+    "constitutional_breakdown": {
+      "sopx_curated_facts": {
+        "score": 45.0,
+        "weight": 0.4,
+        "reason": "No curated entry; fallback",
+        "meta": {}
+      },
+      "sopx_age_maturity": {
+        "score": 35.0,
+        "weight": 0.15,
+        "reason": "No genesis_date; assume young/unknown",
+        "meta": {}
+      },
+      "sopx_decentralization_proxy": {
+        "score": 14.0,
+        "weight": 0.15,
+        "reason": "Dev proxy (commits=0, contrib=0) + interest",
+        "meta": {
+          "commits": 0,
+          "contributors": 0,
+          "alexa_rank": null
+        }
+      },
+      "sopx_governance_admin_risk": {
+        "score": 55.0,
+        "weight": 0.1,
+        "reason": "Admin/neutrality risk proxy (heuristic)",
+        "meta": {
+          "categories": []
+        }
+      },
+      "sopx_l2_settlement_anchor": {
+        "score": 35.0,
+        "weight": 0.2,
+        "reason": "Not identified as settlement anchor",
+        "meta": {
+          "tags": []
+        }
+      }
+    },
+    "demand": 32.58,
+    "capture": 0,
+    "risk": 10,
+    "total": 23.92,
+    "tags": []
+  },
+  {
+    "id": "global-dollar",
+    "symbol": "usdg",
+    "name": "Global Dollar",
+    "rank": 28,
+    "market_cap": 3398700017,
+    "vol_to_mcap": 0.025648026175885942,
+    "constitutional": 37.85,
+    "constitutional_breakdown": {
+      "sopx_curated_facts": {
+        "score": 45.0,
+        "weight": 0.4,
+        "reason": "No curated entry; fallback",
+        "meta": {}
+      },
+      "sopx_age_maturity": {
+        "score": 35.0,
+        "weight": 0.15,
+        "reason": "No genesis_date; assume young/unknown",
+        "meta": {}
+      },
+      "sopx_decentralization_proxy": {
+        "score": 14.0,
+        "weight": 0.15,
+        "reason": "Dev proxy (commits=0, contrib=0) + interest",
+        "meta": {
+          "commits": 0,
+          "contributors": 0,
+          "alexa_rank": null
+        }
+      },
+      "sopx_governance_admin_risk": {
+        "score": 55.0,
+        "weight": 0.1,
+        "reason": "Admin/neutrality risk proxy (heuristic)",
+        "meta": {
+          "categories": []
+        }
+      },
+      "sopx_l2_settlement_anchor": {
+        "score": 35.0,
+        "weight": 0.2,
+        "reason": "Not identified as settlement anchor",
+        "meta": {
+          "tags": []
+        }
+      }
+    },
+    "demand": 24.04,
+    "capture": 0,
+    "risk": 10,
+    "total": 21.35,
+    "tags": []
+  },
+  {
+    "id": "hedera-hashgraph",
+    "symbol": "hbar",
+    "name": "Hedera",
+    "rank": 29,
+    "market_cap": 3043627891,
+    "vol_to_mcap": 0.011274466928585521,
+    "constitutional": 37.85,
+    "constitutional_breakdown": {
+      "sopx_curated_facts": {
+        "score": 45.0,
+        "weight": 0.4,
+        "reason": "No curated entry; fallback",
+        "meta": {}
+      },
+      "sopx_age_maturity": {
+        "score": 35.0,
+        "weight": 0.15,
+        "reason": "No genesis_date; assume young/unknown",
+        "meta": {}
+      },
+      "sopx_decentralization_proxy": {
+        "score": 14.0,
+        "weight": 0.15,
+        "reason": "Dev proxy (commits=0, contrib=0) + interest",
+        "meta": {
+          "commits": 0,
+          "contributors": 0,
+          "alexa_rank": null
+        }
+      },
+      "sopx_governance_admin_risk": {
+        "score": 55.0,
+        "weight": 0.1,
+        "reason": "Admin/neutrality risk proxy (heuristic)",
+        "meta": {
+          "categories": []
+        }
+      },
+      "sopx_l2_settlement_anchor": {
+        "score": 35.0,
+        "weight": 0.2,
+        "reason": "Not identified as settlement anchor",
+        "meta": {
+          "tags": []
+        }
+      }
+    },
+    "demand": 17.37,
+    "capture": 0,
+    "risk": 10,
+    "total": 19.35,
+    "tags": []
+  },
+  {
+    "id": "hashnote-usyc",
+    "symbol": "usyc",
+    "name": "Circle USYC",
+    "rank": 30,
+    "market_cap": 3006074389,
+    "vol_to_mcap": 2.636628031895321e-07,
+    "constitutional": 37.85,
+    "constitutional_breakdown": {
+      "sopx_curated_facts": {
+        "score": 45.0,
+        "weight": 0.4,
+        "reason": "No curated entry; fallback",
+        "meta": {}
+      },
+      "sopx_age_maturity": {
+        "score": 35.0,
+        "weight": 0.15,
+        "reason": "No genesis_date; assume young/unknown",
+        "meta": {}
+      },
+      "sopx_decentralization_proxy": {
+        "score": 14.0,
+        "weight": 0.15,
+        "reason": "Dev proxy (commits=0, contrib=0) + interest",
+        "meta": {
+          "commits": 0,
+          "contributors": 0,
+          "alexa_rank": null
+        }
+      },
+      "sopx_governance_admin_risk": {
+        "score": 55.0,
+        "weight": 0.1,
+        "reason": "Admin/neutrality risk proxy (heuristic)",
+        "meta": {
+          "categories": []
+        }
+      },
+      "sopx_l2_settlement_anchor": {
+        "score": 35.0,
+        "weight": 0.2,
+        "reason": "Not identified as settlement anchor",
+        "meta": {
+          "tags": []
+        }
+      }
+    },
+    "demand": 12.55,
+    "capture": 0,
+    "risk": 30,
+    "total": 15.91,
+    "tags": []
+  },
+  {
+    "id": "shiba-inu",
+    "symbol": "shib",
+    "name": "Shiba Inu",
+    "rank": 31,
+    "market_cap": 2879856459,
+    "vol_to_mcap": 0.05476033901174378,
+    "constitutional": 37.85,
+    "constitutional_breakdown": {
+      "sopx_curated_facts": {
+        "score": 45.0,
+        "weight": 0.4,
+        "reason": "No curated entry; fallback",
+        "meta": {}
+      },
+      "sopx_age_maturity": {
+        "score": 35.0,
+        "weight": 0.15,
+        "reason": "No genesis_date; assume young/unknown",
+        "meta": {}
+      },
+      "sopx_decentralization_proxy": {
+        "score": 14.0,
+        "weight": 0.15,
+        "reason": "Dev proxy (commits=0, contrib=0) + interest",
+        "meta": {
+          "commits": 0,
+          "contributors": 0,
+          "alexa_rank": null
+        }
+      },
+      "sopx_governance_admin_risk": {
+        "score": 55.0,
+        "weight": 0.1,
+        "reason": "Admin/neutrality risk proxy (heuristic)",
+        "meta": {
+          "categories": []
+        }
+      },
+      "sopx_l2_settlement_anchor": {
+        "score": 35.0,
+        "weight": 0.2,
+        "reason": "Not identified as settlement anchor",
+        "meta": {
+          "tags": []
+        }
+      }
+    },
+    "demand": 35.22,
+    "capture": 0,
+    "risk": 10,
+    "total": 24.71,
+    "tags": []
+  },
+  {
+    "id": "sui",
+    "symbol": "sui",
+    "name": "Sui",
+    "rank": 32,
+    "market_cap": 2808525915,
+    "vol_to_mcap": 0.04184522434787646,
+    "constitutional": 37.85,
+    "constitutional_breakdown": {
+      "sopx_curated_facts": {
+        "score": 45.0,
+        "weight": 0.4,
+        "reason": "No curated entry; fallback",
+        "meta": {}
+      },
+      "sopx_age_maturity": {
+        "score": 35.0,
+        "weight": 0.15,
+        "reason": "No genesis_date; assume young/unknown",
+        "meta": {}
+      },
+      "sopx_decentralization_proxy": {
+        "score": 14.0,
+        "weight": 0.15,
+        "reason": "Dev proxy (commits=0, contrib=0) + interest",
+        "meta": {
+          "commits": 0,
+          "contributors": 0,
+          "alexa_rank": null
+        }
+      },
+      "sopx_governance_admin_risk": {
+        "score": 55.0,
+        "weight": 0.1,
+        "reason": "Admin/neutrality risk proxy (heuristic)",
+        "meta": {
+          "categories": []
+        }
+      },
+      "sopx_l2_settlement_anchor": {
+        "score": 35.0,
+        "weight": 0.2,
+        "reason": "Not identified as settlement anchor",
+        "meta": {
+          "tags": []
+        }
+      }
+    },
+    "demand": 30.46,
+    "capture": 0,
+    "risk": 10,
+    "total": 23.28,
+    "tags": []
+  },
+  {
+    "id": "avalanche-2",
+    "symbol": "avax",
+    "name": "Avalanche",
+    "rank": 33,
+    "market_cap": 2731226717,
+    "vol_to_mcap": 0.05621884263370729,
+    "constitutional": 37.85,
+    "constitutional_breakdown": {
+      "sopx_curated_facts": {
+        "score": 45.0,
+        "weight": 0.4,
+        "reason": "No curated entry; fallback",
+        "meta": {}
+      },
+      "sopx_age_maturity": {
+        "score": 35.0,
+        "weight": 0.15,
+        "reason": "No genesis_date; assume young/unknown",
+        "meta": {}
+      },
+      "sopx_decentralization_proxy": {
+        "score": 14.0,
+        "weight": 0.15,
+        "reason": "Dev proxy (commits=0, contrib=0) + interest",
+        "meta": {
+          "commits": 0,
+          "contributors": 0,
+          "alexa_rank": null
+        }
+      },
+      "sopx_governance_admin_risk": {
+        "score": 55.0,
+        "weight": 0.1,
+        "reason": "Admin/neutrality risk proxy (heuristic)",
+        "meta": {
+          "categories": []
+        }
+      },
+      "sopx_l2_settlement_anchor": {
+        "score": 35.0,
+        "weight": 0.2,
+        "reason": "Not identified as settlement anchor",
+        "meta": {
+          "tags": []
+        }
+      }
+    },
+    "demand": 36.1,
+    "capture": 0,
+    "risk": 10,
+    "total": 24.97,
+    "tags": []
+  },
+  {
+    "id": "paypal-usd",
+    "symbol": "pyusd",
+    "name": "PayPal USD",
+    "rank": 34,
+    "market_cap": 2710035546,
+    "vol_to_mcap": 0.007821345011981624,
+    "constitutional": 37.85,
+    "constitutional_breakdown": {
+      "sopx_curated_facts": {
+        "score": 45.0,
+        "weight": 0.4,
+        "reason": "No curated entry; fallback",
+        "meta": {}
+      },
+      "sopx_age_maturity": {
+        "score": 35.0,
+        "weight": 0.15,
+        "reason": "No genesis_date; assume young/unknown",
+        "meta": {}
+      },
+      "sopx_decentralization_proxy": {
+        "score": 14.0,
+        "weight": 0.15,
+        "reason": "Dev proxy (commits=0, contrib=0) + interest",
+        "meta": {
+          "commits": 0,
+          "contributors": 0,
+          "alexa_rank": null
+        }
+      },
+      "sopx_governance_admin_risk": {
+        "score": 55.0,
+        "weight": 0.1,
+        "reason": "Admin/neutrality risk proxy (heuristic)",
+        "meta": {
+          "categories": []
+        }
+      },
+      "sopx_l2_settlement_anchor": {
+        "score": 35.0,
+        "weight": 0.2,
+        "reason": "Not identified as settlement anchor",
+        "meta": {
+          "tags": []
+        }
+      }
+    },
+    "demand": 16.02,
+    "capture": 0,
+    "risk": 10,
+    "total": 18.95,
+    "tags": []
+  },
+  {
+    "id": "blackrock-usd-institutional-digital-liquidity-fund",
+    "symbol": "buidl",
+    "name": "BlackRock USD Institutional Digital Liquidity Fund",
+    "rank": 35,
+    "market_cap": 2702712403,
+    "vol_to_mcap": 0.0,
+    "constitutional": 37.85,
+    "constitutional_breakdown": {
+      "sopx_curated_facts": {
+        "score": 45.0,
+        "weight": 0.4,
+        "reason": "No curated entry; fallback",
+        "meta": {}
+      },
+      "sopx_age_maturity": {
+        "score": 35.0,
+        "weight": 0.15,
+        "reason": "No genesis_date; assume young/unknown",
+        "meta": {}
+      },
+      "sopx_decentralization_proxy": {
+        "score": 14.0,
+        "weight": 0.15,
+        "reason": "Dev proxy (commits=0, contrib=0) + interest",
+        "meta": {
+          "commits": 0,
+          "contributors": 0,
+          "alexa_rank": null
+        }
+      },
+      "sopx_governance_admin_risk": {
+        "score": 55.0,
+        "weight": 0.1,
+        "reason": "Admin/neutrality risk proxy (heuristic)",
+        "meta": {
+          "categories": []
+        }
+      },
+      "sopx_l2_settlement_anchor": {
+        "score": 35.0,
+        "weight": 0.2,
+        "reason": "Not identified as settlement anchor",
+        "meta": {
+          "tags": []
+        }
+      }
+    },
+    "demand": 12.5,
+    "capture": 0,
+    "risk": 30,
+    "total": 15.89,
+    "tags": []
+  },
+  {
+    "id": "uniswap",
+    "symbol": "uni",
+    "name": "Uniswap",
+    "rank": 36,
+    "market_cap": 2614608001,
+    "vol_to_mcap": 0.08364856028756565,
+    "constitutional": 38.55,
+    "constitutional_breakdown": {
+      "sopx_curated_facts": {
+        "score": 45.0,
+        "weight": 0.4,
+        "reason": "No curated entry; fallback",
+        "meta": {}
+      },
+      "sopx_age_maturity": {
+        "score": 35.0,
+        "weight": 0.15,
+        "reason": "No genesis_date; assume young/unknown",
+        "meta": {}
+      },
+      "sopx_decentralization_proxy": {
+        "score": 18.68,
+        "weight": 0.15,
+        "reason": "Dev proxy (commits=0, contrib=12) + interest",
+        "meta": {
+          "commits": 0,
+          "contributors": 12,
+          "alexa_rank": null
+        }
+      },
+      "sopx_governance_admin_risk": {
+        "score": 55.0,
+        "weight": 0.1,
+        "reason": "Admin/neutrality risk proxy (heuristic)",
+        "meta": {
+          "categories": [
+            "Decentralized Exchange (DEX)",
+            "Exchange-based Tokens",
+            "Decentralized Finance (DeFi)",
+            "Yield Farming",
+            "Automated Market Maker (AMM)",
+            "BNB Chain Ecosystem",
+            "Avalanche Ecosystem",
+            "Polygon Ecosystem",
+            "Near Protocol Ecosystem",
+            "Gnosis Chain Ecosystem",
+            "Harmony Ecosystem",
+            "Arbitrum Ecosystem",
+            "Ethereum Ecosystem",
+            "Optimism Ecosystem",
+            "Paradigm Portfolio",
+            "Coinbase Ventures Portfolio",
+            "Index Coop Defi Index",
+            "Andreessen Horowitz (a16z) Portfolio",
+            "Energi Ecosystem",
+            "Sora Ecosystem",
+            "Huobi ECO Chain Ecosystem",
+            "GMCI DeFi Index",
+            "GMCI 30 Index",
+            "Blockchain Capital Portfolio",
+            "GMCI Index",
+            "Polychain Capital Portfolio",
+            "Made in USA",
+            "Unichain Ecosystem",
+            "Coinbase 50 Index",
+            "Governance"
+          ]
+        }
+      },
+      "sopx_l2_settlement_anchor": {
+        "score": 35.0,
+        "weight": 0.2,
+        "reason": "Not identified as settlement anchor",
+        "meta": {
+          "tags": []
+        }
+      }
+    },
+    "demand": 53.52,
+    "capture": 100,
+    "risk": 0,
+    "total": 51.48,
+    "tags": []
+  },
+  {
+    "id": "crypto-com-chain",
+    "symbol": "cro",
+    "name": "Cronos",
+    "rank": 37,
+    "market_cap": 2566491744,
+    "vol_to_mcap": 0.001161275506522728,
+    "constitutional": 37.85,
+    "constitutional_breakdown": {
+      "sopx_curated_facts": {
+        "score": 45.0,
+        "weight": 0.4,
+        "reason": "No curated entry; fallback",
+        "meta": {}
+      },
+      "sopx_age_maturity": {
+        "score": 35.0,
+        "weight": 0.15,
+        "reason": "No genesis_date; assume young/unknown",
+        "meta": {}
+      },
+      "sopx_decentralization_proxy": {
+        "score": 14.0,
+        "weight": 0.15,
+        "reason": "Dev proxy (commits=0, contrib=0) + interest",
+        "meta": {
+          "commits": 0,
+          "contributors": 0,
+          "alexa_rank": null
+        }
+      },
+      "sopx_governance_admin_risk": {
+        "score": 55.0,
+        "weight": 0.1,
+        "reason": "Admin/neutrality risk proxy (heuristic)",
+        "meta": {
+          "categories": []
+        }
+      },
+      "sopx_l2_settlement_anchor": {
+        "score": 35.0,
+        "weight": 0.2,
+        "reason": "Not identified as settlement anchor",
+        "meta": {
+          "tags": []
+        }
+      }
+    },
+    "demand": 12.02,
+    "capture": 0,
+    "risk": 30,
+    "total": 15.75,
+    "tags": []
+  },
+  {
+    "id": "tether-gold",
+    "symbol": "xaut",
+    "name": "Tether Gold",
+    "rank": 38,
+    "market_cap": 2479352999,
+    "vol_to_mcap": 0.031323447702414076,
+    "constitutional": 37.85,
+    "constitutional_breakdown": {
+      "sopx_curated_facts": {
+        "score": 45.0,
+        "weight": 0.4,
+        "reason": "No curated entry; fallback",
+        "meta": {}
+      },
+      "sopx_age_maturity": {
+        "score": 35.0,
+        "weight": 0.15,
+        "reason": "No genesis_date; assume young/unknown",
+        "meta": {}
+      },
+      "sopx_decentralization_proxy": {
+        "score": 14.0,
+        "weight": 0.15,
+        "reason": "Dev proxy (commits=0, contrib=0) + interest",
+        "meta": {
+          "commits": 0,
+          "contributors": 0,
+          "alexa_rank": null
+        }
+      },
+      "sopx_governance_admin_risk": {
+        "score": 55.0,
+        "weight": 0.1,
+        "reason": "Admin/neutrality risk proxy (heuristic)",
+        "meta": {
+          "categories": []
+        }
+      },
+      "sopx_l2_settlement_anchor": {
+        "score": 35.0,
+        "weight": 0.2,
+        "reason": "Not identified as settlement anchor",
+        "meta": {
+          "tags": []
+        }
+      }
+    },
+    "demand": 26.55,
+    "capture": 0,
+    "risk": 10,
+    "total": 22.1,
+    "tags": []
+  },
+  {
+    "id": "near",
+    "symbol": "near",
+    "name": "NEAR Protocol",
+    "rank": 39,
+    "market_cap": 2231064869,
+    "vol_to_mcap": 0.05943435659019379,
+    "constitutional": 47.6,
+    "constitutional_breakdown": {
+      "sopx_curated_facts": {
+        "score": 45.0,
+        "weight": 0.4,
+        "reason": "No curated entry; fallback",
+        "meta": {}
+      },
+      "sopx_age_maturity": {
+        "score": 35.0,
+        "weight": 0.15,
+        "reason": "No genesis_date; assume young/unknown",
+        "meta": {}
+      },
+      "sopx_decentralization_proxy": {
+        "score": 79.0,
+        "weight": 0.15,
+        "reason": "Dev proxy (commits=103, contrib=213) + interest",
+        "meta": {
+          "commits": 103,
+          "contributors": 213,
+          "alexa_rank": null
+        }
+      },
+      "sopx_governance_admin_risk": {
+        "score": 55.0,
+        "weight": 0.1,
+        "reason": "Admin/neutrality risk proxy (heuristic)",
+        "meta": {
+          "categories": [
+            "Artificial Intelligence (AI)",
+            "Smart Contract Platform",
+            "Layer 1 (L1)",
+            "Near Protocol Ecosystem",
+            "Alleged SEC Securities",
+            "FTX Holdings",
+            "Data Availability",
+            "Coinbase Ventures Portfolio",
+            "Multicoin Capital Portfolio",
+            "Proof of Stake (PoS)",
+            "Alameda Research Portfolio",
+            "DragonFly Capital Portfolio",
+            "Pantera Capital Portfolio",
+            "Andreessen Horowitz (a16z) Portfolio",
+            "GMCI Layer 1 Index",
+            "GMCI 30 Index",
+            "Circle Ventures Portfolio",
+            "GMCI Index",
+            "Made in USA",
+            "Coinbase 50 Index",
+            "Chain Abstraction",
+            "CoinList Launchpad",
+            "Privacy Infrastructure",
+            "Privacy"
+          ]
+        }
+      },
+      "sopx_l2_settlement_anchor": {
+        "score": 35.0,
+        "weight": 0.2,
+        "reason": "Not identified as settlement anchor",
+        "meta": {
+          "tags": []
+        }
+      }
+    },
+    "demand": 38.0,
+    "capture": 56.67,
+    "risk": 0,
+    "total": 41.77,
+    "tags": []
+  },
+  {
+    "id": "ondo-us-dollar-yield",
+    "symbol": "usdy",
+    "name": "Ondo US Dollar Yield",
+    "rank": 40,
+    "market_cap": 2150081081,
+    "vol_to_mcap": 0.00040347036568338604,
+    "constitutional": 37.85,
+    "constitutional_breakdown": {
+      "sopx_curated_facts": {
+        "score": 45.0,
+        "weight": 0.4,
+        "reason": "No curated entry; fallback",
+        "meta": {}
+      },
+      "sopx_age_maturity": {
+        "score": 35.0,
+        "weight": 0.15,
+        "reason": "No genesis_date; assume young/unknown",
+        "meta": {}
+      },
+      "sopx_decentralization_proxy": {
+        "score": 14.0,
+        "weight": 0.15,
+        "reason": "Dev proxy (commits=0, contrib=0) + interest",
+        "meta": {
+          "commits": 0,
+          "contributors": 0,
+          "alexa_rank": null
+        }
+      },
+      "sopx_governance_admin_risk": {
+        "score": 55.0,
+        "weight": 0.1,
+        "reason": "Admin/neutrality risk proxy (heuristic)",
+        "meta": {
+          "categories": []
+        }
+      },
+      "sopx_l2_settlement_anchor": {
+        "score": 35.0,
+        "weight": 0.2,
+        "reason": "Not identified as settlement anchor",
+        "meta": {
+          "tags": []
+        }
+      }
+    },
+    "demand": 12.73,
+    "capture": 0,
+    "risk": 30,
+    "total": 15.96,
+    "tags": []
+  },
+  {
+    "id": "ondo-finance",
+    "symbol": "ondo",
+    "name": "Ondo",
+    "rank": 41,
+    "market_cap": 1911719180,
+    "vol_to_mcap": 0.05306444171366215,
+    "constitutional": 38.41,
+    "constitutional_breakdown": {
+      "sopx_curated_facts": {
+        "score": 45.0,
+        "weight": 0.4,
+        "reason": "No curated entry; fallback",
+        "meta": {}
+      },
+      "sopx_age_maturity": {
+        "score": 35.0,
+        "weight": 0.15,
+        "reason": "No genesis_date; assume young/unknown",
+        "meta": {}
+      },
+      "sopx_decentralization_proxy": {
+        "score": 14.39,
+        "weight": 0.15,
+        "reason": "Dev proxy (commits=0, contrib=1) + interest",
+        "meta": {
+          "commits": 0,
+          "contributors": 1,
+          "alexa_rank": null
+        }
+      },
+      "sopx_governance_admin_risk": {
+        "score": 60.0,
+        "weight": 0.1,
+        "reason": "Admin/neutrality risk proxy (heuristic)",
+        "meta": {
+          "categories": [
+            "Decentralized Finance (DeFi)",
+            "Ethereum Ecosystem",
+            "Real World Assets (RWA)",
+            "Coinbase Ventures Portfolio",
+            "Pantera Capital Portfolio",
+            "GMCI DeFi Index",
+            "RWA Protocol",
+            "GMCI Index",
+            "World Liberty Financial Portfolio",
+            "Binance Alpha Spotlight",
+            "Made in USA",
+            "CoinList Launchpad"
+          ]
+        }
+      },
+      "sopx_l2_settlement_anchor": {
+        "score": 35.0,
+        "weight": 0.2,
+        "reason": "Not identified as settlement anchor",
+        "meta": {
+          "tags": []
+        }
+      }
+    },
+    "demand": 37.03,
+    "capture": 100,
+    "risk": 0,
+    "total": 46.47,
+    "tags": []
+  },
+  {
+    "id": "bittensor",
+    "symbol": "tao",
+    "name": "Bittensor",
+    "rank": 42,
+    "market_cap": 1859467801,
+    "vol_to_mcap": 0.0424823597147085,
+    "constitutional": 37.85,
+    "constitutional_breakdown": {
+      "sopx_curated_facts": {
+        "score": 45.0,
+        "weight": 0.4,
+        "reason": "No curated entry; fallback",
+        "meta": {}
+      },
+      "sopx_age_maturity": {
+        "score": 35.0,
+        "weight": 0.15,
+        "reason": "No genesis_date; assume young/unknown",
+        "meta": {}
+      },
+      "sopx_decentralization_proxy": {
+        "score": 14.0,
+        "weight": 0.15,
+        "reason": "Dev proxy (commits=0, contrib=0) + interest",
+        "meta": {
+          "commits": 0,
+          "contributors": 0,
+          "alexa_rank": null
+        }
+      },
+      "sopx_governance_admin_risk": {
+        "score": 55.0,
+        "weight": 0.1,
+        "reason": "Admin/neutrality risk proxy (heuristic)",
+        "meta": {
+          "categories": []
+        }
+      },
+      "sopx_l2_settlement_anchor": {
+        "score": 35.0,
+        "weight": 0.2,
+        "reason": "Not identified as settlement anchor",
+        "meta": {
+          "tags": []
+        }
+      }
+    },
+    "demand": 31.82,
+    "capture": 0,
+    "risk": 10,
+    "total": 23.69,
+    "tags": []
+  },
+  {
+    "id": "okb",
+    "symbol": "okb",
+    "name": "OKB",
+    "rank": 43,
+    "market_cap": 1823286228,
+    "vol_to_mcap": 0.0059873786311514885,
+    "constitutional": 37.85,
+    "constitutional_breakdown": {
+      "sopx_curated_facts": {
+        "score": 45.0,
+        "weight": 0.4,
+        "reason": "No curated entry; fallback",
+        "meta": {}
+      },
+      "sopx_age_maturity": {
+        "score": 35.0,
+        "weight": 0.15,
+        "reason": "No genesis_date; assume young/unknown",
+        "meta": {}
+      },
+      "sopx_decentralization_proxy": {
+        "score": 14.0,
+        "weight": 0.15,
+        "reason": "Dev proxy (commits=0, contrib=0) + interest",
+        "meta": {
+          "commits": 0,
+          "contributors": 0,
+          "alexa_rank": null
+        }
+      },
+      "sopx_governance_admin_risk": {
+        "score": 55.0,
+        "weight": 0.1,
+        "reason": "Admin/neutrality risk proxy (heuristic)",
+        "meta": {
+          "categories": []
+        }
+      },
+      "sopx_l2_settlement_anchor": {
+        "score": 35.0,
+        "weight": 0.2,
+        "reason": "Not identified as settlement anchor",
+        "meta": {
+          "tags": []
+        }
+      }
+    },
+    "demand": 16.07,
+    "capture": 0,
+    "risk": 10,
+    "total": 18.96,
+    "tags": []
+  },
+  {
+    "id": "pax-gold",
+    "symbol": "paxg",
+    "name": "PAX Gold",
+    "rank": 44,
+    "market_cap": 1792279798,
+    "vol_to_mcap": 0.01594230099110898,
+    "constitutional": 37.85,
+    "constitutional_breakdown": {
+      "sopx_curated_facts": {
+        "score": 45.0,
+        "weight": 0.4,
+        "reason": "No curated entry; fallback",
+        "meta": {}
+      },
+      "sopx_age_maturity": {
+        "score": 35.0,
+        "weight": 0.15,
+        "reason": "No genesis_date; assume young/unknown",
+        "meta": {}
+      },
+      "sopx_decentralization_proxy": {
+        "score": 14.0,
+        "weight": 0.15,
+        "reason": "Dev proxy (commits=0, contrib=0) + interest",
+        "meta": {
+          "commits": 0,
+          "contributors": 0,
+          "alexa_rank": null
+        }
+      },
+      "sopx_governance_admin_risk": {
+        "score": 55.0,
+        "weight": 0.1,
+        "reason": "Admin/neutrality risk proxy (heuristic)",
+        "meta": {
+          "categories": []
+        }
+      },
+      "sopx_l2_settlement_anchor": {
+        "score": 35.0,
+        "weight": 0.2,
+        "reason": "Not identified as settlement anchor",
+        "meta": {
+          "tags": []
+        }
+      }
+    },
+    "demand": 19.7,
+    "capture": 0,
+    "risk": 10,
+    "total": 20.05,
+    "tags": []
+  },
+  {
+    "id": "world-liberty-financial",
+    "symbol": "wlfi",
+    "name": "World Liberty Financial",
+    "rank": 45,
+    "market_cap": 1767737897,
+    "vol_to_mcap": 0.012360582435372205,
+    "constitutional": 37.85,
+    "constitutional_breakdown": {
+      "sopx_curated_facts": {
+        "score": 45.0,
+        "weight": 0.4,
+        "reason": "No curated entry; fallback",
+        "meta": {}
+      },
+      "sopx_age_maturity": {
+        "score": 35.0,
+        "weight": 0.15,
+        "reason": "No genesis_date; assume young/unknown",
+        "meta": {}
+      },
+      "sopx_decentralization_proxy": {
+        "score": 14.0,
+        "weight": 0.15,
+        "reason": "Dev proxy (commits=0, contrib=0) + interest",
+        "meta": {
+          "commits": 0,
+          "contributors": 0,
+          "alexa_rank": null
+        }
+      },
+      "sopx_governance_admin_risk": {
+        "score": 55.0,
+        "weight": 0.1,
+        "reason": "Admin/neutrality risk proxy (heuristic)",
+        "meta": {
+          "categories": []
+        }
+      },
+      "sopx_l2_settlement_anchor": {
+        "score": 35.0,
+        "weight": 0.2,
+        "reason": "Not identified as settlement anchor",
+        "meta": {
+          "tags": []
+        }
+      }
+    },
+    "demand": 17.96,
+    "capture": 0,
+    "risk": 10,
+    "total": 19.53,
+    "tags": []
+  },
+  {
+    "id": "aster-2",
+    "symbol": "aster",
+    "name": "Aster",
+    "rank": 46,
+    "market_cap": 1624999628,
+    "vol_to_mcap": 0.026055930272496038,
+    "constitutional": 37.85,
+    "constitutional_breakdown": {
+      "sopx_curated_facts": {
+        "score": 45.0,
+        "weight": 0.4,
+        "reason": "No curated entry; fallback",
+        "meta": {}
+      },
+      "sopx_age_maturity": {
+        "score": 35.0,
+        "weight": 0.15,
+        "reason": "No genesis_date; assume young/unknown",
+        "meta": {}
+      },
+      "sopx_decentralization_proxy": {
+        "score": 14.0,
+        "weight": 0.15,
+        "reason": "Dev proxy (commits=0, contrib=0) + interest",
+        "meta": {
+          "commits": 0,
+          "contributors": 0,
+          "alexa_rank": null
+        }
+      },
+      "sopx_governance_admin_risk": {
+        "score": 55.0,
+        "weight": 0.1,
+        "reason": "Admin/neutrality risk proxy (heuristic)",
+        "meta": {
+          "categories": []
+        }
+      },
+      "sopx_l2_settlement_anchor": {
+        "score": 35.0,
+        "weight": 0.2,
+        "reason": "Not identified as settlement anchor",
+        "meta": {
+          "tags": []
+        }
+      }
+    },
+    "demand": 23.3,
+    "capture": 0,
+    "risk": 10,
+    "total": 21.13,
+    "tags": []
+  },
+  {
+    "id": "htx-dao",
+    "symbol": "htx",
+    "name": "HTX DAO",
+    "rank": 47,
+    "market_cap": 1607373255,
+    "vol_to_mcap": 0.035807670571201586,
+    "constitutional": 37.85,
+    "constitutional_breakdown": {
+      "sopx_curated_facts": {
+        "score": 45.0,
+        "weight": 0.4,
+        "reason": "No curated entry; fallback",
+        "meta": {}
+      },
+      "sopx_age_maturity": {
+        "score": 35.0,
+        "weight": 0.15,
+        "reason": "No genesis_date; assume young/unknown",
+        "meta": {}
+      },
+      "sopx_decentralization_proxy": {
+        "score": 14.0,
+        "weight": 0.15,
+        "reason": "Dev proxy (commits=0, contrib=0) + interest",
+        "meta": {
+          "commits": 0,
+          "contributors": 0,
+          "alexa_rank": null
+        }
+      },
+      "sopx_governance_admin_risk": {
+        "score": 55.0,
+        "weight": 0.1,
+        "reason": "Admin/neutrality risk proxy (heuristic)",
+        "meta": {
+          "categories": []
+        }
+      },
+      "sopx_l2_settlement_anchor": {
+        "score": 35.0,
+        "weight": 0.2,
+        "reason": "Not identified as settlement anchor",
+        "meta": {
+          "tags": []
+        }
+      }
+    },
+    "demand": 28.06,
+    "capture": 0,
+    "risk": 10,
+    "total": 22.56,
+    "tags": []
+  },
+  {
+    "id": "usdd",
+    "symbol": "usdd",
+    "name": "USDD",
+    "rank": 48,
+    "market_cap": 1589747312,
+    "vol_to_mcap": 0.0008860452157191633,
+    "constitutional": 37.85,
+    "constitutional_breakdown": {
+      "sopx_curated_facts": {
+        "score": 45.0,
+        "weight": 0.4,
+        "reason": "No curated entry; fallback",
+        "meta": {}
+      },
+      "sopx_age_maturity": {
+        "score": 35.0,
+        "weight": 0.15,
+        "reason": "No genesis_date; assume young/unknown",
+        "meta": {}
+      },
+      "sopx_decentralization_proxy": {
+        "score": 14.0,
+        "weight": 0.15,
+        "reason": "Dev proxy (commits=0, contrib=0) + interest",
+        "meta": {
+          "commits": 0,
+          "contributors": 0,
+          "alexa_rank": null
+        }
+      },
+      "sopx_governance_admin_risk": {
+        "score": 55.0,
+        "weight": 0.1,
+        "reason": "Admin/neutrality risk proxy (heuristic)",
+        "meta": {
+          "categories": []
+        }
+      },
+      "sopx_l2_settlement_anchor": {
+        "score": 35.0,
+        "weight": 0.2,
+        "reason": "Not identified as settlement anchor",
+        "meta": {
+          "tags": []
+        }
+      }
+    },
+    "demand": 12.87,
+    "capture": 0,
+    "risk": 30,
+    "total": 16.0,
+    "tags": []
+  },
+  {
+    "id": "memecore",
+    "symbol": "m",
+    "name": "MemeCore",
+    "rank": 49,
+    "market_cap": 1470421399,
+    "vol_to_mcap": 0.00570869752419864,
+    "constitutional": 37.85,
+    "constitutional_breakdown": {
+      "sopx_curated_facts": {
+        "score": 45.0,
+        "weight": 0.4,
+        "reason": "No curated entry; fallback",
+        "meta": {}
+      },
+      "sopx_age_maturity": {
+        "score": 35.0,
+        "weight": 0.15,
+        "reason": "No genesis_date; assume young/unknown",
+        "meta": {}
+      },
+      "sopx_decentralization_proxy": {
+        "score": 14.0,
+        "weight": 0.15,
+        "reason": "Dev proxy (commits=0, contrib=0) + interest",
+        "meta": {
+          "commits": 0,
+          "contributors": 0,
+          "alexa_rank": null
+        }
+      },
+      "sopx_governance_admin_risk": {
+        "score": 55.0,
+        "weight": 0.1,
+        "reason": "Admin/neutrality risk proxy (heuristic)",
+        "meta": {
+          "categories": []
+        }
+      },
+      "sopx_l2_settlement_anchor": {
+        "score": 35.0,
+        "weight": 0.2,
+        "reason": "Not identified as settlement anchor",
+        "meta": {
+          "tags": []
+        }
+      }
+    },
+    "demand": 12.27,
+    "capture": 0,
+    "risk": 10,
+    "total": 17.82,
+    "tags": []
+  },
+  {
+    "id": "ripple-usd",
+    "symbol": "rlusd",
+    "name": "Ripple USD",
+    "rank": 50,
+    "market_cap": 1468974187,
+    "vol_to_mcap": 0.022380088970208704,
+    "constitutional": 37.85,
+    "constitutional_breakdown": {
+      "sopx_curated_facts": {
+        "score": 45.0,
+        "weight": 0.4,
+        "reason": "No curated entry; fallback",
+        "meta": {}
+      },
+      "sopx_age_maturity": {
+        "score": 35.0,
+        "weight": 0.15,
+        "reason": "No genesis_date; assume young/unknown",
+        "meta": {}
+      },
+      "sopx_decentralization_proxy": {
+        "score": 14.0,
+        "weight": 0.15,
+        "reason": "Dev proxy (commits=0, contrib=0) + interest",
+        "meta": {
+          "commits": 0,
+          "contributors": 0,
+          "alexa_rank": null
+        }
+      },
+      "sopx_governance_admin_risk": {
+        "score": 55.0,
+        "weight": 0.1,
+        "reason": "Admin/neutrality risk proxy (heuristic)",
+        "meta": {
+          "categories": []
+        }
+      },
+      "sopx_l2_settlement_anchor": {
+        "score": 35.0,
+        "weight": 0.2,
+        "reason": "Not identified as settlement anchor",
+        "meta": {
+          "tags": []
+        }
+      }
+    },
+    "demand": 22.57,
+    "capture": 0,
+    "risk": 10,
+    "total": 20.91,
+    "tags": []
+  },
+  {
+    "id": "aave",
+    "symbol": "aave",
+    "name": "Aave",
+    "rank": 52,
+    "market_cap": 1425529836,
+    "vol_to_mcap": 0.18141032230208615,
+    "constitutional": 37.97,
+    "constitutional_breakdown": {
+      "sopx_curated_facts": {
+        "score": 45.0,
+        "weight": 0.4,
+        "reason": "No curated entry; fallback",
+        "meta": {}
+      },
+      "sopx_age_maturity": {
+        "score": 35.0,
+        "weight": 0.15,
+        "reason": "No genesis_date; assume young/unknown",
+        "meta": {}
+      },
+      "sopx_decentralization_proxy": {
+        "score": 14.78,
+        "weight": 0.15,
+        "reason": "Dev proxy (commits=0, contrib=2) + interest",
+        "meta": {
+          "commits": 0,
+          "contributors": 2,
+          "alexa_rank": null
+        }
+      },
+      "sopx_governance_admin_risk": {
+        "score": 55.0,
+        "weight": 0.1,
+        "reason": "Admin/neutrality risk proxy (heuristic)",
+        "meta": {
+          "categories": [
+            "Decentralized Finance (DeFi)",
+            "Yield Farming",
+            "BNB Chain Ecosystem",
+            "Lending/Borrowing Protocols",
+            "Solana Ecosystem",
+            "Avalanche Ecosystem",
+            "Polygon Ecosystem",
+            "Near Protocol Ecosystem",
+            "Fantom Ecosystem",
+            "Harmony Ecosystem",
+            "Arbitrum Ecosystem",
+            "Ethereum Ecosystem",
+            "Optimism Ecosystem",
+            "Base Ecosystem",
+            "Index Coop Defi Index",
+            "Stablecoin Issuer",
+            "Energi Ecosystem",
+            "Sora Ecosystem",
+            "Huobi ECO Chain Ecosystem",
+            "GMCI DeFi Index",
+            "Blockchain Capital Portfolio",
+            "GMCI Index",
+            "World Liberty Financial Portfolio",
+            "Coinbase 50 Index",
+            "Hydration Ecosystem",
+            "Governance",
+            "Base Native"
+          ]
+        }
+      },
+      "sopx_l2_settlement_anchor": {
+        "score": 35.0,
+        "weight": 0.2,
+        "reason": "Not identified as settlement anchor",
+        "meta": {
+          "tags": []
+        }
+      }
+    },
+    "demand": 57.35,
+    "capture": 100,
+    "risk": 0,
+    "total": 52.39,
+    "tags": []
+  },
+  {
+    "id": "falcon-finance",
+    "symbol": "usdf",
+    "name": "Falcon USD",
+    "rank": 51,
+    "market_cap": 1420490864,
+    "vol_to_mcap": 0.0002510209738314797,
+    "constitutional": 37.85,
+    "constitutional_breakdown": {
+      "sopx_curated_facts": {
+        "score": 45.0,
+        "weight": 0.4,
+        "reason": "No curated entry; fallback",
+        "meta": {}
+      },
+      "sopx_age_maturity": {
+        "score": 35.0,
+        "weight": 0.15,
+        "reason": "No genesis_date; assume young/unknown",
+        "meta": {}
+      },
+      "sopx_decentralization_proxy": {
+        "score": 14.0,
+        "weight": 0.15,
+        "reason": "Dev proxy (commits=0, contrib=0) + interest",
+        "meta": {
+          "commits": 0,
+          "contributors": 0,
+          "alexa_rank": null
+        }
+      },
+      "sopx_governance_admin_risk": {
+        "score": 55.0,
+        "weight": 0.1,
+        "reason": "Admin/neutrality risk proxy (heuristic)",
+        "meta": {
+          "categories": []
+        }
+      },
+      "sopx_l2_settlement_anchor": {
+        "score": 35.0,
+        "weight": 0.2,
+        "reason": "Not identified as settlement anchor",
+        "meta": {
+          "tags": []
+        }
+      }
+    },
+    "demand": 12.61,
+    "capture": 0,
+    "risk": 30,
+    "total": 15.92,
+    "tags": []
+  },
+  {
+    "id": "polkadot",
+    "symbol": "dot",
+    "name": "Polkadot",
+    "rank": 53,
+    "market_cap": 1339003589,
+    "vol_to_mcap": 0.0633459609046649,
+    "constitutional": 37.85,
+    "constitutional_breakdown": {
+      "sopx_curated_facts": {
+        "score": 45.0,
+        "weight": 0.4,
+        "reason": "No curated entry; fallback",
+        "meta": {}
+      },
+      "sopx_age_maturity": {
+        "score": 35.0,
+        "weight": 0.15,
+        "reason": "No genesis_date; assume young/unknown",
+        "meta": {}
+      },
+      "sopx_decentralization_proxy": {
+        "score": 14.0,
+        "weight": 0.15,
+        "reason": "Dev proxy (commits=0, contrib=0) + interest",
+        "meta": {
+          "commits": 0,
+          "contributors": 0,
+          "alexa_rank": null
+        }
+      },
+      "sopx_governance_admin_risk": {
+        "score": 55.0,
+        "weight": 0.1,
+        "reason": "Admin/neutrality risk proxy (heuristic)",
+        "meta": {
+          "categories": [
+            "Smart Contract Platform",
+            "Polkadot Ecosystem",
+            "Proof of Stake (PoS)",
+            "Layer 0 (L0)",
+            "Pantera Capital Portfolio",
+            "GMCI 30 Index",
+            "GMCI Index",
+            "Made in USA",
+            "Coinbase 50 Index",
+            "Governance",
+            "Base Native"
+          ]
+        }
+      },
+      "sopx_l2_settlement_anchor": {
+        "score": 35.0,
+        "weight": 0.2,
+        "reason": "Not identified as settlement anchor",
+        "meta": {
+          "tags": []
+        }
+      }
+    },
+    "demand": 40.13,
+    "capture": 100,
+    "risk": 0,
+    "total": 47.18,
+    "tags": []
+  },
+  {
+    "id": "sky",
+    "symbol": "sky",
+    "name": "Sky",
+    "rank": 54,
+    "market_cap": 1322024854,
+    "vol_to_mcap": 0.004545892599383763,
+    "constitutional": 37.85,
+    "constitutional_breakdown": {
+      "sopx_curated_facts": {
+        "score": 45.0,
+        "weight": 0.4,
+        "reason": "No curated entry; fallback",
+        "meta": {}
+      },
+      "sopx_age_maturity": {
+        "score": 35.0,
+        "weight": 0.15,
+        "reason": "No genesis_date; assume young/unknown",
+        "meta": {}
+      },
+      "sopx_decentralization_proxy": {
+        "score": 14.0,
+        "weight": 0.15,
+        "reason": "Dev proxy (commits=0, contrib=0) + interest",
+        "meta": {
+          "commits": 0,
+          "contributors": 0,
+          "alexa_rank": null
+        }
+      },
+      "sopx_governance_admin_risk": {
+        "score": 55.0,
+        "weight": 0.1,
+        "reason": "Admin/neutrality risk proxy (heuristic)",
+        "meta": {
+          "categories": []
+        }
+      },
+      "sopx_l2_settlement_anchor": {
+        "score": 35.0,
+        "weight": 0.2,
+        "reason": "Not identified as settlement anchor",
+        "meta": {
+          "tags": []
+        }
+      }
+    },
+    "demand": 13.62,
+    "capture": 0,
+    "risk": 10,
+    "total": 18.23,
+    "tags": []
+  },
+  {
+    "id": "bfusd",
+    "symbol": "bfusd",
+    "name": "BFUSD",
+    "rank": 55,
+    "market_cap": 1317748369,
+    "vol_to_mcap": 0.0006635864787019896,
+    "constitutional": 37.85,
+    "constitutional_breakdown": {
+      "sopx_curated_facts": {
+        "score": 45.0,
+        "weight": 0.4,
+        "reason": "No curated entry; fallback",
+        "meta": {}
+      },
+      "sopx_age_maturity": {
+        "score": 35.0,
+        "weight": 0.15,
+        "reason": "No genesis_date; assume young/unknown",
+        "meta": {}
+      },
+      "sopx_decentralization_proxy": {
+        "score": 14.0,
+        "weight": 0.15,
+        "reason": "Dev proxy (commits=0, contrib=0) + interest",
+        "meta": {
+          "commits": 0,
+          "contributors": 0,
+          "alexa_rank": null
+        }
+      },
+      "sopx_governance_admin_risk": {
+        "score": 55.0,
+        "weight": 0.1,
+        "reason": "Admin/neutrality risk proxy (heuristic)",
+        "meta": {
+          "categories": []
+        }
+      },
+      "sopx_l2_settlement_anchor": {
+        "score": 35.0,
+        "weight": 0.2,
+        "reason": "Not identified as settlement anchor",
+        "meta": {
+          "tags": []
+        }
+      }
+    },
+    "demand": 12.8,
+    "capture": 0,
+    "risk": 30,
+    "total": 15.98,
+    "tags": []
+  },
+  {
+    "id": "mantle",
+    "symbol": "mnt",
+    "name": "Mantle",
+    "rank": 56,
+    "market_cap": 1308782014,
+    "vol_to_mcap": 0.01233554314416182,
+    "constitutional": 37.85,
+    "constitutional_breakdown": {
+      "sopx_curated_facts": {
+        "score": 45.0,
+        "weight": 0.4,
+        "reason": "No curated entry; fallback",
+        "meta": {}
+      },
+      "sopx_age_maturity": {
+        "score": 35.0,
+        "weight": 0.15,
+        "reason": "No genesis_date; assume young/unknown",
+        "meta": {}
+      },
+      "sopx_decentralization_proxy": {
+        "score": 14.0,
+        "weight": 0.15,
+        "reason": "Dev proxy (commits=0, contrib=0) + interest",
+        "meta": {
+          "commits": 0,
+          "contributors": 0,
+          "alexa_rank": null
+        }
+      },
+      "sopx_governance_admin_risk": {
+        "score": 55.0,
+        "weight": 0.1,
+        "reason": "Admin/neutrality risk proxy (heuristic)",
+        "meta": {
+          "categories": []
+        }
+      },
+      "sopx_l2_settlement_anchor": {
+        "score": 35.0,
+        "weight": 0.2,
+        "reason": "Not identified as settlement anchor",
+        "meta": {
+          "tags": []
+        }
+      }
+    },
+    "demand": 17.05,
+    "capture": 0,
+    "risk": 10,
+    "total": 19.26,
+    "tags": []
+  },
+  {
+    "id": "morpho",
+    "symbol": "morpho",
+    "name": "Morpho",
+    "rank": 57,
+    "market_cap": 1286789732,
+    "vol_to_mcap": 0.007904508209115863,
+    "constitutional": 37.85,
+    "constitutional_breakdown": {
+      "sopx_curated_facts": {
+        "score": 45.0,
+        "weight": 0.4,
+        "reason": "No curated entry; fallback",
+        "meta": {}
+      },
+      "sopx_age_maturity": {
+        "score": 35.0,
+        "weight": 0.15,
+        "reason": "No genesis_date; assume young/unknown",
+        "meta": {}
+      },
+      "sopx_decentralization_proxy": {
+        "score": 14.0,
+        "weight": 0.15,
+        "reason": "Dev proxy (commits=0, contrib=0) + interest",
+        "meta": {
+          "commits": 0,
+          "contributors": 0,
+          "alexa_rank": null
+        }
+      },
+      "sopx_governance_admin_risk": {
+        "score": 55.0,
+        "weight": 0.1,
+        "reason": "Admin/neutrality risk proxy (heuristic)",
+        "meta": {
+          "categories": []
+        }
+      },
+      "sopx_l2_settlement_anchor": {
+        "score": 35.0,
+        "weight": 0.2,
+        "reason": "Not identified as settlement anchor",
+        "meta": {
+          "tags": []
+        }
+      }
+    },
+    "demand": 16.36,
+    "capture": 0,
+    "risk": 10,
+    "total": 19.05,
+    "tags": []
+  },
+  {
+    "id": "pepe",
+    "symbol": "pepe",
+    "name": "Pepe",
+    "rank": 58,
+    "market_cap": 1208495122,
+    "vol_to_mcap": 0.11537755962907395,
+    "constitutional": 37.85,
+    "constitutional_breakdown": {
+      "sopx_curated_facts": {
+        "score": 45.0,
+        "weight": 0.4,
+        "reason": "No curated entry; fallback",
+        "meta": {}
+      },
+      "sopx_age_maturity": {
+        "score": 35.0,
+        "weight": 0.15,
+        "reason": "No genesis_date; assume young/unknown",
+        "meta": {}
+      },
+      "sopx_decentralization_proxy": {
+        "score": 14.0,
+        "weight": 0.15,
+        "reason": "Dev proxy (commits=0, contrib=0) + interest",
+        "meta": {
+          "commits": 0,
+          "contributors": 0,
+          "alexa_rank": null
+        }
+      },
+      "sopx_governance_admin_risk": {
+        "score": 55.0,
+        "weight": 0.1,
+        "reason": "Admin/neutrality risk proxy (heuristic)",
+        "meta": {
+          "categories": [
+            "BNB Chain Ecosystem",
+            "Avalanche Ecosystem",
+            "Meme",
+            "Arbitrum Ecosystem",
+            "Ethereum Ecosystem",
+            "Frog-Themed",
+            "GMCI Meme Index",
+            "GMCI Index",
+            "The Boy’s Club",
+            "4chan-Themed"
+          ]
+        }
+      },
+      "sopx_l2_settlement_anchor": {
+        "score": 35.0,
+        "weight": 0.2,
+        "reason": "Not identified as settlement anchor",
+        "meta": {
+          "tags": []
+        }
+      }
+    },
+    "demand": 57.62,
+    "capture": 100,
+    "risk": 0,
+    "total": 52.43,
+    "tags": []
+  },
+  {
+    "id": "audiera",
+    "symbol": "beat",
+    "name": "Audiera",
+    "rank": 59,
+    "market_cap": 1146916669,
+    "vol_to_mcap": 0.035125640849849746,
+    "constitutional": 37.85,
+    "constitutional_breakdown": {
+      "sopx_curated_facts": {
+        "score": 45.0,
+        "weight": 0.4,
+        "reason": "No curated entry; fallback",
+        "meta": {}
+      },
+      "sopx_age_maturity": {
+        "score": 35.0,
+        "weight": 0.15,
+        "reason": "No genesis_date; assume young/unknown",
+        "meta": {}
+      },
+      "sopx_decentralization_proxy": {
+        "score": 14.0,
+        "weight": 0.15,
+        "reason": "Dev proxy (commits=0, contrib=0) + interest",
+        "meta": {
+          "commits": 0,
+          "contributors": 0,
+          "alexa_rank": null
+        }
+      },
+      "sopx_governance_admin_risk": {
+        "score": 55.0,
+        "weight": 0.1,
+        "reason": "Admin/neutrality risk proxy (heuristic)",
+        "meta": {
+          "categories": []
+        }
+      },
+      "sopx_l2_settlement_anchor": {
+        "score": 35.0,
+        "weight": 0.2,
+        "reason": "Not identified as settlement anchor",
+        "meta": {
+          "tags": []
+        }
+      }
+    },
+    "demand": 31.38,
+    "capture": 0,
+    "risk": 10,
+    "total": 23.55,
+    "tags": []
+  },
+  {
+    "id": "bitget-token",
+    "symbol": "bgb",
+    "name": "Bitget Token",
+    "rank": 60,
+    "market_cap": 1144557023,
+    "vol_to_mcap": 0.006042652188592617,
+    "constitutional": 37.85,
+    "constitutional_breakdown": {
+      "sopx_curated_facts": {
+        "score": 45.0,
+        "weight": 0.4,
+        "reason": "No curated entry; fallback",
+        "meta": {}
+      },
+      "sopx_age_maturity": {
+        "score": 35.0,
+        "weight": 0.15,
+        "reason": "No genesis_date; assume young/unknown",
+        "meta": {}
+      },
+      "sopx_decentralization_proxy": {
+        "score": 14.0,
+        "weight": 0.15,
+        "reason": "Dev proxy (commits=0, contrib=0) + interest",
+        "meta": {
+          "commits": 0,
+          "contributors": 0,
+          "alexa_rank": null
+        }
+      },
+      "sopx_governance_admin_risk": {
+        "score": 55.0,
+        "weight": 0.1,
+        "reason": "Admin/neutrality risk proxy (heuristic)",
+        "meta": {
+          "categories": []
+        }
+      },
+      "sopx_l2_settlement_anchor": {
+        "score": 35.0,
+        "weight": 0.2,
+        "reason": "Not identified as settlement anchor",
+        "meta": {
+          "tags": []
+        }
+      }
+    },
+    "demand": 14.69,
+    "capture": 0,
+    "risk": 10,
+    "total": 18.55,
+    "tags": []
+  },
+  {
+    "id": "internet-computer",
+    "symbol": "icp",
+    "name": "Internet Computer",
+    "rank": 61,
+    "market_cap": 1134342141,
+    "vol_to_mcap": 0.020364376112868048,
+    "constitutional": 37.85,
+    "constitutional_breakdown": {
+      "sopx_curated_facts": {
+        "score": 45.0,
+        "weight": 0.4,
+        "reason": "No curated entry; fallback",
+        "meta": {}
+      },
+      "sopx_age_maturity": {
+        "score": 35.0,
+        "weight": 0.15,
+        "reason": "No genesis_date; assume young/unknown",
+        "meta": {}
+      },
+      "sopx_decentralization_proxy": {
+        "score": 14.0,
+        "weight": 0.15,
+        "reason": "Dev proxy (commits=0, contrib=0) + interest",
+        "meta": {
+          "commits": 0,
+          "contributors": 0,
+          "alexa_rank": null
+        }
+      },
+      "sopx_governance_admin_risk": {
+        "score": 55.0,
+        "weight": 0.1,
+        "reason": "Admin/neutrality risk proxy (heuristic)",
+        "meta": {
+          "categories": []
+        }
+      },
+      "sopx_l2_settlement_anchor": {
+        "score": 35.0,
+        "weight": 0.2,
+        "reason": "Not identified as settlement anchor",
+        "meta": {
+          "tags": []
+        }
+      }
+    },
+    "demand": 20.19,
+    "capture": 0,
+    "risk": 10,
+    "total": 20.2,
+    "tags": []
+  },
+  {
+    "id": "worldcoin-wld",
+    "symbol": "wld",
+    "name": "Worldcoin",
+    "rank": 62,
+    "market_cap": 1121888438,
+    "vol_to_mcap": 0.07192960303954929,
+    "constitutional": 37.85,
+    "constitutional_breakdown": {
+      "sopx_curated_facts": {
+        "score": 45.0,
+        "weight": 0.4,
+        "reason": "No curated entry; fallback",
+        "meta": {}
+      },
+      "sopx_age_maturity": {
+        "score": 35.0,
+        "weight": 0.15,
+        "reason": "No genesis_date; assume young/unknown",
+        "meta": {}
+      },
+      "sopx_decentralization_proxy": {
+        "score": 14.0,
+        "weight": 0.15,
+        "reason": "Dev proxy (commits=0, contrib=0) + interest",
+        "meta": {
+          "commits": 0,
+          "contributors": 0,
+          "alexa_rank": null
+        }
+      },
+      "sopx_governance_admin_risk": {
+        "score": 55.0,
+        "weight": 0.1,
+        "reason": "Admin/neutrality risk proxy (heuristic)",
+        "meta": {
+          "categories": [
+            "Smart Contract Platform",
+            "Ethereum Ecosystem",
+            "Decentralized Identifier (DID)",
+            "Optimism Ecosystem",
+            "Coinbase Ventures Portfolio",
+            "Multicoin Capital Portfolio",
+            "Andreessen Horowitz (a16z) Portfolio",
+            "Blockchain Capital Portfolio",
+            "Optimism Superchain Ecosystem",
+            "World Chain Ecosystem",
+            "Made in USA",
+            "Governance"
+          ]
+        }
+      },
+      "sopx_l2_settlement_anchor": {
+        "score": 35.0,
+        "weight": 0.2,
+        "reason": "Not identified as settlement anchor",
+        "meta": {
+          "tags": []
+        }
+      }
+    },
+    "demand": 43.07,
+    "capture": 100,
+    "risk": 0,
+    "total": 48.06,
+    "tags": []
+  },
+  {
+    "id": "usdgo",
+    "symbol": "usdgo",
+    "name": "USDGO",
+    "rank": 63,
+    "market_cap": 1112595443,
+    "vol_to_mcap": 0.010320535709762026,
+    "constitutional": 37.85,
+    "constitutional_breakdown": {
+      "sopx_curated_facts": {
+        "score": 45.0,
+        "weight": 0.4,
+        "reason": "No curated entry; fallback",
+        "meta": {}
+      },
+      "sopx_age_maturity": {
+        "score": 35.0,
+        "weight": 0.15,
+        "reason": "No genesis_date; assume young/unknown",
+        "meta": {}
+      },
+      "sopx_decentralization_proxy": {
+        "score": 14.0,
+        "weight": 0.15,
+        "reason": "Dev proxy (commits=0, contrib=0) + interest",
+        "meta": {
+          "commits": 0,
+          "contributors": 0,
+          "alexa_rank": null
+        }
+      },
+      "sopx_governance_admin_risk": {
+        "score": 55.0,
+        "weight": 0.1,
+        "reason": "Admin/neutrality risk proxy (heuristic)",
+        "meta": {
+          "categories": []
+        }
+      },
+      "sopx_l2_settlement_anchor": {
+        "score": 35.0,
+        "weight": 0.2,
+        "reason": "Not identified as settlement anchor",
+        "meta": {
+          "tags": []
+        }
+      }
+    },
+    "demand": 17.14,
+    "capture": 0,
+    "risk": 10,
+    "total": 19.28,
+    "tags": []
+  },
+  {
+    "id": "united-stables",
+    "symbol": "u",
+    "name": "United Stables",
+    "rank": 64,
+    "market_cap": 1102594583,
+    "vol_to_mcap": 0.07029038523763544,
+    "constitutional": 37.85,
+    "constitutional_breakdown": {
+      "sopx_curated_facts": {
+        "score": 45.0,
+        "weight": 0.4,
+        "reason": "No curated entry; fallback",
+        "meta": {}
+      },
+      "sopx_age_maturity": {
+        "score": 35.0,
+        "weight": 0.15,
+        "reason": "No genesis_date; assume young/unknown",
+        "meta": {}
+      },
+      "sopx_decentralization_proxy": {
+        "score": 14.0,
+        "weight": 0.15,
+        "reason": "Dev proxy (commits=0, contrib=0) + interest",
+        "meta": {
+          "commits": 0,
+          "contributors": 0,
+          "alexa_rank": null
+        }
+      },
+      "sopx_governance_admin_risk": {
+        "score": 55.0,
+        "weight": 0.1,
+        "reason": "Admin/neutrality risk proxy (heuristic)",
+        "meta": {
+          "categories": [
+            "Stablecoins",
+            "USD Stablecoin",
+            "BNB Chain Ecosystem",
+            "Ethereum Ecosystem",
+            "Tron Ecosystem"
+          ]
+        }
+      },
+      "sopx_l2_settlement_anchor": {
+        "score": 35.0,
+        "weight": 0.2,
+        "reason": "Not identified as settlement anchor",
+        "meta": {
+          "tags": []
+        }
+      }
+    },
+    "demand": 44.13,
+    "capture": 56.67,
+    "risk": 0,
+    "total": 39.71,
+    "tags": []
+  },
+  {
+    "id": "ethereum-classic",
+    "symbol": "etc",
+    "name": "Ethereum Classic",
+    "rank": 65,
+    "market_cap": 1038877298,
+    "vol_to_mcap": 0.02881863725161506,
+    "constitutional": 37.85,
+    "constitutional_breakdown": {
+      "sopx_curated_facts": {
+        "score": 45.0,
+        "weight": 0.4,
+        "reason": "No curated entry; fallback",
+        "meta": {}
+      },
+      "sopx_age_maturity": {
+        "score": 35.0,
+        "weight": 0.15,
+        "reason": "No genesis_date; assume young/unknown",
+        "meta": {}
+      },
+      "sopx_decentralization_proxy": {
+        "score": 14.0,
+        "weight": 0.15,
+        "reason": "Dev proxy (commits=0, contrib=0) + interest",
+        "meta": {
+          "commits": 0,
+          "contributors": 0,
+          "alexa_rank": null
+        }
+      },
+      "sopx_governance_admin_risk": {
+        "score": 55.0,
+        "weight": 0.1,
+        "reason": "Admin/neutrality risk proxy (heuristic)",
+        "meta": {
+          "categories": []
+        }
+      },
+      "sopx_l2_settlement_anchor": {
+        "score": 35.0,
+        "weight": 0.2,
+        "reason": "Not identified as settlement anchor",
+        "meta": {
+          "tags": []
+        }
+      }
+    },
+    "demand": 24.44,
+    "capture": 0,
+    "risk": 10,
+    "total": 21.47,
+    "tags": []
+  },
+  {
+    "id": "blockchain-capital",
+    "symbol": "bcap",
+    "name": "Blockchain Capital",
+    "rank": 66,
+    "market_cap": 967888430,
+    "vol_to_mcap": 0.0,
+    "constitutional": 37.85,
+    "constitutional_breakdown": {
+      "sopx_curated_facts": {
+        "score": 45.0,
+        "weight": 0.4,
+        "reason": "No curated entry; fallback",
+        "meta": {}
+      },
+      "sopx_age_maturity": {
+        "score": 35.0,
+        "weight": 0.15,
+        "reason": "No genesis_date; assume young/unknown",
+        "meta": {}
+      },
+      "sopx_decentralization_proxy": {
+        "score": 14.0,
+        "weight": 0.15,
+        "reason": "Dev proxy (commits=0, contrib=0) + interest",
+        "meta": {
+          "commits": 0,
+          "contributors": 0,
+          "alexa_rank": null
+        }
+      },
+      "sopx_governance_admin_risk": {
+        "score": 55.0,
+        "weight": 0.1,
+        "reason": "Admin/neutrality risk proxy (heuristic)",
+        "meta": {
+          "categories": []
+        }
+      },
+      "sopx_l2_settlement_anchor": {
+        "score": 35.0,
+        "weight": 0.2,
+        "reason": "Not identified as settlement anchor",
+        "meta": {
+          "tags": []
+        }
+      }
+    },
+    "demand": 12.5,
+    "capture": 0,
+    "risk": 30,
+    "total": 15.89,
+    "tags": []
+  },
+  {
+    "id": "pi-network",
+    "symbol": "pi",
+    "name": "Pi Network",
+    "rank": 67,
+    "market_cap": 960540840,
+    "vol_to_mcap": 0.00968974312430068,
+    "constitutional": 37.85,
+    "constitutional_breakdown": {
+      "sopx_curated_facts": {
+        "score": 45.0,
+        "weight": 0.4,
+        "reason": "No curated entry; fallback",
+        "meta": {}
+      },
+      "sopx_age_maturity": {
+        "score": 35.0,
+        "weight": 0.15,
+        "reason": "No genesis_date; assume young/unknown",
+        "meta": {}
+      },
+      "sopx_decentralization_proxy": {
+        "score": 14.0,
+        "weight": 0.15,
+        "reason": "Dev proxy (commits=0, contrib=0) + interest",
+        "meta": {
+          "commits": 0,
+          "contributors": 0,
+          "alexa_rank": null
+        }
+      },
+      "sopx_governance_admin_risk": {
+        "score": 55.0,
+        "weight": 0.1,
+        "reason": "Admin/neutrality risk proxy (heuristic)",
+        "meta": {
+          "categories": []
+        }
+      },
+      "sopx_l2_settlement_anchor": {
+        "score": 35.0,
+        "weight": 0.2,
+        "reason": "Not identified as settlement anchor",
+        "meta": {
+          "tags": []
+        }
+      }
+    },
+    "demand": 18.26,
+    "capture": 0,
+    "risk": 10,
+    "total": 19.62,
+    "tags": []
+  },
+  {
+    "id": "spiko-amundi-overnight-swap-fund-eur",
+    "symbol": "eursafo",
+    "name": "Spiko Amundi Overnight Swap Fund (EUR)",
+    "rank": 68,
+    "market_cap": 944433426,
+    "vol_to_mcap": 0.0,
+    "constitutional": 37.85,
+    "constitutional_breakdown": {
+      "sopx_curated_facts": {
+        "score": 45.0,
+        "weight": 0.4,
+        "reason": "No curated entry; fallback",
+        "meta": {}
+      },
+      "sopx_age_maturity": {
+        "score": 35.0,
+        "weight": 0.15,
+        "reason": "No genesis_date; assume young/unknown",
+        "meta": {}
+      },
+      "sopx_decentralization_proxy": {
+        "score": 14.0,
+        "weight": 0.15,
+        "reason": "Dev proxy (commits=0, contrib=0) + interest",
+        "meta": {
+          "commits": 0,
+          "contributors": 0,
+          "alexa_rank": null
+        }
+      },
+      "sopx_governance_admin_risk": {
+        "score": 55.0,
+        "weight": 0.1,
+        "reason": "Admin/neutrality risk proxy (heuristic)",
+        "meta": {
+          "categories": []
+        }
+      },
+      "sopx_l2_settlement_anchor": {
+        "score": 35.0,
+        "weight": 0.2,
+        "reason": "Not identified as settlement anchor",
+        "meta": {
+          "tags": []
+        }
+      }
+    },
+    "demand": 12.88,
+    "capture": 0,
+    "risk": 30,
+    "total": 16.0,
+    "tags": []
+  },
+  {
+    "id": "eutbl",
+    "symbol": "eutbl",
+    "name": "Spiko EU T-Bills Money Market Fund",
+    "rank": 69,
+    "market_cap": 932705898,
+    "vol_to_mcap": 0.0,
+    "constitutional": 37.85,
+    "constitutional_breakdown": {
+      "sopx_curated_facts": {
+        "score": 45.0,
+        "weight": 0.4,
+        "reason": "No curated entry; fallback",
+        "meta": {}
+      },
+      "sopx_age_maturity": {
+        "score": 35.0,
+        "weight": 0.15,
+        "reason": "No genesis_date; assume young/unknown",
+        "meta": {}
+      },
+      "sopx_decentralization_proxy": {
+        "score": 14.0,
+        "weight": 0.15,
+        "reason": "Dev proxy (commits=0, contrib=0) + interest",
+        "meta": {
+          "commits": 0,
+          "contributors": 0,
+          "alexa_rank": null
+        }
+      },
+      "sopx_governance_admin_risk": {
+        "score": 55.0,
+        "weight": 0.1,
+        "reason": "Admin/neutrality risk proxy (heuristic)",
+        "meta": {
+          "categories": []
+        }
+      },
+      "sopx_l2_settlement_anchor": {
+        "score": 35.0,
+        "weight": 0.2,
+        "reason": "Not identified as settlement anchor",
+        "meta": {
+          "tags": []
+        }
+      }
+    },
+    "demand": 12.85,
+    "capture": 0,
+    "risk": 30,
+    "total": 16.0,
+    "tags": []
+  },
+  {
+    "id": "kucoin-shares",
+    "symbol": "kcs",
+    "name": "KuCoin",
+    "rank": 70,
+    "market_cap": 906320207,
+    "vol_to_mcap": 0.0031228664859725454,
+    "constitutional": 37.85,
+    "constitutional_breakdown": {
+      "sopx_curated_facts": {
+        "score": 45.0,
+        "weight": 0.4,
+        "reason": "No curated entry; fallback",
+        "meta": {}
+      },
+      "sopx_age_maturity": {
+        "score": 35.0,
+        "weight": 0.15,
+        "reason": "No genesis_date; assume young/unknown",
+        "meta": {}
+      },
+      "sopx_decentralization_proxy": {
+        "score": 14.0,
+        "weight": 0.15,
+        "reason": "Dev proxy (commits=0, contrib=0) + interest",
+        "meta": {
+          "commits": 0,
+          "contributors": 0,
+          "alexa_rank": null
+        }
+      },
+      "sopx_governance_admin_risk": {
+        "score": 55.0,
+        "weight": 0.1,
+        "reason": "Admin/neutrality risk proxy (heuristic)",
+        "meta": {
+          "categories": []
+        }
+      },
+      "sopx_l2_settlement_anchor": {
+        "score": 35.0,
+        "weight": 0.2,
+        "reason": "Not identified as settlement anchor",
+        "meta": {
+          "tags": []
+        }
+      }
+    },
+    "demand": 13.88,
+    "capture": 0,
+    "risk": 10,
+    "total": 18.3,
+    "tags": []
+  },
+  {
+    "id": "quant-network",
+    "symbol": "qnt",
+    "name": "Quant",
+    "rank": 71,
+    "market_cap": 897087095,
+    "vol_to_mcap": 0.007283730906863619,
+    "constitutional": 37.85,
+    "constitutional_breakdown": {
+      "sopx_curated_facts": {
+        "score": 45.0,
+        "weight": 0.4,
+        "reason": "No curated entry; fallback",
+        "meta": {}
+      },
+      "sopx_age_maturity": {
+        "score": 35.0,
+        "weight": 0.15,
+        "reason": "No genesis_date; assume young/unknown",
+        "meta": {}
+      },
+      "sopx_decentralization_proxy": {
+        "score": 14.0,
+        "weight": 0.15,
+        "reason": "Dev proxy (commits=0, contrib=0) + interest",
+        "meta": {
+          "commits": 0,
+          "contributors": 0,
+          "alexa_rank": null
+        }
+      },
+      "sopx_governance_admin_risk": {
+        "score": 55.0,
+        "weight": 0.1,
+        "reason": "Admin/neutrality risk proxy (heuristic)",
+        "meta": {
+          "categories": []
+        }
+      },
+      "sopx_l2_settlement_anchor": {
+        "score": 35.0,
+        "weight": 0.2,
+        "reason": "Not identified as settlement anchor",
+        "meta": {
+          "tags": []
+        }
+      }
+    },
+    "demand": 14.9,
+    "capture": 0,
+    "risk": 10,
+    "total": 18.61,
+    "tags": []
+  },
+  {
+    "id": "superstate-short-duration-us-government-securities-fund-ustb",
+    "symbol": "ustb",
+    "name": "Invesco Short Duration US Government Securities Fund",
+    "rank": 72,
+    "market_cap": 892925807,
+    "vol_to_mcap": 0.0,
+    "constitutional": 37.85,
+    "constitutional_breakdown": {
+      "sopx_curated_facts": {
+        "score": 45.0,
+        "weight": 0.4,
+        "reason": "No curated entry; fallback",
+        "meta": {}
+      },
+      "sopx_age_maturity": {
+        "score": 35.0,
+        "weight": 0.15,
+        "reason": "No genesis_date; assume young/unknown",
+        "meta": {}
+      },
+      "sopx_decentralization_proxy": {
+        "score": 14.0,
+        "weight": 0.15,
+        "reason": "Dev proxy (commits=0, contrib=0) + interest",
+        "meta": {
+          "commits": 0,
+          "contributors": 0,
+          "alexa_rank": null
+        }
+      },
+      "sopx_governance_admin_risk": {
+        "score": 55.0,
+        "weight": 0.1,
+        "reason": "Admin/neutrality risk proxy (heuristic)",
+        "meta": {
+          "categories": []
+        }
+      },
+      "sopx_l2_settlement_anchor": {
+        "score": 35.0,
+        "weight": 0.2,
+        "reason": "Not identified as settlement anchor",
+        "meta": {
+          "tags": []
+        }
+      }
+    },
+    "demand": 12.53,
+    "capture": 0,
+    "risk": 30,
+    "total": 15.9,
+    "tags": []
+  },
+  {
+    "id": "pump-fun",
+    "symbol": "pump",
+    "name": "Pump.fun",
+    "rank": 73,
+    "market_cap": 880631045,
+    "vol_to_mcap": 0.096618172256237,
+    "constitutional": 37.85,
+    "constitutional_breakdown": {
+      "sopx_curated_facts": {
+        "score": 45.0,
+        "weight": 0.4,
+        "reason": "No curated entry; fallback",
+        "meta": {}
+      },
+      "sopx_age_maturity": {
+        "score": 35.0,
+        "weight": 0.15,
+        "reason": "No genesis_date; assume young/unknown",
+        "meta": {}
+      },
+      "sopx_decentralization_proxy": {
+        "score": 14.0,
+        "weight": 0.15,
+        "reason": "Dev proxy (commits=0, contrib=0) + interest",
+        "meta": {
+          "commits": 0,
+          "contributors": 0,
+          "alexa_rank": null
+        }
+      },
+      "sopx_governance_admin_risk": {
+        "score": 55.0,
+        "weight": 0.1,
+        "reason": "Admin/neutrality risk proxy (heuristic)",
+        "meta": {
+          "categories": [
+            "Decentralized Exchange (DEX)",
+            "Exchange-based Tokens",
+            "SocialFi",
+            "Decentralized Finance (DeFi)",
+            "Automated Market Maker (AMM)",
+            "Solana Ecosystem",
+            "Launchpad",
+            "Meme",
+            "CoinList Launchpad"
+          ]
+        }
+      },
+      "sopx_l2_settlement_anchor": {
+        "score": 35.0,
+        "weight": 0.2,
+        "reason": "Not identified as settlement anchor",
+        "meta": {
+          "tags": []
+        }
+      }
+    },
+    "demand": 61.68,
+    "capture": 100,
+    "risk": 0,
+    "total": 53.64,
+    "tags": []
+  },
+  {
+    "id": "janus-henderson-anemoy-treasury-fund",
+    "symbol": "jtrsy",
+    "name": "Janus Henderson Anemoy Treasury Fund",
+    "rank": 74,
+    "market_cap": 871052265,
+    "vol_to_mcap": 0.0,
+    "constitutional": 37.85,
+    "constitutional_breakdown": {
+      "sopx_curated_facts": {
+        "score": 45.0,
+        "weight": 0.4,
+        "reason": "No curated entry; fallback",
+        "meta": {}
+      },
+      "sopx_age_maturity": {
+        "score": 35.0,
+        "weight": 0.15,
+        "reason": "No genesis_date; assume young/unknown",
+        "meta": {}
+      },
+      "sopx_decentralization_proxy": {
+        "score": 14.0,
+        "weight": 0.15,
+        "reason": "Dev proxy (commits=0, contrib=0) + interest",
+        "meta": {
+          "commits": 0,
+          "contributors": 0,
+          "alexa_rank": null
+        }
+      },
+      "sopx_governance_admin_risk": {
+        "score": 55.0,
+        "weight": 0.1,
+        "reason": "Admin/neutrality risk proxy (heuristic)",
+        "meta": {
+          "categories": []
+        }
+      },
+      "sopx_l2_settlement_anchor": {
+        "score": 35.0,
+        "weight": 0.2,
+        "reason": "Not identified as settlement anchor",
+        "meta": {
+          "tags": []
+        }
+      }
+    },
+    "demand": 12.53,
+    "capture": 0,
+    "risk": 30,
+    "total": 15.9,
+    "tags": []
+  },
+  {
+    "id": "just",
+    "symbol": "jst",
+    "name": "JUST",
+    "rank": 75,
+    "market_cap": 863286965,
+    "vol_to_mcap": 0.01863681215202873,
+    "constitutional": 37.85,
+    "constitutional_breakdown": {
+      "sopx_curated_facts": {
+        "score": 45.0,
+        "weight": 0.4,
+        "reason": "No curated entry; fallback",
+        "meta": {}
+      },
+      "sopx_age_maturity": {
+        "score": 35.0,
+        "weight": 0.15,
+        "reason": "No genesis_date; assume young/unknown",
+        "meta": {}
+      },
+      "sopx_decentralization_proxy": {
+        "score": 14.0,
+        "weight": 0.15,
+        "reason": "Dev proxy (commits=0, contrib=0) + interest",
+        "meta": {
+          "commits": 0,
+          "contributors": 0,
+          "alexa_rank": null
+        }
+      },
+      "sopx_governance_admin_risk": {
+        "score": 55.0,
+        "weight": 0.1,
+        "reason": "Admin/neutrality risk proxy (heuristic)",
+        "meta": {
+          "categories": []
+        }
+      },
+      "sopx_l2_settlement_anchor": {
+        "score": 35.0,
+        "weight": 0.2,
+        "reason": "Not identified as settlement anchor",
+        "meta": {
+          "tags": []
+        }
+      }
+    },
+    "demand": 21.16,
+    "capture": 0,
+    "risk": 10,
+    "total": 20.49,
+    "tags": []
+  },
+  {
+    "id": "stable-2",
+    "symbol": "stable",
+    "name": "​​Stable",
+    "rank": 76,
+    "market_cap": 836383666,
+    "vol_to_mcap": 0.009228488448266755,
+    "constitutional": 37.85,
+    "constitutional_breakdown": {
+      "sopx_curated_facts": {
+        "score": 45.0,
+        "weight": 0.4,
+        "reason": "No curated entry; fallback",
+        "meta": {}
+      },
+      "sopx_age_maturity": {
+        "score": 35.0,
+        "weight": 0.15,
+        "reason": "No genesis_date; assume young/unknown",
+        "meta": {}
+      },
+      "sopx_decentralization_proxy": {
+        "score": 14.0,
+        "weight": 0.15,
+        "reason": "Dev proxy (commits=0, contrib=0) + interest",
+        "meta": {
+          "commits": 0,
+          "contributors": 0,
+          "alexa_rank": null
+        }
+      },
+      "sopx_governance_admin_risk": {
+        "score": 55.0,
+        "weight": 0.1,
+        "reason": "Admin/neutrality risk proxy (heuristic)",
+        "meta": {
+          "categories": []
+        }
+      },
+      "sopx_l2_settlement_anchor": {
+        "score": 35.0,
+        "weight": 0.2,
+        "reason": "Not identified as settlement anchor",
+        "meta": {
+          "tags": []
+        }
+      }
+    },
+    "demand": 12.85,
+    "capture": 0,
+    "risk": 10,
+    "total": 18.0,
+    "tags": []
+  },
+  {
+    "id": "ethena",
+    "symbol": "ena",
+    "name": "Ethena",
+    "rank": 77,
+    "market_cap": 821331304,
+    "vol_to_mcap": 0.13673508053700092,
+    "constitutional": 37.85,
+    "constitutional_breakdown": {
+      "sopx_curated_facts": {
+        "score": 45.0,
+        "weight": 0.4,
+        "reason": "No curated entry; fallback",
+        "meta": {}
+      },
+      "sopx_age_maturity": {
+        "score": 35.0,
+        "weight": 0.15,
+        "reason": "No genesis_date; assume young/unknown",
+        "meta": {}
+      },
+      "sopx_decentralization_proxy": {
+        "score": 14.0,
+        "weight": 0.15,
+        "reason": "Dev proxy (commits=0, contrib=0) + interest",
+        "meta": {
+          "commits": 0,
+          "contributors": 0,
+          "alexa_rank": null
+        }
+      },
+      "sopx_governance_admin_risk": {
+        "score": 55.0,
+        "weight": 0.1,
+        "reason": "Admin/neutrality risk proxy (heuristic)",
+        "meta": {
+          "categories": [
+            "Decentralized Finance (DeFi)",
+            "Binance Launchpool",
+            "Solana Ecosystem",
+            "Avalanche Ecosystem",
+            "Arbitrum Ecosystem",
+            "Ethereum Ecosystem",
+            "Metis Ecosystem",
+            "Optimism Ecosystem",
+            "ZkSync Ecosystem",
+            "Mantle Ecosystem",
+            "Base Ecosystem",
+            "TON Ecosystem",
+            "Manta Network Ecosystem",
+            "Scroll Ecosystem",
+            "Kava Ecosystem",
+            "Blast Ecosystem",
+            "Stablecoin Issuer",
+            "Mode Ecosystem",
+            "DragonFly Capital Portfolio",
+            "YZi Labs (Prev. Binance Labs) Portfolio",
+            "Fraxtal Ecosystem",
+            "Delphi Ventures Portfolio",
+            "OKX Ventures Portfolio",
+            "Zircuit Ecosystem",
+            "Morph L2 Ecosystem",
+            "World Liberty Financial Portfolio",
+            "Swellchain Ecosystem",
+            "Governance"
+          ]
+        }
+      },
+      "sopx_l2_settlement_anchor": {
+        "score": 35.0,
+        "weight": 0.2,
+        "reason": "Not identified as settlement anchor",
+        "meta": {
+          "tags": []
+        }
+      }
+    },
+    "demand": 57.1,
+    "capture": 100,
+    "risk": 0,
+    "total": 52.27,
+    "tags": []
+  },
+  {
+    "id": "polygon-ecosystem-token",
+    "symbol": "pol",
+    "name": "POL (ex-MATIC)",
+    "rank": 78,
+    "market_cap": 773200650,
+    "vol_to_mcap": 0.028983055045284818,
+    "constitutional": 37.85,
+    "constitutional_breakdown": {
+      "sopx_curated_facts": {
+        "score": 45.0,
+        "weight": 0.4,
+        "reason": "No curated entry; fallback",
+        "meta": {}
+      },
+      "sopx_age_maturity": {
+        "score": 35.0,
+        "weight": 0.15,
+        "reason": "No genesis_date; assume young/unknown",
+        "meta": {}
+      },
+      "sopx_decentralization_proxy": {
+        "score": 14.0,
+        "weight": 0.15,
+        "reason": "Dev proxy (commits=0, contrib=0) + interest",
+        "meta": {
+          "commits": 0,
+          "contributors": 0,
+          "alexa_rank": null
+        }
+      },
+      "sopx_governance_admin_risk": {
+        "score": 55.0,
+        "weight": 0.1,
+        "reason": "Admin/neutrality risk proxy (heuristic)",
+        "meta": {
+          "categories": []
+        }
+      },
+      "sopx_l2_settlement_anchor": {
+        "score": 35.0,
+        "weight": 0.2,
+        "reason": "Not identified as settlement anchor",
+        "meta": {
+          "tags": []
+        }
+      }
+    },
+    "demand": 24.17,
+    "capture": 0,
+    "risk": 10,
+    "total": 21.39,
+    "tags": []
+  },
+  {
+    "id": "kaspa",
+    "symbol": "kas",
+    "name": "Kaspa",
+    "rank": 79,
+    "market_cap": 744082309,
+    "vol_to_mcap": 0.007275360446716386,
+    "constitutional": 37.85,
+    "constitutional_breakdown": {
+      "sopx_curated_facts": {
+        "score": 45.0,
+        "weight": 0.4,
+        "reason": "No curated entry; fallback",
+        "meta": {}
+      },
+      "sopx_age_maturity": {
+        "score": 35.0,
+        "weight": 0.15,
+        "reason": "No genesis_date; assume young/unknown",
+        "meta": {}
+      },
+      "sopx_decentralization_proxy": {
+        "score": 14.0,
+        "weight": 0.15,
+        "reason": "Dev proxy (commits=0, contrib=0) + interest",
+        "meta": {
+          "commits": 0,
+          "contributors": 0,
+          "alexa_rank": null
+        }
+      },
+      "sopx_governance_admin_risk": {
+        "score": 55.0,
+        "weight": 0.1,
+        "reason": "Admin/neutrality risk proxy (heuristic)",
+        "meta": {
+          "categories": []
+        }
+      },
+      "sopx_l2_settlement_anchor": {
+        "score": 35.0,
+        "weight": 0.2,
+        "reason": "Not identified as settlement anchor",
+        "meta": {
+          "tags": []
+        }
+      }
+    },
+    "demand": 14.8,
+    "capture": 0,
+    "risk": 10,
+    "total": 18.58,
+    "tags": []
+  },
+  {
+    "id": "nexo",
+    "symbol": "nexo",
+    "name": "NEXO",
+    "rank": 80,
+    "market_cap": 718879575,
+    "vol_to_mcap": 0.003931356653164057,
+    "constitutional": 37.85,
+    "constitutional_breakdown": {
+      "sopx_curated_facts": {
+        "score": 45.0,
+        "weight": 0.4,
+        "reason": "No curated entry; fallback",
+        "meta": {}
+      },
+      "sopx_age_maturity": {
+        "score": 35.0,
+        "weight": 0.15,
+        "reason": "No genesis_date; assume young/unknown",
+        "meta": {}
+      },
+      "sopx_decentralization_proxy": {
+        "score": 14.0,
+        "weight": 0.15,
+        "reason": "Dev proxy (commits=0, contrib=0) + interest",
+        "meta": {
+          "commits": 0,
+          "contributors": 0,
+          "alexa_rank": null
+        }
+      },
+      "sopx_governance_admin_risk": {
+        "score": 55.0,
+        "weight": 0.1,
+        "reason": "Admin/neutrality risk proxy (heuristic)",
+        "meta": {
+          "categories": []
+        }
+      },
+      "sopx_l2_settlement_anchor": {
+        "score": 35.0,
+        "weight": 0.2,
+        "reason": "Not identified as settlement anchor",
+        "meta": {
+          "tags": []
+        }
+      }
+    },
+    "demand": 13.67,
+    "capture": 0,
+    "risk": 10,
+    "total": 18.24,
+    "tags": []
+  },
+  {
+    "id": "algorand",
+    "symbol": "algo",
+    "name": "Algorand",
+    "rank": 81,
+    "market_cap": 714499296,
+    "vol_to_mcap": 0.02085891068533677,
+    "constitutional": 37.85,
+    "constitutional_breakdown": {
+      "sopx_curated_facts": {
+        "score": 45.0,
+        "weight": 0.4,
+        "reason": "No curated entry; fallback",
+        "meta": {}
+      },
+      "sopx_age_maturity": {
+        "score": 35.0,
+        "weight": 0.15,
+        "reason": "No genesis_date; assume young/unknown",
+        "meta": {}
+      },
+      "sopx_decentralization_proxy": {
+        "score": 14.0,
+        "weight": 0.15,
+        "reason": "Dev proxy (commits=0, contrib=0) + interest",
+        "meta": {
+          "commits": 0,
+          "contributors": 0,
+          "alexa_rank": null
+        }
+      },
+      "sopx_governance_admin_risk": {
+        "score": 55.0,
+        "weight": 0.1,
+        "reason": "Admin/neutrality risk proxy (heuristic)",
+        "meta": {
+          "categories": []
+        }
+      },
+      "sopx_l2_settlement_anchor": {
+        "score": 35.0,
+        "weight": 0.2,
+        "reason": "Not identified as settlement anchor",
+        "meta": {
+          "tags": []
+        }
+      }
+    },
+    "demand": 20.36,
+    "capture": 0,
+    "risk": 10,
+    "total": 20.25,
+    "tags": []
+  },
+  {
+    "id": "render-token",
+    "symbol": "render",
+    "name": "Render",
+    "rank": 82,
+    "market_cap": 708983223,
+    "vol_to_mcap": 0.027309555955458767,
+    "constitutional": 37.85,
+    "constitutional_breakdown": {
+      "sopx_curated_facts": {
+        "score": 45.0,
+        "weight": 0.4,
+        "reason": "No curated entry; fallback",
+        "meta": {}
+      },
+      "sopx_age_maturity": {
+        "score": 35.0,
+        "weight": 0.15,
+        "reason": "No genesis_date; assume young/unknown",
+        "meta": {}
+      },
+      "sopx_decentralization_proxy": {
+        "score": 14.0,
+        "weight": 0.15,
+        "reason": "Dev proxy (commits=0, contrib=0) + interest",
+        "meta": {
+          "commits": 0,
+          "contributors": 0,
+          "alexa_rank": null
+        }
+      },
+      "sopx_governance_admin_risk": {
+        "score": 55.0,
+        "weight": 0.1,
+        "reason": "Admin/neutrality risk proxy (heuristic)",
+        "meta": {
+          "categories": []
+        }
+      },
+      "sopx_l2_settlement_anchor": {
+        "score": 35.0,
+        "weight": 0.2,
+        "reason": "Not identified as settlement anchor",
+        "meta": {
+          "tags": []
+        }
+      }
+    },
+    "demand": 22.84,
+    "capture": 0,
+    "risk": 10,
+    "total": 20.99,
+    "tags": []
+  },
+  {
+    "id": "gatechain-token",
+    "symbol": "gt",
+    "name": "Gate",
+    "rank": 83,
+    "market_cap": 689866413,
+    "vol_to_mcap": 0.0017807012732478106,
+    "constitutional": 37.85,
+    "constitutional_breakdown": {
+      "sopx_curated_facts": {
+        "score": 45.0,
+        "weight": 0.4,
+        "reason": "No curated entry; fallback",
+        "meta": {}
+      },
+      "sopx_age_maturity": {
+        "score": 35.0,
+        "weight": 0.15,
+        "reason": "No genesis_date; assume young/unknown",
+        "meta": {}
+      },
+      "sopx_decentralization_proxy": {
+        "score": 14.0,
+        "weight": 0.15,
+        "reason": "Dev proxy (commits=0, contrib=0) + interest",
+        "meta": {
+          "commits": 0,
+          "contributors": 0,
+          "alexa_rank": null
+        }
+      },
+      "sopx_governance_admin_risk": {
+        "score": 55.0,
+        "weight": 0.1,
+        "reason": "Admin/neutrality risk proxy (heuristic)",
+        "meta": {
+          "categories": []
+        }
+      },
+      "sopx_l2_settlement_anchor": {
+        "score": 35.0,
+        "weight": 0.2,
+        "reason": "Not identified as settlement anchor",
+        "meta": {
+          "tags": []
+        }
+      }
+    },
+    "demand": 12.58,
+    "capture": 0,
+    "risk": 30,
+    "total": 15.91,
+    "tags": []
+  },
+  {
+    "id": "janus-henderson-anemoy-aaa-clo-fund",
+    "symbol": "jaaa",
+    "name": "Janus Henderson Anemoy AAA CLO Fund",
+    "rank": 84,
+    "market_cap": 685003726,
+    "vol_to_mcap": 0.0,
+    "constitutional": 37.85,
+    "constitutional_breakdown": {
+      "sopx_curated_facts": {
+        "score": 45.0,
+        "weight": 0.4,
+        "reason": "No curated entry; fallback",
+        "meta": {}
+      },
+      "sopx_age_maturity": {
+        "score": 35.0,
+        "weight": 0.15,
+        "reason": "No genesis_date; assume young/unknown",
+        "meta": {}
+      },
+      "sopx_decentralization_proxy": {
+        "score": 14.0,
+        "weight": 0.15,
+        "reason": "Dev proxy (commits=0, contrib=0) + interest",
+        "meta": {
+          "commits": 0,
+          "contributors": 0,
+          "alexa_rank": null
+        }
+      },
+      "sopx_governance_admin_risk": {
+        "score": 55.0,
+        "weight": 0.1,
+        "reason": "Admin/neutrality risk proxy (heuristic)",
+        "meta": {
+          "categories": []
+        }
+      },
+      "sopx_l2_settlement_anchor": {
+        "score": 35.0,
+        "weight": 0.2,
+        "reason": "Not identified as settlement anchor",
+        "meta": {
+          "tags": []
+        }
+      }
+    },
+    "demand": 12.53,
+    "capture": 0,
+    "risk": 30,
+    "total": 15.9,
+    "tags": []
+  },
+  {
+    "id": "beldex",
+    "symbol": "bdx",
+    "name": "Beldex",
+    "rank": 85,
+    "market_cap": 654377555,
+    "vol_to_mcap": 0.019657929740576143,
+    "constitutional": 37.85,
+    "constitutional_breakdown": {
+      "sopx_curated_facts": {
+        "score": 45.0,
+        "weight": 0.4,
+        "reason": "No curated entry; fallback",
+        "meta": {}
+      },
+      "sopx_age_maturity": {
+        "score": 35.0,
+        "weight": 0.15,
+        "reason": "No genesis_date; assume young/unknown",
+        "meta": {}
+      },
+      "sopx_decentralization_proxy": {
+        "score": 14.0,
+        "weight": 0.15,
+        "reason": "Dev proxy (commits=0, contrib=0) + interest",
+        "meta": {
+          "commits": 0,
+          "contributors": 0,
+          "alexa_rank": null
+        }
+      },
+      "sopx_governance_admin_risk": {
+        "score": 55.0,
+        "weight": 0.1,
+        "reason": "Admin/neutrality risk proxy (heuristic)",
+        "meta": {
+          "categories": []
+        }
+      },
+      "sopx_l2_settlement_anchor": {
+        "score": 35.0,
+        "weight": 0.2,
+        "reason": "Not identified as settlement anchor",
+        "meta": {
+          "tags": []
+        }
+      }
+    },
+    "demand": 21.57,
+    "capture": 0,
+    "risk": 10,
+    "total": 20.61,
+    "tags": []
+  },
+  {
+    "id": "jupiter-exchange-solana",
+    "symbol": "jup",
+    "name": "Jupiter",
+    "rank": 86,
+    "market_cap": 652872118,
+    "vol_to_mcap": 0.0233311479844817,
+    "constitutional": 37.85,
+    "constitutional_breakdown": {
+      "sopx_curated_facts": {
+        "score": 45.0,
+        "weight": 0.4,
+        "reason": "No curated entry; fallback",
+        "meta": {}
+      },
+      "sopx_age_maturity": {
+        "score": 35.0,
+        "weight": 0.15,
+        "reason": "No genesis_date; assume young/unknown",
+        "meta": {}
+      },
+      "sopx_decentralization_proxy": {
+        "score": 14.0,
+        "weight": 0.15,
+        "reason": "Dev proxy (commits=0, contrib=0) + interest",
+        "meta": {
+          "commits": 0,
+          "contributors": 0,
+          "alexa_rank": null
+        }
+      },
+      "sopx_governance_admin_risk": {
+        "score": 55.0,
+        "weight": 0.1,
+        "reason": "Admin/neutrality risk proxy (heuristic)",
+        "meta": {
+          "categories": []
+        }
+      },
+      "sopx_l2_settlement_anchor": {
+        "score": 35.0,
+        "weight": 0.2,
+        "reason": "Not identified as settlement anchor",
+        "meta": {
+          "tags": []
+        }
+      }
+    },
+    "demand": 24.35,
+    "capture": 0,
+    "risk": 10,
+    "total": 21.44,
+    "tags": []
+  },
+  {
+    "id": "cosmos",
+    "symbol": "atom",
+    "name": "Cosmos Hub",
+    "rank": 87,
+    "market_cap": 648307816,
+    "vol_to_mcap": 0.025919991376442082,
+    "constitutional": 54.28,
+    "constitutional_breakdown": {
+      "sopx_curated_facts": {
+        "score": 68.0,
+        "weight": 0.4,
+        "reason": "curated: layer=regional, anchor=none, dec=medium, admin=medium, exit=partial, thesis=ecosystem, flags=1",
+        "meta": {
+          "layer": "regional",
+          "settlement_anchor": "none",
+          "decentralization": "medium",
+          "admin_risk": "medium",
+          "exit_test": "partial",
+          "thesis": "ecosystem",
+          "review_interval_weeks": 8,
+          "risk_flags": [
+            "weak_exit_paths"
+          ],
+          "penalties": 7
+        }
+      },
+      "sopx_age_maturity": {
+        "score": 35.0,
+        "weight": 0.15,
+        "reason": "No genesis_date; assume young/unknown",
+        "meta": {}
+      },
+      "sopx_decentralization_proxy": {
+        "score": 22.19,
+        "weight": 0.15,
+        "reason": "Dev proxy (commits=0, contrib=21) + interest",
+        "meta": {
+          "commits": 0,
+          "contributors": 21,
+          "alexa_rank": null
+        }
+      },
+      "sopx_governance_admin_risk": {
+        "score": 55.0,
+        "weight": 0.1,
+        "reason": "Admin/neutrality risk proxy (heuristic)",
+        "meta": {
+          "categories": [
+            "Smart Contract Platform",
+            "BNB Chain Ecosystem",
+            "Cosmos Ecosystem",
+            "Terra Ecosystem",
+            "Canto Ecosystem",
+            "Alleged SEC Securities",
+            "Osmosis Ecosystem",
+            "Paradigm Portfolio",
+            "Proof of Stake (PoS)",
+            "Kava Ecosystem",
+            "Layer 0 (L0)",
+            "DragonFly Capital Portfolio",
+            "Pantera Capital Portfolio",
+            "Archway Ecosystem",
+            "Evmos Ecosystem",
+            "GMCI 30 Index",
+            "GMCI Index",
+            "Outlier Ventures Portfolio",
+            "Polychain Capital Portfolio",
+            "Mantra Ecosystem",
+            "Coinbase 50 Index",
+            "Governance",
+            "Dungeon Chain Ecosystem"
+          ]
+        }
+      },
+      "sopx_l2_settlement_anchor": {
+        "score": 35.0,
+        "weight": 0.2,
+        "reason": "Not identified as settlement anchor",
+        "meta": {
+          "tags": [
+            "Regional-Layer",
+            "Federation"
+          ]
+        }
+      }
+    },
+    "demand": 21.46,
+    "capture": 56.67,
+    "risk": 0,
+    "total": 39.48,
+    "tags": [
+      "Regional-Layer",
+      "Federation",
+      "layer:regional",
+      "thesis:ecosystem",
+      "flag:weak_exit_paths"
+    ]
+  },
+  {
+    "id": "gho",
+    "symbol": "gho",
+    "name": "GHO",
+    "rank": 88,
+    "market_cap": 647831468,
+    "vol_to_mcap": 0.0014909973468593533,
+    "constitutional": 37.85,
+    "constitutional_breakdown": {
+      "sopx_curated_facts": {
+        "score": 45.0,
+        "weight": 0.4,
+        "reason": "No curated entry; fallback",
+        "meta": {}
+      },
+      "sopx_age_maturity": {
+        "score": 35.0,
+        "weight": 0.15,
+        "reason": "No genesis_date; assume young/unknown",
+        "meta": {}
+      },
+      "sopx_decentralization_proxy": {
+        "score": 14.0,
+        "weight": 0.15,
+        "reason": "Dev proxy (commits=0, contrib=0) + interest",
+        "meta": {
+          "commits": 0,
+          "contributors": 0,
+          "alexa_rank": null
+        }
+      },
+      "sopx_governance_admin_risk": {
+        "score": 55.0,
+        "weight": 0.1,
+        "reason": "Admin/neutrality risk proxy (heuristic)",
+        "meta": {
+          "categories": []
+        }
+      },
+      "sopx_l2_settlement_anchor": {
+        "score": 35.0,
+        "weight": 0.2,
+        "reason": "Not identified as settlement anchor",
+        "meta": {
+          "tags": []
+        }
+      }
+    },
+    "demand": 13.15,
+    "capture": 0,
+    "risk": 30,
+    "total": 16.08,
+    "tags": []
+  },
+  {
+    "id": "ylds",
+    "symbol": "ylds",
+    "name": "YLDS",
+    "rank": 89,
+    "market_cap": 630800881,
+    "vol_to_mcap": 0.0010953884511141004,
+    "constitutional": 37.85,
+    "constitutional_breakdown": {
+      "sopx_curated_facts": {
+        "score": 45.0,
+        "weight": 0.4,
+        "reason": "No curated entry; fallback",
+        "meta": {}
+      },
+      "sopx_age_maturity": {
+        "score": 35.0,
+        "weight": 0.15,
+        "reason": "No genesis_date; assume young/unknown",
+        "meta": {}
+      },
+      "sopx_decentralization_proxy": {
+        "score": 14.0,
+        "weight": 0.15,
+        "reason": "Dev proxy (commits=0, contrib=0) + interest",
+        "meta": {
+          "commits": 0,
+          "contributors": 0,
+          "alexa_rank": null
+        }
+      },
+      "sopx_governance_admin_risk": {
+        "score": 55.0,
+        "weight": 0.1,
+        "reason": "Admin/neutrality risk proxy (heuristic)",
+        "meta": {
+          "categories": []
+        }
+      },
+      "sopx_l2_settlement_anchor": {
+        "score": 35.0,
+        "weight": 0.2,
+        "reason": "Not identified as settlement anchor",
+        "meta": {
+          "tags": []
+        }
+      }
+    },
+    "demand": 13.02,
+    "capture": 0,
+    "risk": 30,
+    "total": 16.05,
+    "tags": []
+  },
+  {
+    "id": "bianrensheng",
+    "symbol": "币安人生",
+    "name": "币安人生 (BinanceLife)",
+    "rank": 90,
+    "market_cap": 620865857,
+    "vol_to_mcap": 0.008889435516181075,
+    "constitutional": 37.85,
+    "constitutional_breakdown": {
+      "sopx_curated_facts": {
+        "score": 45.0,
+        "weight": 0.4,
+        "reason": "No curated entry; fallback",
+        "meta": {}
+      },
+      "sopx_age_maturity": {
+        "score": 35.0,
+        "weight": 0.15,
+        "reason": "No genesis_date; assume young/unknown",
+        "meta": {}
+      },
+      "sopx_decentralization_proxy": {
+        "score": 14.0,
+        "weight": 0.15,
+        "reason": "Dev proxy (commits=0, contrib=0) + interest",
+        "meta": {
+          "commits": 0,
+          "contributors": 0,
+          "alexa_rank": null
+        }
+      },
+      "sopx_governance_admin_risk": {
+        "score": 55.0,
+        "weight": 0.1,
+        "reason": "Admin/neutrality risk proxy (heuristic)",
+        "meta": {
+          "categories": []
+        }
+      },
+      "sopx_l2_settlement_anchor": {
+        "score": 35.0,
+        "weight": 0.2,
+        "reason": "Not identified as settlement anchor",
+        "meta": {
+          "tags": []
+        }
+      }
+    },
+    "demand": 16.1,
+    "capture": 0,
+    "risk": 10,
+    "total": 18.97,
+    "tags": []
+  },
+  {
+    "id": "filecoin",
+    "symbol": "fil",
+    "name": "Filecoin",
+    "rank": 91,
+    "market_cap": 580892453,
+    "vol_to_mcap": 0.0714573373877178,
+    "constitutional": 37.85,
+    "constitutional_breakdown": {
+      "sopx_curated_facts": {
+        "score": 45.0,
+        "weight": 0.4,
+        "reason": "No curated entry; fallback",
+        "meta": {}
+      },
+      "sopx_age_maturity": {
+        "score": 35.0,
+        "weight": 0.15,
+        "reason": "No genesis_date; assume young/unknown",
+        "meta": {}
+      },
+      "sopx_decentralization_proxy": {
+        "score": 14.0,
+        "weight": 0.15,
+        "reason": "Dev proxy (commits=0, contrib=0) + interest",
+        "meta": {
+          "commits": 0,
+          "contributors": 0,
+          "alexa_rank": null
+        }
+      },
+      "sopx_governance_admin_risk": {
+        "score": 55.0,
+        "weight": 0.1,
+        "reason": "Admin/neutrality risk proxy (heuristic)",
+        "meta": {
+          "categories": [
+            "Infrastructure",
+            "Smart Contract Platform",
+            "Storage",
+            "Layer 1 (L1)",
+            "DePIN",
+            "Alleged SEC Securities",
+            "Pantera Capital Portfolio",
+            "GMCI DePIN Index",
+            "GMCI 30 Index",
+            "Sequoia Capital Portfolio",
+            "Blockchain Capital Portfolio",
+            "GMCI Index",
+            "Made in USA",
+            "CoinList Launchpad"
+          ]
+        }
+      },
+      "sopx_l2_settlement_anchor": {
+        "score": 35.0,
+        "weight": 0.2,
+        "reason": "Not identified as settlement anchor",
+        "meta": {
+          "tags": []
+        }
+      }
+    },
+    "demand": 43.78,
+    "capture": 56.67,
+    "risk": 0,
+    "total": 39.61,
+    "tags": []
+  },
+  {
+    "id": "venice-token",
+    "symbol": "vvv",
+    "name": "Venice Token",
+    "rank": 92,
+    "market_cap": 561327299,
+    "vol_to_mcap": 0.01666392141744027,
+    "constitutional": 37.85,
+    "constitutional_breakdown": {
+      "sopx_curated_facts": {
+        "score": 45.0,
+        "weight": 0.4,
+        "reason": "No curated entry; fallback",
+        "meta": {}
+      },
+      "sopx_age_maturity": {
+        "score": 35.0,
+        "weight": 0.15,
+        "reason": "No genesis_date; assume young/unknown",
+        "meta": {}
+      },
+      "sopx_decentralization_proxy": {
+        "score": 14.0,
+        "weight": 0.15,
+        "reason": "Dev proxy (commits=0, contrib=0) + interest",
+        "meta": {
+          "commits": 0,
+          "contributors": 0,
+          "alexa_rank": null
+        }
+      },
+      "sopx_governance_admin_risk": {
+        "score": 55.0,
+        "weight": 0.1,
+        "reason": "Admin/neutrality risk proxy (heuristic)",
+        "meta": {
+          "categories": []
+        }
+      },
+      "sopx_l2_settlement_anchor": {
+        "score": 35.0,
+        "weight": 0.2,
+        "reason": "Not identified as settlement anchor",
+        "meta": {
+          "tags": []
+        }
+      }
+    },
+    "demand": 17.32,
+    "capture": 0,
+    "risk": 10,
+    "total": 19.34,
+    "tags": []
+  },
+  {
+    "id": "usual-usd",
+    "symbol": "usd0",
+    "name": "Usual USD",
+    "rank": 93,
+    "market_cap": 552864152,
+    "vol_to_mcap": 0.001961984686610681,
+    "constitutional": 37.85,
+    "constitutional_breakdown": {
+      "sopx_curated_facts": {
+        "score": 45.0,
+        "weight": 0.4,
+        "reason": "No curated entry; fallback",
+        "meta": {}
+      },
+      "sopx_age_maturity": {
+        "score": 35.0,
+        "weight": 0.15,
+        "reason": "No genesis_date; assume young/unknown",
+        "meta": {}
+      },
+      "sopx_decentralization_proxy": {
+        "score": 14.0,
+        "weight": 0.15,
+        "reason": "Dev proxy (commits=0, contrib=0) + interest",
+        "meta": {
+          "commits": 0,
+          "contributors": 0,
+          "alexa_rank": null
+        }
+      },
+      "sopx_governance_admin_risk": {
+        "score": 55.0,
+        "weight": 0.1,
+        "reason": "Admin/neutrality risk proxy (heuristic)",
+        "meta": {
+          "categories": []
+        }
+      },
+      "sopx_l2_settlement_anchor": {
+        "score": 35.0,
+        "weight": 0.2,
+        "reason": "Not identified as settlement anchor",
+        "meta": {
+          "tags": []
+        }
+      }
+    },
+    "demand": 13.36,
+    "capture": 0,
+    "risk": 30,
+    "total": 16.15,
+    "tags": []
+  },
+  {
+    "id": "flare-networks",
+    "symbol": "flr",
+    "name": "Flare",
+    "rank": 94,
+    "market_cap": 543202088,
+    "vol_to_mcap": 0.003618822613951366,
+    "constitutional": 37.85,
+    "constitutional_breakdown": {
+      "sopx_curated_facts": {
+        "score": 45.0,
+        "weight": 0.4,
+        "reason": "No curated entry; fallback",
+        "meta": {}
+      },
+      "sopx_age_maturity": {
+        "score": 35.0,
+        "weight": 0.15,
+        "reason": "No genesis_date; assume young/unknown",
+        "meta": {}
+      },
+      "sopx_decentralization_proxy": {
+        "score": 14.0,
+        "weight": 0.15,
+        "reason": "Dev proxy (commits=0, contrib=0) + interest",
+        "meta": {
+          "commits": 0,
+          "contributors": 0,
+          "alexa_rank": null
+        }
+      },
+      "sopx_governance_admin_risk": {
+        "score": 55.0,
+        "weight": 0.1,
+        "reason": "Admin/neutrality risk proxy (heuristic)",
+        "meta": {
+          "categories": []
+        }
+      },
+      "sopx_l2_settlement_anchor": {
+        "score": 35.0,
+        "weight": 0.2,
+        "reason": "Not identified as settlement anchor",
+        "meta": {
+          "tags": []
+        }
+      }
+    },
+    "demand": 13.53,
+    "capture": 0,
+    "risk": 10,
+    "total": 18.2,
+    "tags": []
+  },
+  {
+    "id": "arbitrum",
+    "symbol": "arb",
+    "name": "Arbitrum",
+    "rank": 95,
+    "market_cap": 534907216,
+    "vol_to_mcap": 0.059253679987745764,
+    "constitutional": 39.39,
+    "constitutional_breakdown": {
+      "sopx_curated_facts": {
+        "score": 45.0,
+        "weight": 0.4,
+        "reason": "No curated entry; fallback",
+        "meta": {}
+      },
+      "sopx_age_maturity": {
+        "score": 35.0,
+        "weight": 0.15,
+        "reason": "No genesis_date; assume young/unknown",
+        "meta": {}
+      },
+      "sopx_decentralization_proxy": {
+        "score": 24.27,
+        "weight": 0.15,
+        "reason": "Dev proxy (commits=4, contrib=24) + interest",
+        "meta": {
+          "commits": 4,
+          "contributors": 24,
+          "alexa_rank": null
+        }
+      },
+      "sopx_governance_admin_risk": {
+        "score": 55.0,
+        "weight": 0.1,
+        "reason": "Admin/neutrality risk proxy (heuristic)",
+        "meta": {
+          "categories": [
+            "Smart Contract Platform",
+            "Arbitrum Ecosystem",
+            "Ethereum Ecosystem",
+            "Arbitrum Nova Ecosystem",
+            "Layer 2 (L2)",
+            "eGirl Capital Portfolio",
+            "Rollup",
+            "Alameda Research Portfolio",
+            "Pantera Capital Portfolio",
+            "GMCI Layer 2 Index",
+            "GMCI 30 Index",
+            "GMCI Index",
+            "Polychain Capital Portfolio",
+            "Made in USA",
+            "Governance"
+          ]
+        }
+      },
+      "sopx_l2_settlement_anchor": {
+        "score": 35.0,
+        "weight": 0.2,
+        "reason": "Not identified as settlement anchor",
+        "meta": {
+          "tags": []
+        }
+      }
+    },
+    "demand": 38.64,
+    "capture": 100,
+    "risk": 0,
+    "total": 47.35,
+    "tags": []
+  },
+  {
+    "id": "lighter",
+    "symbol": "lit",
+    "name": "Lighter",
+    "rank": 96,
+    "market_cap": 525762916,
+    "vol_to_mcap": 0.03781499492444233,
+    "constitutional": 37.85,
+    "constitutional_breakdown": {
+      "sopx_curated_facts": {
+        "score": 45.0,
+        "weight": 0.4,
+        "reason": "No curated entry; fallback",
+        "meta": {}
+      },
+      "sopx_age_maturity": {
+        "score": 35.0,
+        "weight": 0.15,
+        "reason": "No genesis_date; assume young/unknown",
+        "meta": {}
+      },
+      "sopx_decentralization_proxy": {
+        "score": 14.0,
+        "weight": 0.15,
+        "reason": "Dev proxy (commits=0, contrib=0) + interest",
+        "meta": {
+          "commits": 0,
+          "contributors": 0,
+          "alexa_rank": null
+        }
+      },
+      "sopx_governance_admin_risk": {
+        "score": 55.0,
+        "weight": 0.1,
+        "reason": "Admin/neutrality risk proxy (heuristic)",
+        "meta": {
+          "categories": []
+        }
+      },
+      "sopx_l2_settlement_anchor": {
+        "score": 35.0,
+        "weight": 0.2,
+        "reason": "Not identified as settlement anchor",
+        "meta": {
+          "tags": []
+        }
+      }
+    },
+    "demand": 29.64,
+    "capture": 0,
+    "risk": 10,
+    "total": 23.03,
+    "tags": []
+  },
+  {
+    "id": "xdce-crowd-sale",
+    "symbol": "xdc",
+    "name": "XDC Network",
+    "rank": 97,
+    "market_cap": 519356358,
+    "vol_to_mcap": 0.011331059896257205,
+    "constitutional": 37.85,
+    "constitutional_breakdown": {
+      "sopx_curated_facts": {
+        "score": 45.0,
+        "weight": 0.4,
+        "reason": "No curated entry; fallback",
+        "meta": {}
+      },
+      "sopx_age_maturity": {
+        "score": 35.0,
+        "weight": 0.15,
+        "reason": "No genesis_date; assume young/unknown",
+        "meta": {}
+      },
+      "sopx_decentralization_proxy": {
+        "score": 14.0,
+        "weight": 0.15,
+        "reason": "Dev proxy (commits=0, contrib=0) + interest",
+        "meta": {
+          "commits": 0,
+          "contributors": 0,
+          "alexa_rank": null
+        }
+      },
+      "sopx_governance_admin_risk": {
+        "score": 55.0,
+        "weight": 0.1,
+        "reason": "Admin/neutrality risk proxy (heuristic)",
+        "meta": {
+          "categories": []
+        }
+      },
+      "sopx_l2_settlement_anchor": {
+        "score": 35.0,
+        "weight": 0.2,
+        "reason": "Not identified as settlement anchor",
+        "meta": {
+          "tags": []
+        }
+      }
+    },
+    "demand": 15.7,
+    "capture": 0,
+    "risk": 10,
+    "total": 18.85,
+    "tags": []
+  },
+  {
+    "id": "usx",
+    "symbol": "usx",
+    "name": "USX",
+    "rank": 98,
+    "market_cap": 516581971,
+    "vol_to_mcap": 0.0016817350367808327,
+    "constitutional": 37.85,
+    "constitutional_breakdown": {
+      "sopx_curated_facts": {
+        "score": 45.0,
+        "weight": 0.4,
+        "reason": "No curated entry; fallback",
+        "meta": {}
+      },
+      "sopx_age_maturity": {
+        "score": 35.0,
+        "weight": 0.15,
+        "reason": "No genesis_date; assume young/unknown",
+        "meta": {}
+      },
+      "sopx_decentralization_proxy": {
+        "score": 14.0,
+        "weight": 0.15,
+        "reason": "Dev proxy (commits=0, contrib=0) + interest",
+        "meta": {
+          "commits": 0,
+          "contributors": 0,
+          "alexa_rank": null
+        }
+      },
+      "sopx_governance_admin_risk": {
+        "score": 55.0,
+        "weight": 0.1,
+        "reason": "Admin/neutrality risk proxy (heuristic)",
+        "meta": {
+          "categories": []
+        }
+      },
+      "sopx_l2_settlement_anchor": {
+        "score": 35.0,
+        "weight": 0.2,
+        "reason": "Not identified as settlement anchor",
+        "meta": {
+          "tags": []
+        }
+      }
+    },
+    "demand": 13.26,
+    "capture": 0,
+    "risk": 30,
+    "total": 16.12,
+    "tags": []
+  },
+  {
+    "id": "talus",
+    "symbol": "us",
+    "name": "Talus",
+    "rank": 195,
+    "market_cap": 511506383,
+    "vol_to_mcap": 0.02214864833856824,
+    "constitutional": 37.85,
+    "constitutional_breakdown": {
+      "sopx_curated_facts": {
+        "score": 45.0,
+        "weight": 0.4,
+        "reason": "No curated entry; fallback",
+        "meta": {}
+      },
+      "sopx_age_maturity": {
+        "score": 35.0,
+        "weight": 0.15,
+        "reason": "No genesis_date; assume young/unknown",
+        "meta": {}
+      },
+      "sopx_decentralization_proxy": {
+        "score": 14.0,
+        "weight": 0.15,
+        "reason": "Dev proxy (commits=0, contrib=0) + interest",
+        "meta": {
+          "commits": 0,
+          "contributors": 0,
+          "alexa_rank": null
+        }
+      },
+      "sopx_governance_admin_risk": {
+        "score": 55.0,
+        "weight": 0.1,
+        "reason": "Admin/neutrality risk proxy (heuristic)",
+        "meta": {
+          "categories": []
+        }
+      },
+      "sopx_l2_settlement_anchor": {
+        "score": 35.0,
+        "weight": 0.2,
+        "reason": "Not identified as settlement anchor",
+        "meta": {
+          "tags": []
+        }
+      }
+    },
+    "demand": 26.02,
+    "capture": 0,
+    "risk": 10,
+    "total": 21.95,
+    "tags": []
+  },
+  {
+    "id": "true-usd",
+    "symbol": "tusd",
+    "name": "TrueUSD",
+    "rank": 99,
+    "market_cap": 492394237,
+    "vol_to_mcap": 0.05254896799289712,
+    "constitutional": 37.85,
+    "constitutional_breakdown": {
+      "sopx_curated_facts": {
+        "score": 45.0,
+        "weight": 0.4,
+        "reason": "No curated entry; fallback",
+        "meta": {}
+      },
+      "sopx_age_maturity": {
+        "score": 35.0,
+        "weight": 0.15,
+        "reason": "No genesis_date; assume young/unknown",
+        "meta": {}
+      },
+      "sopx_decentralization_proxy": {
+        "score": 14.0,
+        "weight": 0.15,
+        "reason": "Dev proxy (commits=0, contrib=0) + interest",
+        "meta": {
+          "commits": 0,
+          "contributors": 0,
+          "alexa_rank": null
+        }
+      },
+      "sopx_governance_admin_risk": {
+        "score": 55.0,
+        "weight": 0.1,
+        "reason": "Admin/neutrality risk proxy (heuristic)",
+        "meta": {
+          "categories": []
+        }
+      },
+      "sopx_l2_settlement_anchor": {
+        "score": 35.0,
+        "weight": 0.2,
+        "reason": "Not identified as settlement anchor",
+        "meta": {
+          "tags": []
+        }
+      }
+    },
+    "demand": 36.15,
+    "capture": 0,
+    "risk": 10,
+    "total": 24.98,
+    "tags": []
+  }
+]
