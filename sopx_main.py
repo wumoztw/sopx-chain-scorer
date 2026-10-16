@@ -1,6 +1,7 @@
 import os
 import yaml
 
+from config import AppConfig
 from sopx_coingecko import SopxCoinGeckoClient
 from sopx_scorer import sopx_score_coin
 from sopx_report import sopx_write_reports
@@ -116,14 +117,14 @@ def sopx_build_investor_plurk_post(scores, ts, flags=None, max_chars=320):
 
 # ---------- main ----------
 def main():
-    cfg = sopx_load_yaml("config.yml")
+    cfg: AppConfig = AppConfig.from_yaml("config.yml")
     overrides = sopx_load_yaml("manual_overrides.yml")
 
-    cg = SopxCoinGeckoClient(delay_sec=cfg["coingecko"]["request_delay_sec"])
+    cg = SopxCoinGeckoClient(delay_sec=cfg.coingecko.request_delay_sec)
 
     markets = cg.top_markets(
-        vs_currency=cfg["coingecko"]["vs_currency"],
-        per_page=cfg["coingecko"]["top_n"],
+        vs_currency=cfg.coingecko.vs_currency,
+        per_page=cfg.coingecko.top_n,
         page=1,
     )
 
@@ -134,8 +135,8 @@ def main():
         stage1_scores.append(s)
 
     # ---------- Stage 2 selection ----------
-    stage2_top_n = cfg.get("stage2", {}).get("detail_top_n", 20)
-    stage2_extra_n = cfg.get("stage2", {}).get("detail_extra_n", 10)
+    stage2_top_n = cfg.stage2.detail_top_n
+    stage2_extra_n = cfg.stage2.detail_extra_n
 
     by_total = sorted(stage1_scores, key=lambda x: x["total"], reverse=True)
     by_rank = sorted(stage1_scores, key=lambda x: x.get("rank") or 999)
@@ -165,7 +166,7 @@ def main():
     movers_up, movers_down, flags = sopx_compute_trends(final_scores, weeks_lookback=7)
 
     # ---------- Reports ----------
-    sopx_write_reports(final_scores, cfg["output"]["report_dir"], trends=(movers_up, movers_down, flags))
+    sopx_write_reports(final_scores, cfg.output.report_dir, trends=(movers_up, movers_down, flags))
 
     # ---------- Plurk ----------
     ck = os.getenv("PLURK_CONSUMER_KEY")
@@ -174,7 +175,7 @@ def main():
     ats = os.getenv("PLURK_ACCESS_TOKEN_SECRET")
 
     if all([ck, cs, at, ats]):
-        max_chars = cfg.get("plurk", {}).get("max_chars", 320)
+        max_chars = cfg.plurk.max_chars
         if max_chars > 600:
             max_chars = 320  # keep safe for Plurk
 

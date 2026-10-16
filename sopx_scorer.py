@@ -1,3 +1,5 @@
+from config import AppConfig
+from sopx_rules.sopx_rule_base import SopxRuleContext
 from sopx_rules.sopx_rule_engine import sopx_run_rule_set
 
 def sopx_clamp(x, lo=0, hi=100):
@@ -8,7 +10,7 @@ def sopx_safe_div(a, b):
         return 0.0
     return a / b
 
-def sopx_score_coin(market_row: dict, detail: dict, cfg: dict, overrides: dict):
+def sopx_score_coin(market_row: dict, detail: dict, cfg: AppConfig, overrides: dict):
     md = (detail or {}).get("market_data") or {}
     dev = (detail or {}).get("developer_data") or {}
     com = (detail or {}).get("community_data") or {}
@@ -20,11 +22,11 @@ def sopx_score_coin(market_row: dict, detail: dict, cfg: dict, overrides: dict):
     rank = market_row.get("market_cap_rank") or 999
 
     # --- Constitutional (plugin rules) ---
-    rule_cfg = cfg.get("rules", {}).get("constitutional", {})
-    enabled = rule_cfg.get("enabled", [])
-    weights = rule_cfg.get("weights", {})
+    rule_cfg = cfg.rules.constitutional
+    enabled = rule_cfg.enabled
+    weights = rule_cfg.weights
 
-    context = {"overrides": overrides, "cfg": cfg}
+    context: SopxRuleContext = {"overrides": overrides, "cfg": cfg}
     constitutional, constitutional_breakdown = sopx_run_rule_set(
         rule_group="constitutional",
         enabled=enabled,
@@ -99,18 +101,19 @@ def sopx_score_coin(market_row: dict, detail: dict, cfg: dict, overrides: dict):
     capture = sopx_clamp(supply_score - inflation_penalty)
 
     # --- Risk penalties ---
-    missing_dev_pen = cfg["scoring"]["veto"]["missing_dev_data_penalty"] if dev.get("commit_count_4_weeks") is None else 0
-    liq_pen = 20 if vol_to_mcap < cfg["scoring"]["veto"]["min_volume_to_mcap"] else 0
-    small_pen = 20 if mcap < cfg["scoring"]["veto"]["min_market_cap_usd"] else 0
+    veto = cfg.scoring.veto
+    missing_dev_pen = veto.missing_dev_data_penalty if dev.get("commit_count_4_weeks") is None else 0
+    liq_pen = 20 if vol_to_mcap < veto.min_volume_to_mcap else 0
+    small_pen = 20 if mcap < veto.min_market_cap_usd else 0
     risk = sopx_clamp(missing_dev_pen + liq_pen + small_pen)
 
     # --- Total ---
-    w = cfg["scoring"]["weights"]
+    w = cfg.scoring.weights
     total = (
-        w["constitutional"] * constitutional +
-        w["demand"] * demand +
-        w["capture"] * capture -
-        w["risk"] * (risk / 100) * 100
+        w.constitutional * constitutional +
+        w.demand * demand +
+        w.capture * capture -
+        w.risk * (risk / 100) * 100
     )
     total = sopx_clamp(total)
 

@@ -1,5 +1,5 @@
 import yaml
-from ..sopx_rule_base import SopxBaseRule, SopxRuleResult
+from ..sopx_rule_base import SopxBaseRule, SopxRuleContext, SopxRuleResult
 
 def clamp(x, lo=0, hi=100):
     return max(lo, min(hi, x))
@@ -71,10 +71,9 @@ class Rule(SopxBaseRule):
             Rule._cache = yaml.safe_load(f) or {}
         return Rule._cache
 
-    def evaluate(self, market_row: dict, detail: dict, context: dict) -> SopxRuleResult:
-        cfg = context.get("cfg", {})
-        ds_cfg = cfg.get("dataset", {})
-        path = ds_cfg.get("curated_path", "curated_dataset.yml")
+    def evaluate(self, market_row: dict, detail: dict, context: SopxRuleContext) -> SopxRuleResult:
+        cfg = context["cfg"]
+        path = cfg.dataset.curated_path
 
         ds = self._load_dataset(path)
         coins = (ds.get("coins") or {})
