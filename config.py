@@ -141,12 +141,15 @@ class Stage2Config:
     """Stage 2 scoring configuration"""
     detail_top_n: int = 20
     detail_extra_n: int = 10
+    stage2_candidates: int = 20
 
     def __post_init__(self):
         if self.detail_top_n <= 0:
             raise ValueError("detail_top_n must be positive")
         if self.detail_extra_n <= 0:
             raise ValueError("detail_extra_n must be positive")
+        if self.stage2_candidates <= 0:
+            raise ValueError("stage2_candidates must be positive")
 
 
 @dataclass

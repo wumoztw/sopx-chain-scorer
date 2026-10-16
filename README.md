@@ -38,6 +38,22 @@ CoinGecko 回應預設保存在使用者快取目錄（`$XDG_CACHE_HOME/sopx-cha
 ### 4. 投資人導向的 Plurk 自動推送
 自動將項目分類為 **HOLD (長期核心)**、**ROTATE (成長配置)**、**TRADE (高波動交易)** 與 **AVOID (結構風險)** 並推送至社交平台。
 
+## CLI Usage
+
+Run `python sopx_main.py` with optional flags to customize execution:
+
+- `-c, --config <path>` — use custom config file (default: `config.yml`)
+- `--limit, -n <N>` — cap final output and scoring currency count
+- `--top-stage1 <N>` — override Stage 1 → Stage 2 candidate count from config (`stage2_candidates`)
+- `-w, --workers <N>` — Stage 2 parallel fetch threads (default: 4)
+- `--no-cache` — skip local CoinGecko TTL cache
+- `--output-dir <dir>` — report output directory (default: `reports`)
+
+Example:
+```bash
+python sopx_main.py -c alt_config.yml --limit 10 --top-stage1 30 -w 6 --no-cache --output-dir alt_reports
+```
+
 ## Setup
 1) Add Plurk OAuth secrets in repo settings:
 - PLURK_CONSUMER_KEY

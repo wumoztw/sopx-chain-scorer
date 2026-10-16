@@ -121,11 +121,22 @@ def sopx_build_investor_plurk_post(scores, ts, flags=None, max_chars=320):
 # ---------- main ----------
 def main(argv=None):
     parser = argparse.ArgumentParser(description="Score CoinGecko market data")
+    parser.add_argument("-c", "--config", default="config.yml", help="path to YAML config file (default: config.yml)")
+    parser.add_argument("--limit", "-n", type=int, default=None, help="limit final output and scoring currency count")
+    parser.add_argument("--top-stage1", type=int, default=None, help="override Stage 2 candidate count from Stage 1 (overrides config stage2_candidates)")
+    parser.add_argument("-w", "--workers", type=int, default=4, help="Stage 2 parallel fetch thread count (default: 4)")
     parser.add_argument("--no-cache", action="store_true", help="bypass local CoinGecko cache")
+    parser.add_argument("--output-dir", default=None, help="custom report output directory (default: reports)")
     args = parser.parse_args(argv)
 
-    cfg: AppConfig = AppConfig.from_yaml("config.yml")
+    cfg: AppConfig = AppConfig.from_yaml(args.config)
     overrides = sopx_load_yaml("manual_overrides.yml")
+
+    # CLI overrides for config values
+    if args.top_stage1 is not None:
+        cfg.stage2.stage2_candidates = args.top_stage1
+    if args.output_dir is not None:
+        cfg.output.report_dir = args.output_dir
 
     cg = SopxCoinGeckoClient(
         delay_sec=cfg.coingecko.request_delay_sec,
@@ -143,8 +154,15 @@ def main(argv=None):
         s = sopx_score_coin(row, {}, cfg, overrides)
         stage1_scores.append(s)
 
+    # Apply --limit to stage1 candidates if provided
+    if args.limit is not None:
+        stage1_scores = stage1_scores[: args.limit]
+
     # ---------- Stage 2 selection ----------
-    stage2_top_n = cfg.stage2.detail_top_n
+    if args.top_stage1 is not None:
+        stage2_top_n = args.top_stage1
+    else:
+        stage2_top_n = cfg.stage2.detail_top_n if cfg.stage2.detail_top_n is not None else cfg.stage2.stage2_candidates
     stage2_extra_n = cfg.stage2.detail_extra_n
 
     by_total = sorted(stage1_scores, key=lambda x: x["total"], reverse=True)
@@ -155,19 +173,34 @@ def main(argv=None):
 
     score_by_id = {s["id"]: s for s in stage1_scores}
 
-    for row in markets:
+    # Stage 2 parallel detail fetching
+    from concurrent.futures import ThreadPoolExecutor, as_completed
+
+    def _fetch_detail(row):
         cid = row["id"]
         if cid not in candidate_ids:
-            continue
+            return cid, None
         try:
             detail = cg.coin_detail(cid)
+            s2 = sopx_score_coin(row, detail, cfg, overrides)
+            return cid, s2
         except Exception as e:
             print(f"[WARN] coin_detail failed for {cid}: {e}")
-            continue
-        s2 = sopx_score_coin(row, detail, cfg, overrides)
-        score_by_id[cid] = s2
+            return cid, None
+
+    rows = [r for r in markets if r["id"] in candidate_ids]
+    with ThreadPoolExecutor(max_workers=args.workers) as executor:
+        future_to_cid = {executor.submit(_fetch_detail, row): row["id"] for row in rows}
+        for future in as_completed(future_to_cid):
+            cid, s2 = future.result()
+            if s2 is not None:
+                score_by_id[cid] = s2
 
     final_scores = list(score_by_id.values())
+
+    # Apply --limit to final output if provided
+    if args.limit is not None:
+        final_scores = sorted(final_scores, key=lambda x: x["total"], reverse=True)[: args.limit]
 
     # ---------- History & trends ----------
     date_utc = sopx_utc_today_str()
