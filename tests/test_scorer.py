@@ -69,7 +69,7 @@ def test_zero_market_cap_and_missing_supply_are_safe(monkeypatch):
     assert 0 <= result["total"] <= 100
 
 
-def test_rule_engine_normalizes_weights_and_clamps_rule_scores(monkeypatch):
+def test_rule_engine_normalizes_weights_and_clamps_rule_scores():
     class FixedRule:
         def __init__(self, score):
             self.score = score
@@ -77,12 +77,15 @@ def test_rule_engine_normalizes_weights_and_clamps_rule_scores(monkeypatch):
         def evaluate(self, market_row, detail, context):
             return SopxRuleResult(score=self.score, reason="fixed", meta={})
 
-    rules = {"sopx_curated_facts": FixedRule(150), "sopx_age_maturity": FixedRule(-20)}
-    monkeypatch.setattr(sopx_rule_engine, "_sopx_load_rule", lambda path: rules[path.rsplit(".", 1)[-1]])
+    engine = sopx_rule_engine.SopxRuleEngine()
+    engine._rules["constitutional"].update({
+        "sopx_curated_facts": FixedRule(150),
+        "sopx_age_maturity": FixedRule(-20),
+    })
     from config import RuleWeightConfig
 
     weights = RuleWeightConfig(sopx_curated_facts=1, sopx_age_maturity=3)
-    score, breakdown = sopx_rule_engine.sopx_run_rule_set(
+    score, breakdown = engine.run(
         rule_group="constitutional",
         enabled=["sopx_curated_facts", "sopx_age_maturity"],
         weights=weights,
@@ -94,6 +97,36 @@ def test_rule_engine_normalizes_weights_and_clamps_rule_scores(monkeypatch):
     assert score == 25
     assert breakdown["sopx_curated_facts"]["score"] == 100
     assert breakdown["sopx_age_maturity"]["score"] == 0
+
+
+def test_rule_engine_preloads_and_reuses_instances(monkeypatch):
+    load_calls = []
+    original_loader = sopx_rule_engine._sopx_load_rule
+
+    def recording_loader(module_path):
+        load_calls.append(module_path)
+        return original_loader(module_path)
+
+    monkeypatch.setattr(sopx_rule_engine, "_sopx_load_rule", recording_loader)
+    engine = sopx_rule_engine.SopxRuleEngine()
+    preload_calls = len(load_calls)
+    rule_instance = engine._rules["constitutional"]["sopx_age_maturity"]
+
+    from config import RuleWeightConfig
+
+    for _ in range(3):
+        engine.run(
+            rule_group="constitutional",
+            enabled=["sopx_age_maturity"],
+            weights=RuleWeightConfig(),
+            market_row={},
+            detail={},
+            context={},
+        )
+
+    assert preload_calls == sum(len(rules) for rules in engine._rules.values())
+    assert len(load_calls) == preload_calls
+    assert engine._rules["constitutional"]["sopx_age_maturity"] is rule_instance
 
 
 def test_governance_rule_category_and_platform_adjustments():

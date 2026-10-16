@@ -1,3 +1,5 @@
+import argparse
+
 import os
 import yaml
 
@@ -11,6 +13,7 @@ from sopx_history import (
     sopx_utc_today_str,
 )
 from sopx_plurk import sopx_post_plurk
+from sopx_dashboard import sopx_make_dashboard
 
 
 # ---------- helpers ----------
@@ -116,12 +119,18 @@ def sopx_build_investor_plurk_post(scores, ts, flags=None, max_chars=320):
 
 
 # ---------- main ----------
-def main():
+def main(argv=None):
+    parser = argparse.ArgumentParser(description="Score CoinGecko market data")
+    parser.add_argument("--no-cache", action="store_true", help="bypass local CoinGecko cache")
+    args = parser.parse_args(argv)
+
     cfg: AppConfig = AppConfig.from_yaml("config.yml")
     overrides = sopx_load_yaml("manual_overrides.yml")
 
-    cg = SopxCoinGeckoClient(delay_sec=cfg.coingecko.request_delay_sec)
-
+    cg = SopxCoinGeckoClient(
+        delay_sec=cfg.coingecko.request_delay_sec,
+        cache_enabled=not args.no_cache,
+    )
     markets = cg.top_markets(
         vs_currency=cfg.coingecko.vs_currency,
         per_page=cfg.coingecko.top_n,
@@ -167,6 +176,10 @@ def main():
 
     # ---------- Reports ----------
     sopx_write_reports(final_scores, cfg.output.report_dir, trends=(movers_up, movers_down, flags))
+
+    # ---------- Dashboard ----------
+    dashboard_path = sopx_make_dashboard(final_scores, cfg.output.report_dir)
+    print(f"Dashboard generated: {dashboard_path}")
 
     # ---------- Plurk ----------
     ck = os.getenv("PLURK_CONSUMER_KEY")

@@ -28,8 +28,12 @@ Weekly GitHub Actions job:
 ### 2. 多層次數據抓取
 系統利用 CoinGecko API 進行兩階段數據獲取，確保深度分析的高分項目擁有最完整的數據指標。
 
+
+### API 本機快取
+CoinGecko 回應預設保存在使用者快取目錄（`$XDG_CACHE_HOME/sopx-chain-scorer`，未設定時為 `~/.cache/sopx-chain-scorer`）；市場列表 TTL 為 30 分鐘，幣種詳細資料 TTL 為 6 小時。快取過期後若 API 重試仍失敗，會警告並使用可用的過期資料。執行 `python sopx_main.py --no-cache` 可略過讀寫快取與 stale fallback。
+
 ### 3. 週報生成與趨勢分析
-自動計算 7 週內的趨勢變化，識別上升明星與結構性警訊，並生成 Markdown 與 JSON 報告。
+自動計算 7 週內的趨勢變化，識別上升明星與結構性警訊，並生成 Markdown、JSON 與獨立式 HTML 排行儀表板。
 
 ### 4. 投資人導向的 Plurk 自動推送
 自動將項目分類為 **HOLD (長期核心)**、**ROTATE (成長配置)**、**TRADE (高波動交易)** 與 **AVOID (結構風險)** 並推送至社交平台。
@@ -51,8 +55,9 @@ Weekly GitHub Actions job:
 ## Outputs
 - reports/report_YYYY-MM-DD.md
 - reports/report_YYYY-MM-DD.json
+- reports/dashboard_YYYY-MM-DD.html（深色響應式排行儀表板，內嵌 CSS）
 - reports/history.csv
 
 ## Tests
 
-Install the development dependencies with `pip install -r requirements-dev.txt`, then run `pytest` from the repository root. The suite covers configuration parsing/defaults, scoring thresholds, Stage 2 selection, and concurrent CoinGecko rate limiting.
+Install the development dependencies with `pip install -r requirements-dev.txt`, then run `pytest` from the repository root. The suite covers configuration parsing/defaults, scoring thresholds, Stage 2 selection, concurrent CoinGecko rate limiting, TTL caching/stale fallback, and rule preloading.
