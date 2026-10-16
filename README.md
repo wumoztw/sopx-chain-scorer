@@ -46,7 +46,13 @@ Weekly GitHub Actions job:
 
 3) Run Actions → Weekly SOPX Scoring → Run workflow.
 
+`config.yml` is loaded into the nested dataclasses in `config.py` (`AppConfig` and its section models). Update YAML keys to match those typed settings; invalid section shapes and values rejected by model validation stop startup.
+
 ## Outputs
 - reports/report_YYYY-MM-DD.md
 - reports/report_YYYY-MM-DD.json
 - reports/history.csv
+
+## Tests
+
+Install the development dependencies with `pip install -r requirements-dev.txt`, then run `pytest` from the repository root. The suite covers configuration parsing/defaults, scoring thresholds, Stage 2 selection, and concurrent CoinGecko rate limiting.
