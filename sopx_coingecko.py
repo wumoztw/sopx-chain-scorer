@@ -1,15 +1,63 @@
 import time
 import random
 import requests
+import threading
+from collections import deque
 
 BASE = "https://api.coingecko.com/api/v3"
 
+class RateLimiter:
+    """Token bucket rate limiter to respect CoinGecko's API rate limits."""
+    
+    def __init__(self, max_requests_per_second: float = 1.0, burst: int = 1):
+        self.max_requests_per_second = max_requests_per_second  # sustained rate (requests/sec)
+        self.burst = burst  # max burst size
+        self.tokens = float(burst)  # current tokens
+        self.last_refill = time.time()
+        self.lock = threading.Lock()
+    
+    def _acquire(self):
+        """Acquire a token, waiting if necessary."""
+        with self.lock:
+            now = time.time()
+            # Refill tokens based on elapsed time
+            elapsed = now - self.last_refill
+            self.tokens = min(self.burst, self.tokens + elapsed * self.max_requests_per_second)
+            self.last_refill = now
+            
+            if self.tokens >= 1.0:
+                self.tokens -= 1.0
+                return
+            else:
+                # Calculate wait time needed
+                wait = (1.0 - self.tokens) / self.max_requests_per_second
+                time.sleep(wait)
+                # The wait replenishes exactly one token, which this request consumes.
+                self.tokens = 0.0
+                self.last_refill = time.time()
+
+    def __enter__(self):
+        self._acquire()
+        return self
+    
+    def __exit__(self, exc_type, exc_val, exc_tb):
+        pass
+
+
 class SopxCoinGeckoClient:
-    def __init__(self, delay_sec: float = 1.0, max_retries: int = 8):
+    def __init__(self, delay_sec: float = 1.0, max_retries: int = 8, rate_limit_rps: float = None):
         self.delay_sec = float(delay_sec)
         self.max_retries = int(max_retries)
+        # If rate_limit_rps not set, derive from delay_sec for equivalent pacing
+        if rate_limit_rps is None:
+            rate_limit_rps = 1.0 / delay_sec  # sustained rate equivalent to original delay
+        self.rate_limit_rps = rate_limit_rps  # requests per second (sustained rate)
         self.s = requests.Session()
         self.s.headers.update({"User-Agent": "sopx-chain-scorer/1.1"})
+        # Rate limiter: sustain at rate_limit_rps, with burst for initial parallelism
+        # burst = 2 so a couple of requests can start in parallel before pacing kicks in
+        burst = max(2, int(delay_sec / (1.0 / rate_limit_rps)))
+        self.rate_limiter = RateLimiter(max_requests_per_second=rate_limit_rps, burst=burst)
 
     def _sleep_with_jitter(self, seconds: float):
         # small jitter helps when many runners hit the API at same time
@@ -20,7 +68,9 @@ class SopxCoinGeckoClient:
         url = f"{BASE}{path}"
 
         for attempt in range(1, self.max_retries + 1):
-            r = self.s.get(url, params=params, timeout=30)
+            # Acquire rate limit token before making the request
+            with self.rate_limiter:
+                r = self.s.get(url, params=params, timeout=30)
 
             # Success
             if r.status_code < 400:
